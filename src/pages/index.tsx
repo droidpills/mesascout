@@ -7,6 +7,7 @@ interface Player {
   position: string;
   score: number;
   link: string;
+  league: string;
   club: string;
   nationalities: string[];
   marketValue: string;
