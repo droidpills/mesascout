@@ -1,8 +1,19 @@
 import Header from "../components/header";
 import { useState, useEffect } from "react";
 
+
+interface Player {
+  name: string;
+  position: string;
+  score: number;
+  link: string;
+  club: string;
+  nationalities: string[];
+  marketValue: string;
+}
+
 const Home: React.FC = () => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<Player[]>([]);
 
   useEffect(() => {
     fetch("data/players_scores_with_transfermarkt.json")
@@ -10,7 +21,7 @@ const Home: React.FC = () => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.json();
+        return response.json() as Promise<Player[]>; // Tipagem explícita aqui
       })
       .then((jsonData) => setData(jsonData))
       .catch((error) => console.error("Failed to fetch data:", error));
