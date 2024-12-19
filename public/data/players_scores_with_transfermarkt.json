@@ -1,0 +1,4283 @@
+[
+  {
+    "name": "Riqui Puig",
+    "position": "CM",
+    "score": 8.18,
+    "link": "https://www.sofascore.com/pt/jogador/riqui-puig/901842",
+    "league": "MLS",
+    "club": "Los Angeles Galaxy",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€20.00m"
+  },
+  {
+    "name": "Evander",
+    "position": "AM",
+    "score": 7.97,
+    "link": "https://www.sofascore.com/pt/jogador/evander/822515",
+    "league": "MLS",
+    "club": "Portland Timbers",
+    "nationalities": [
+      "Brazil"
+    ],
+    "marketValue": "€14.00m"
+  },
+  {
+    "name": "Ryan Gauld",
+    "position": "AM",
+    "score": 7.93,
+    "link": "https://www.sofascore.com/pt/jogador/ryan-gauld/233288",
+    "league": "MLS",
+    "club": "Vancouver Whitecaps FC",
+    "nationalities": [
+      "Scotland"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Cucho Hernández",
+    "position": "CF",
+    "score": 7.87,
+    "link": "https://www.sofascore.com/pt/jogador/cucho-hernandez/887055",
+    "league": "MLS",
+    "club": "Columbus Crew",
+    "nationalities": [
+      "Colombia",
+      "Spain"
+    ],
+    "marketValue": "€18.00m"
+  },
+  {
+    "name": "Luciano Acosta",
+    "position": "AM",
+    "score": 7.86,
+    "link": "https://www.sofascore.com/pt/jogador/luciano-acosta/548030",
+    "league": "MLS",
+    "club": "FC Cincinnati",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Gabriel Pec",
+    "position": "RW",
+    "score": 7.72,
+    "link": "https://www.sofascore.com/pt/jogador/gabriel-pec/995072",
+    "league": "MLS",
+    "club": "Los Angeles Galaxy",
+    "nationalities": [
+      "Brazil",
+      "Portugal"
+    ],
+    "marketValue": "€12.00m"
+  },
+  {
+    "name": "Christian Benteke",
+    "position": "CF",
+    "score": 7.71,
+    "link": "https://www.sofascore.com/pt/jogador/christian-benteke/45970",
+    "league": "MLS",
+    "club": "D.C. United",
+    "nationalities": [
+      "Belgium",
+      "DR Congo"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Carles Gil",
+    "position": "AM",
+    "score": 7.7,
+    "link": "https://www.sofascore.com/pt/jogador/carles-gil/254895",
+    "league": "MLS",
+    "club": "New England Revolution",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€2.80m"
+  },
+  {
+    "name": "Đorđe Mihailović",
+    "position": "Meia",
+    "score": 7.59,
+    "link": "https://www.sofascore.com/pt/jogador/dorde-mihailovic/869211",
+    "league": "MLS",
+    "club": "Unknown",
+    "nationalities": [],
+    "marketValue": "Unknown"
+  },
+  {
+    "name": "Federico Bernardeschi",
+    "position": "RW",
+    "score": 7.55,
+    "link": "https://www.sofascore.com/pt/jogador/federico-bernardeschi/294597",
+    "league": "MLS",
+    "club": "Toronto FC",
+    "nationalities": [
+      "Italy"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Santiago Rodríguez",
+    "position": "AM",
+    "score": 7.54,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-rodriguez/975216",
+    "league": "MLS",
+    "club": "New York City FC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Mateusz Bogusz",
+    "position": "AM",
+    "score": 7.5,
+    "link": "https://www.sofascore.com/pt/jogador/mateusz-bogusz/928455",
+    "league": "MLS",
+    "club": "Los Angeles FC",
+    "nationalities": [
+      "Poland"
+    ],
+    "marketValue": "€10.00m"
+  },
+  {
+    "name": "Albert Rusnák",
+    "position": "AM",
+    "score": 7.49,
+    "link": "https://www.sofascore.com/pt/jogador/albert-rusnak/134903",
+    "league": "MLS",
+    "club": "Seattle Sounders FC",
+    "nationalities": [
+      "Slovakia"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Cristian Arango",
+    "position": "CF",
+    "score": 7.47,
+    "link": "https://www.sofascore.com/pt/jogador/cristian-arango/247903",
+    "league": "MLS",
+    "club": "Real Salt Lake City",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€7.50m"
+  },
+  {
+    "name": "Kai Wagner",
+    "position": "LB",
+    "score": 7.45,
+    "link": "https://www.sofascore.com/pt/jogador/kai-wagner/806201",
+    "league": "MLS",
+    "club": "Philadelphia Union",
+    "nationalities": [
+      "Germany"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Luis Suárez",
+    "position": "CF",
+    "score": 7.45,
+    "link": "https://www.sofascore.com/pt/jogador/luis-suarez/16943",
+    "league": "MLS",
+    "club": "Inter Miami CF",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€2.80m"
+  },
+  {
+    "name": "Cole Bassett",
+    "position": "AM",
+    "score": 7.43,
+    "link": "https://www.sofascore.com/pt/jogador/cole-bassett/945420",
+    "league": "MLS",
+    "club": "Colorado Rapids",
+    "nationalities": [
+      "United States"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Jordi Alba",
+    "position": "LB",
+    "score": 7.4,
+    "link": "https://www.sofascore.com/pt/jogador/jordi-alba/35199",
+    "league": "MLS",
+    "club": "Inter Miami CF",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Denis Bouanga",
+    "position": "LW",
+    "score": 7.38,
+    "link": "https://www.sofascore.com/pt/jogador/denis-bouanga/760618",
+    "league": "MLS",
+    "club": "Los Angeles FC",
+    "nationalities": [
+      "Gabon",
+      "France"
+    ],
+    "marketValue": "€10.00m"
+  },
+  {
+    "name": "Jack McGlynn",
+    "position": "CM",
+    "score": 7.36,
+    "link": "https://www.sofascore.com/pt/jogador/jack-mcglynn/1025196",
+    "league": "MLS",
+    "club": "Philadelphia Union",
+    "nationalities": [
+      "United States",
+      "Ireland"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Brad Stuver",
+    "position": "GK",
+    "score": 7.35,
+    "link": "https://www.sofascore.com/pt/jogador/brad-stuver/314190",
+    "league": "MLS",
+    "club": "Austin FC",
+    "nationalities": [
+      "United States"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Luca Orellano",
+    "position": "RW",
+    "score": 7.35,
+    "link": "https://www.sofascore.com/pt/jogador/luca-orellano/965764",
+    "league": "MLS",
+    "club": "FC Cincinnati",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Facundo Torres",
+    "position": "RW",
+    "score": 7.34,
+    "link": "https://www.sofascore.com/pt/jogador/facundo-torres/874572",
+    "league": "MLS",
+    "club": "Orlando City SC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€14.00m"
+  },
+  {
+    "name": "Lewis Morgan",
+    "position": "LW",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/lewis-morgan/383550",
+    "league": "MLS",
+    "club": "New York Red Bulls",
+    "nationalities": [
+      "Scotland"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Santiago Moreno",
+    "position": "RW",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-moreno/100203",
+    "league": "MLS",
+    "club": "Portland Timbers",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Hany Mukhtar",
+    "position": "AM",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/hany-mukhtar/221350",
+    "league": "MLS",
+    "club": "Nashville SC",
+    "nationalities": [
+      "Germany",
+      "Sudan"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Diego Rossi",
+    "position": "AM",
+    "score": 7.32,
+    "link": "https://www.sofascore.com/pt/jogador/diego-rossi/831809",
+    "league": "MLS",
+    "club": "Columbus Crew",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Joseph Paintsil",
+    "position": "RW",
+    "score": 7.31,
+    "link": "https://www.sofascore.com/pt/jogador/joseph-paintsil/901285",
+    "league": "MLS",
+    "club": "Los Angeles Galaxy",
+    "nationalities": [
+      "Ghana"
+    ],
+    "marketValue": "€10.00m"
+  },
+  {
+    "name": "Cristian Espinoza",
+    "position": "RW",
+    "score": 7.31,
+    "link": "https://www.sofascore.com/pt/jogador/cristian-espinoza/789680",
+    "league": "MLS",
+    "club": "San Jose Earthquakes",
+    "nationalities": [
+      "Argentina",
+      "United States"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Amine Bassi",
+    "position": "AM",
+    "score": 7.3,
+    "link": "https://www.sofascore.com/pt/jogador/amine-bassi/879780",
+    "league": "MLS",
+    "club": "Houston Dynamo FC",
+    "nationalities": [
+      "Morocco",
+      "France"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Mateusz Klich",
+    "position": "CM",
+    "score": 7.28,
+    "link": "https://www.sofascore.com/pt/jogador/mateusz-klich/44900",
+    "league": "MLS",
+    "club": "D.C. United",
+    "nationalities": [
+      "Poland"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Kristijan Kahlina",
+    "position": "GK",
+    "score": 7.28,
+    "link": "https://www.sofascore.com/pt/jogador/kristijan-kahlina/797985",
+    "league": "MLS",
+    "club": "Charlotte FC",
+    "nationalities": [
+      "Croatia"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Dániel Gazdag",
+    "position": "AM",
+    "score": 7.27,
+    "link": "https://www.sofascore.com/pt/jogador/daniel-gazdag/284605",
+    "league": "MLS",
+    "club": "Philadelphia Union",
+    "nationalities": [
+      "Hungary"
+    ],
+    "marketValue": "€9.00m"
+  },
+  {
+    "name": "Brad Guzan",
+    "position": "GK",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/brad-guzan/14889",
+    "league": "MLS",
+    "club": "Atlanta United FC",
+    "nationalities": [
+      "United States",
+      "Poland"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Erik Thommy",
+    "position": "AM",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/erik-thommy/254159",
+    "league": "MLS",
+    "club": "Sporting Kansas City",
+    "nationalities": [
+      "Germany"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Cristian Roldán",
+    "position": "CM",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/cristian-roldan/790171",
+    "league": "MLS",
+    "club": "Seattle Sounders FC",
+    "nationalities": [
+      "United States",
+      "El Salvador"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Jonathan Rodríguez",
+    "position": "LW",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/jonathan-rodriguez/340395",
+    "league": "MLS",
+    "club": "Without Club",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Marky Delgado",
+    "position": "CM",
+    "score": 7.24,
+    "link": "https://www.sofascore.com/pt/jogador/marky-delgado/234890",
+    "league": "MLS",
+    "club": "Los Angeles Galaxy",
+    "nationalities": [
+      "United States",
+      "Mexico"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Dejan Joveljić",
+    "position": "CF",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/dejan-joveljic/885663",
+    "league": "MLS",
+    "club": "Los Angeles Galaxy",
+    "nationalities": [
+      "Serbia",
+      "Bosnia-Herzegovina"
+    ],
+    "marketValue": "€6.50m"
+  },
+  {
+    "name": "Timothy Tillman",
+    "position": "CM",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/timothy-tillman/844670",
+    "league": "MLS",
+    "club": "Los Angeles FC",
+    "nationalities": [
+      "United States",
+      "Germany"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Robin Lod",
+    "position": "CM",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/robin-lod/159593",
+    "league": "MLS",
+    "club": "Minnesota United FC",
+    "nationalities": [
+      "Finland"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Jordan Morris",
+    "position": "LW",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/jordan-morris/772421",
+    "league": "MLS",
+    "club": "Seattle Sounders FC",
+    "nationalities": [
+      "United States"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Rafael Navarro",
+    "position": "CF",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/rafael-navarro/985427",
+    "league": "MLS",
+    "club": "Colorado Rapids",
+    "nationalities": [
+      "Brazil"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Aaron Herrera",
+    "position": "RB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/aaron-herrera/880795",
+    "league": "MLS",
+    "club": "D.C. United",
+    "nationalities": [
+      "Guatemala",
+      "United States"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Joseph Rosales",
+    "position": "LB",
+    "score": 7.19,
+    "link": "https://www.sofascore.com/pt/jogador/joseph-rosales/985148",
+    "league": "MLS",
+    "club": "Minnesota United FC",
+    "nationalities": [
+      "Honduras"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Diego Luna",
+    "position": "LM",
+    "score": 7.18,
+    "link": "https://www.sofascore.com/pt/jogador/diego-luna/1117904",
+    "league": "MLS",
+    "club": "Real Salt Lake City",
+    "nationalities": [
+      "United States",
+      "Mexico"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Maximilian Arfsten",
+    "position": "RW",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/arfsten-maximilian/1471659",
+    "league": "MLS",
+    "club": "Columbus Crew",
+    "nationalities": [
+      "United States"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Ashley Westwood",
+    "position": "DM",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/ashley-westwood/49647",
+    "league": "MLS",
+    "club": "Charlotte FC",
+    "nationalities": [
+      "England"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Nathan Harriel",
+    "position": "RB",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/nathan-harriel/1025193",
+    "league": "MLS",
+    "club": "Philadelphia Union",
+    "nationalities": [
+      "United States"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Martín Ojeda",
+    "position": "LW",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/martin-ojeda/888812",
+    "league": "MLS",
+    "club": "Orlando City SC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Claudio Aquino",
+    "position": "AM",
+    "score": 7.64,
+    "link": "https://www.sofascore.com/pt/jogador/claudio-aquino/340455",
+    "league": "Argentina",
+    "club": "CA Vélez Sarsfield",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Marcelino Moreno",
+    "position": "AM",
+    "score": 7.45,
+    "link": "https://www.sofascore.com/pt/jogador/marcelino-moreno/848472",
+    "league": "Argentina",
+    "club": "CA Lanús",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Santiago Sosa",
+    "position": "CB",
+    "score": 7.44,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-sosa/928237",
+    "league": "Argentina",
+    "club": "Racing Club",
+    "nationalities": [
+      "Argentina",
+      "Croatia"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Ignacio Arce",
+    "position": "GK",
+    "score": 7.42,
+    "link": "https://www.sofascore.com/pt/jogador/ignacio-arce/896998",
+    "league": "Argentina",
+    "club": "Club Deportivo Riestra",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Santiago Ascacíbar",
+    "position": "CM",
+    "score": 7.32,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-ascacibar/830667",
+    "league": "Argentina",
+    "club": "Club Estudiantes de La Plata",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Éver Banega",
+    "position": "CM",
+    "score": 7.32,
+    "link": "https://www.sofascore.com/pt/jogador/ever-banega/31981",
+    "league": "Argentina",
+    "club": "CA Newell's Old Boys",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Valentin Gómez",
+    "position": "CB",
+    "score": 7.29,
+    "link": "https://www.sofascore.com/pt/jogador/diego-gomez/1186010",
+    "league": "Argentina",
+    "club": "CA Vélez Sarsfield",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€10.00m"
+  },
+  {
+    "name": "Aaron Molinas",
+    "position": "AM",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/aaron-molinas/1022257",
+    "league": "Argentina",
+    "club": "Defensa y Justicia",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Franco Jara",
+    "position": "CF",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/franco-jara/40776",
+    "league": "Argentina",
+    "club": "Club Atlético Belgrano",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Rodrigo Rey",
+    "position": "GK",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/rodrigo-rey/158249",
+    "league": "Argentina",
+    "club": "CA Independiente",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Paulo Díaz",
+    "position": "CB",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/paulo-diaz/790004",
+    "league": "Argentina",
+    "club": "CA River Plate",
+    "nationalities": [
+      "Chile",
+      "Argentina"
+    ],
+    "marketValue": "€5.50m"
+  },
+  {
+    "name": "Gastón Martirena",
+    "position": "RB",
+    "score": 7.24,
+    "link": "https://www.sofascore.com/pt/jogador/gaston-martirena/1017433",
+    "league": "Argentina",
+    "club": "Racing Club",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Sasha Marcich",
+    "position": "LB",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/sasha-marcich/992126",
+    "league": "Argentina",
+    "club": "Club Atlético Platense",
+    "nationalities": [
+      "Argentina",
+      "Croatia"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Nahuel Losada",
+    "position": "GK",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/nahuel-losada/384552",
+    "league": "Argentina",
+    "club": "CA Lanús",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Gastón Benavídez",
+    "position": "RB",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/gaston-benavidez/981452",
+    "league": "Argentina",
+    "club": "CA Talleres",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Emanuel Mammana",
+    "position": "CB",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/emanuel-mammana/358914",
+    "league": "Argentina",
+    "club": "CA Vélez Sarsfield",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Nehuén Paz",
+    "position": "CB",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/nehuen-paz/340525",
+    "league": "Argentina",
+    "club": "Club Atlético Tigre",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Gastón Lodico",
+    "position": "CM",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/gaston-lodico/922460",
+    "league": "Argentina",
+    "club": "Instituto ACC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€3.80m"
+  },
+  {
+    "name": "Miguel Navarro",
+    "position": "LB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/miguel-navarro/946472",
+    "league": "Argentina",
+    "club": "CA Talleres",
+    "nationalities": [
+      "Venezuela"
+    ],
+    "marketValue": "€2.20m"
+  },
+  {
+    "name": "Joaquín García",
+    "position": "RB",
+    "score": 7.18,
+    "link": "https://www.sofascore.com/pt/jogador/joaquin-garcia/989860",
+    "league": "Argentina",
+    "club": "CA Vélez Sarsfield",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€3.20m"
+  },
+  {
+    "name": "Ignacio Malcorra",
+    "position": "AM",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/ignacio-malcorra/789427",
+    "league": "Argentina",
+    "club": "CA Rosario Central",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€400k"
+  },
+  {
+    "name": "Juan Pintado",
+    "position": "RB",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/juan-pintado/805330",
+    "league": "Argentina",
+    "club": "Club de Gimnasia y Esgrima La Plata",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Franco Pardo",
+    "position": "CB",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/franco-pardo/879962",
+    "league": "Argentina",
+    "club": "CA Unión (Santa Fe)",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€2.30m"
+  },
+  {
+    "name": "Lucas Carrizo",
+    "position": "CB",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/lucas-carrizo/871798",
+    "league": "Argentina",
+    "club": "CA Huracán",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Marcos Ledesma",
+    "position": "GK",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/marcos-ledesma/757762",
+    "league": "Argentina",
+    "club": "Club de Gimnasia y Esgrima La Plata",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Alan Lescano",
+    "position": "AM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/alan-lescano/1186068",
+    "league": "Argentina",
+    "club": "AA Argentinos Juniors",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€5.50m"
+  },
+  {
+    "name": "Francisco Álvarez",
+    "position": "CB",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/francisco-alvarez/871788",
+    "league": "Argentina",
+    "club": "AA Argentinos Juniors",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Lucas Acosta",
+    "position": "AM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/lucas-acosta/340845",
+    "league": "Argentina",
+    "club": "Retired",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Pablo Solari",
+    "position": "RW",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/pablo-solari/1018450",
+    "league": "Argentina",
+    "club": "CA River Plate",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Francisco González Metilli",
+    "position": "AM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/francisco-gonzalez-metilli/896773",
+    "league": "Argentina",
+    "club": "Club Atlético Belgrano",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€2.20m"
+  },
+  {
+    "name": "Joaquín Laso",
+    "position": "CB",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/joaquin-laso/789853",
+    "league": "Argentina",
+    "club": "CA Independiente",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Guido Herrera",
+    "position": "GK",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/guido-herrera/248977",
+    "league": "Argentina",
+    "club": "CA Talleres",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Leonardo Morales",
+    "position": "CB",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/leonardo-morales/895342",
+    "league": "Argentina",
+    "club": "Club de Gimnasia y Esgrima La Plata",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Fabio Pereyra",
+    "position": "CB",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/fabio-pereyra/943995",
+    "league": "Argentina",
+    "club": "CA Huracán",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€175k"
+  },
+  {
+    "name": "Mateo Pellegrino",
+    "position": "CF",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/pellegrino-mateo/1099296",
+    "league": "Argentina",
+    "club": "Club Atlético Platense",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Franco Petroli",
+    "position": "GK",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/franco-petroli/822590",
+    "league": "Argentina",
+    "club": "CD Godoy Cruz Antonio Tomba",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Enrique Bologna",
+    "position": "GK",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/enrique-bologna/107418",
+    "league": "Argentina",
+    "club": "Defensa y Justicia",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€25k"
+  },
+  {
+    "name": "Sebastián Villa",
+    "position": "LW",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/sebastian-villa/839983",
+    "league": "Argentina",
+    "club": "CS Independiente Rivadavia",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Gonzalo Maroni",
+    "position": "AM",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/gonzalo-maroni/840510",
+    "league": "Argentina",
+    "club": "Club Atlético Tigre",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Juan Portillo",
+    "position": "LW",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/juan-portillo/1087037",
+    "league": "Argentina",
+    "club": "Alianza FC",
+    "nationalities": [
+      "El Salvador"
+    ],
+    "marketValue": "€125k"
+  },
+  {
+    "name": "Ignacio Vazquez",
+    "position": "CB",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/ignacio-vazquez/883922",
+    "league": "Argentina",
+    "club": "Club Atlético Platense",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Alan Barrionuevo",
+    "position": "CB",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/alan-barrionuevo/1110289",
+    "league": "Argentina",
+    "club": "Club Deportivo Riestra",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Thiago Cardozo",
+    "position": "GK",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/thiago-cardozo/358618",
+    "league": "Argentina",
+    "club": "CA Unión (Santa Fe)",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€1.70m"
+  },
+  {
+    "name": "Felipe Zenobio",
+    "position": "GK",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/felipe-zenobio/992071",
+    "league": "Argentina",
+    "club": "Club Atlético Tigre",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Juan Cozzani",
+    "position": "Goleiro",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/juan-cozzani/874969",
+    "league": "Argentina",
+    "club": "Unknown",
+    "nationalities": [],
+    "marketValue": "Unknown"
+  },
+  {
+    "name": "Julio Soler",
+    "position": "LB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/julio-soler/1201520",
+    "league": "Argentina",
+    "club": "CA Lanús",
+    "nationalities": [
+      "Argentina",
+      "Paraguay"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Jonathan Galván",
+    "position": "CB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/jonathan-galvan/789271",
+    "league": "Argentina",
+    "club": "AA Argentinos Juniors",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Franco Armani",
+    "position": "GK",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/franco-armani/221140",
+    "league": "Argentina",
+    "club": "CA River Plate",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€900k"
+  },
+  {
+    "name": "Carlos Izquierdoz",
+    "position": "CB",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-izquierdoz/174943",
+    "league": "Argentina",
+    "club": "CA Lanús",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Walter Bou",
+    "position": "CF",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/walter-bou/558816",
+    "league": "Argentina",
+    "club": "CA Lanús",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.70m"
+  },
+  {
+    "name": "Ronwen Williams",
+    "position": "GK",
+    "score": 7.8,
+    "link": "https://www.sofascore.com/pt/jogador/williams-ronwen/539792",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Gelson Dala",
+    "position": "CF",
+    "score": 7.62,
+    "link": "https://www.sofascore.com/pt/jogador/gelson-dala/825067",
+    "league": "Africa",
+    "club": "Al-Wakrah SC",
+    "nationalities": [
+      "Angola",
+      "Portugal"
+    ],
+    "marketValue": "€2.30m"
+  },
+  {
+    "name": "Logan Costa",
+    "position": "CB",
+    "score": 7.4,
+    "link": "https://www.sofascore.com/pt/jogador/logan-costa/911853",
+    "league": "Africa",
+    "club": "Villarreal CF",
+    "nationalities": [
+      "Cape Verde",
+      "France"
+    ],
+    "marketValue": "€18.00m"
+  },
+  {
+    "name": "Vozinha",
+    "position": "GK",
+    "score": 7.34,
+    "link": "https://www.sofascore.com/pt/jogador/vozinha/307436",
+    "league": "Africa",
+    "club": "GD Chaves",
+    "nationalities": [
+      "Cape Verde"
+    ],
+    "marketValue": "€50k"
+  },
+  {
+    "name": "Arthur Masuaku",
+    "position": "LB",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/arthur-masuaku/174975",
+    "league": "Africa",
+    "club": "Besiktas JK",
+    "nationalities": [
+      "DR Congo",
+      "France"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Stanley Nwabali",
+    "position": "GK",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/stanley-nwabali/1008358",
+    "league": "Africa",
+    "club": "Chippa United",
+    "nationalities": [
+      "Nigeria"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Sadio Mané",
+    "position": "LW",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/sadio-mane/217704",
+    "league": "Africa",
+    "club": "Al-Nassr FC",
+    "nationalities": [
+      "Senegal"
+    ],
+    "marketValue": "€9.00m"
+  },
+  {
+    "name": "Teboho Mokoena",
+    "position": "CM",
+    "score": 7.3,
+    "link": "https://www.sofascore.com/pt/jogador/teboho-mokoena/881117",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€2.40m"
+  },
+  {
+    "name": "Calvin Bassey",
+    "position": "CB",
+    "score": 7.27,
+    "link": "https://www.sofascore.com/pt/jogador/calvin-bassey/861972",
+    "league": "Africa",
+    "club": "Fulham FC",
+    "nationalities": [
+      "Nigeria",
+      "England"
+    ],
+    "marketValue": "€16.00m"
+  },
+  {
+    "name": "Kialonda Gaspar",
+    "position": "CB",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/kialonda-gaspar/1090374",
+    "league": "Africa",
+    "club": "US Lecce",
+    "nationalities": [
+      "Angola"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "William Troost-Ekong",
+    "position": "CB",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/william-troost-ekong/338991",
+    "league": "Africa",
+    "club": "Al-Kholood Club",
+    "nationalities": [
+      "Nigeria",
+      "Netherlands"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Ademola Lookman",
+    "position": "SS",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/ademola-lookman/824200",
+    "league": "Africa",
+    "club": "Atalanta BC",
+    "nationalities": [
+      "Nigeria",
+      "England"
+    ],
+    "marketValue": "€55.00m"
+  },
+  {
+    "name": "Franck Kessié",
+    "position": "CM",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/franck-kessie/359226",
+    "league": "Africa",
+    "club": "Al-Ahli SFC",
+    "nationalities": [
+      "Cote d'Ivoire",
+      "Italy"
+    ],
+    "marketValue": "€15.00m"
+  },
+  {
+    "name": "Hamari Traoré",
+    "position": "RB",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/hamari-traore/362014",
+    "league": "Africa",
+    "club": "Real Sociedad",
+    "nationalities": [
+      "Mali"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Aguibou Camara",
+    "position": "AM",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/aguibou-camara/906062",
+    "league": "Africa",
+    "club": "Ludogorets Razgrad",
+    "nationalities": [
+      "Guinea"
+    ],
+    "marketValue": "€2.20m"
+  },
+  {
+    "name": "Lassine Sinayoko",
+    "position": "LW",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/sinayoko-lassine/927005",
+    "league": "Africa",
+    "club": "AJ Auxerre",
+    "nationalities": [
+      "Mali",
+      "France"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Kamory Doumbia",
+    "position": "AM",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/kamory-doumbia/1156353",
+    "league": "Africa",
+    "club": "Stade Brestois 29",
+    "nationalities": [
+      "Mali"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Ahmed Hegazy",
+    "position": "CB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/ahmed-hegazy/159653",
+    "league": "Africa",
+    "club": "NEOM SC",
+    "nationalities": [
+      "Egypt"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Krépin Diatta",
+    "position": "RW",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/krepin-diatta/873534",
+    "league": "Africa",
+    "club": "AS Monaco",
+    "nationalities": [
+      "Senegal"
+    ],
+    "marketValue": "€10.00m"
+  },
+  {
+    "name": "Roberto Lopes",
+    "position": "CF",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/roberto-lopes/147138",
+    "league": "Africa",
+    "club": "Retired",
+    "nationalities": [
+      "Brazil"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Fredy",
+    "position": "CM",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/fredy/845281",
+    "league": "Africa",
+    "club": "Retired",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Edouard Mendy",
+    "position": "GK",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/edouard-mendy/845074",
+    "league": "Africa",
+    "club": "Al-Ahli SFC",
+    "nationalities": [
+      "Senegal",
+      "Guinea-Bissau"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Khuliso Mudau",
+    "position": "RB",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/khuliso-mudau/936047",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€1.40m"
+  },
+  {
+    "name": "Mostafa Mohamed",
+    "position": "CF",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/mostafa-mohamed/873551",
+    "league": "Africa",
+    "club": "FC Nantes",
+    "nationalities": [
+      "Egypt"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Mothobi Mvala",
+    "position": "CB",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/mothobi-mvala/845079",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Aubrey Modiba",
+    "position": "LB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/aubrey-modiba/837099",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€1.60m"
+  },
+  {
+    "name": "Mabululu",
+    "position": "CF",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/mabululu/333341",
+    "league": "Africa",
+    "club": "Al-Ahli SC (Tripoli)",
+    "nationalities": [
+      "Angola"
+    ],
+    "marketValue": "€900k"
+  },
+  {
+    "name": "Yoane Wissa",
+    "position": "CF",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/yoane-wissa/805123",
+    "league": "Africa",
+    "club": "Brentford FC",
+    "nationalities": [
+      "DR Congo",
+      "France"
+    ],
+    "marketValue": "€28.00m"
+  },
+  {
+    "name": "João Paulo",
+    "position": "CF",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/joao-paulo/1001675",
+    "league": "Africa",
+    "club": "Deportivo Toluca",
+    "nationalities": [
+      "Portugal"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Chancel Mbemba",
+    "position": "CB",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/chancel-mbemba/238612",
+    "league": "Africa",
+    "club": "Olympique Marseille",
+    "nationalities": [
+      "DR Congo"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Percy Tau",
+    "position": "RW",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/percy-tau/863251",
+    "league": "Africa",
+    "club": "Al Ahly FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Themba Zwane",
+    "position": "AM",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/themba-zwane/559504",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Seko Fofana",
+    "position": "CM",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/seko-fofana/191188",
+    "league": "Africa",
+    "club": "Al-Ettifaq FC",
+    "nationalities": [
+      "Cote d'Ivoire",
+      "France"
+    ],
+    "marketValue": "€12.00m"
+  },
+  {
+    "name": "Mohamed Abdelmonem",
+    "position": "CB",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/mohamed-abdelmonem/926506",
+    "league": "Africa",
+    "club": "OGC Nice",
+    "nationalities": [
+      "Egypt"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Mohamed Bayo",
+    "position": "CF",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/mohamed-bayo/909318",
+    "league": "Africa",
+    "club": "LOSC Lille",
+    "nationalities": [
+      "Guinea",
+      "France"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Djigui Diarra",
+    "position": "GK",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/djigui-diarra/796371",
+    "league": "Africa",
+    "club": "Young Africans SC",
+    "nationalities": [
+      "Mali"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Frank Onyeka",
+    "position": "CM",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/frank-onyeka/885864",
+    "league": "Africa",
+    "club": "FC Augsburg",
+    "nationalities": [
+      "Nigeria"
+    ],
+    "marketValue": "€9.00m"
+  },
+  {
+    "name": "Kalidou Koulibaly",
+    "position": "CB",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/kalidou-koulibaly/126071",
+    "league": "Africa",
+    "club": "Al-Hilal SFC",
+    "nationalities": [
+      "Senegal",
+      "France"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Falaye Sacko",
+    "position": "RB",
+    "score": 6.98,
+    "link": "https://www.sofascore.com/pt/jogador/falaye-sacko/796372",
+    "league": "Africa",
+    "club": "Montpellier HSC",
+    "nationalities": [
+      "Mali"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Ibrahim Sangaré",
+    "position": "DM",
+    "score": 6.97,
+    "link": "https://www.sofascore.com/pt/jogador/ibrahim-sangare/843754",
+    "league": "Africa",
+    "club": "Nottingham Forest",
+    "nationalities": [
+      "Cote d'Ivoire"
+    ],
+    "marketValue": "€28.00m"
+  },
+  {
+    "name": "Grant Kekana",
+    "position": "CB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/kekana-grant/894581",
+    "league": "Africa",
+    "club": "Mamelodi Sundowns FC",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Evan Ndicka",
+    "position": "CB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/evan-ndicka/848287",
+    "league": "Africa",
+    "club": "AS Roma",
+    "nationalities": [
+      "Cote d'Ivoire",
+      "France"
+    ],
+    "marketValue": "€25.00m"
+  },
+  {
+    "name": "Ola Aina",
+    "position": "RB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/ola-aina/800417",
+    "league": "Africa",
+    "club": "Nottingham Forest",
+    "nationalities": [
+      "Nigeria",
+      "England"
+    ],
+    "marketValue": "€14.00m"
+  },
+  {
+    "name": "Victor Osimhen",
+    "position": "CF",
+    "score": 6.94,
+    "link": "https://www.sofascore.com/pt/jogador/victor-osimhen/822471",
+    "league": "Africa",
+    "club": "Galatasaray",
+    "nationalities": [
+      "Nigeria"
+    ],
+    "marketValue": "€75.00m"
+  },
+  {
+    "name": "Semi Ajayi",
+    "position": "CB",
+    "score": 6.94,
+    "link": "https://www.sofascore.com/pt/jogador/semi-ajayi/307274",
+    "league": "Africa",
+    "club": "West Bromwich Albion",
+    "nationalities": [
+      "Nigeria",
+      "England"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Evidence Makgopa",
+    "position": "CF",
+    "score": 6.93,
+    "link": "https://www.sofascore.com/pt/jogador/evidence-makgopa/1022170",
+    "league": "Africa",
+    "club": "Orlando Pirates",
+    "nationalities": [
+      "South Africa"
+    ],
+    "marketValue": "€650k"
+  },
+  {
+    "name": "Ghislain Konan",
+    "position": "LB",
+    "score": 6.93,
+    "link": "https://www.sofascore.com/pt/jogador/ghislain-konan/831781",
+    "league": "Africa",
+    "club": "Without Club",
+    "nationalities": [
+      "Cote d'Ivoire"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Boubakar Kouyaté",
+    "position": "CB",
+    "score": 6.92,
+    "link": "https://www.sofascore.com/pt/jogador/boubakar-kouyate/848537",
+    "league": "Africa",
+    "club": "Montpellier HSC",
+    "nationalities": [
+      "Mali"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Alex Iwobi",
+    "position": "LW",
+    "score": 6.91,
+    "link": "https://www.sofascore.com/pt/jogador/alex-iwobi/352770",
+    "league": "Africa",
+    "club": "Fulham FC",
+    "nationalities": [
+      "Nigeria",
+      "England"
+    ],
+    "marketValue": "€25.00m"
+  },
+  {
+    "name": "Samuel Moutoussamy",
+    "position": "CM",
+    "score": 6.89,
+    "link": "https://www.sofascore.com/pt/jogador/moutoussamy-samuel/892624",
+    "league": "Africa",
+    "club": "Sivasspor",
+    "nationalities": [
+      "DR Congo",
+      "France"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Sergio Canales",
+    "position": "AM",
+    "score": 7.61,
+    "link": "https://www.sofascore.com/pt/jogador/sergio-canales/41560",
+    "league": "México",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Paulinho",
+    "position": "CM",
+    "score": 7.47,
+    "link": "https://www.sofascore.com/pt/jogador/paulinho/205790",
+    "league": "México",
+    "club": "Retired",
+    "nationalities": [
+      "Brazil"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Carlos Rotondi",
+    "position": "LW",
+    "score": 7.45,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-rotondi/884868",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "César Huerta",
+    "position": "LW",
+    "score": 7.44,
+    "link": "https://www.sofascore.com/pt/jogador/cesar-huerta/905257",
+    "league": "México",
+    "club": "UNAM Pumas",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Fernando Gorriarán",
+    "position": "CM",
+    "score": 7.38,
+    "link": "https://www.sofascore.com/pt/jogador/fernando-gorriaran/339141",
+    "league": "México",
+    "club": "Tigres UANL",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "Tiago Volpi",
+    "position": "GK",
+    "score": 7.36,
+    "link": "https://www.sofascore.com/pt/jogador/tiago-volpi/243509",
+    "league": "México",
+    "club": "Deportivo Toluca",
+    "nationalities": [
+      "Brazil"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Agustín Palavecino",
+    "position": "CM",
+    "score": 7.34,
+    "link": "https://www.sofascore.com/pt/jogador/agustin-palavecino/941541",
+    "league": "México",
+    "club": "Club Necaxa",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Gonzalo Piovi",
+    "position": "CB",
+    "score": 7.33,
+    "link": "https://www.sofascore.com/pt/jogador/gonzalo-piovi/340537",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "José Raúl Rangel",
+    "position": "GK",
+    "score": 7.31,
+    "link": "https://www.sofascore.com/pt/jogador/jose-rangel/990408",
+    "league": "México",
+    "club": "Deportivo Guadalajara",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Sébastien Salles-Lamonge",
+    "position": "CM",
+    "score": 7.31,
+    "link": "https://www.sofascore.com/pt/jogador/sebastien-salles-lamonge/828610",
+    "league": "México",
+    "club": "Atlético de San Luis",
+    "nationalities": [
+      "France"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Henry Martín",
+    "position": "CF",
+    "score": 7.29,
+    "link": "https://www.sofascore.com/pt/jogador/henry-martin/755408",
+    "league": "México",
+    "club": "CF América",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Carlos Rodríguez",
+    "position": "GK",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-rodriguez/845849",
+    "league": "México",
+    "club": "Retired",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Jesús Gallardo",
+    "position": "LB",
+    "score": 7.26,
+    "link": "https://www.sofascore.com/pt/jogador/jesus-gallardo/770253",
+    "league": "México",
+    "club": "Deportivo Toluca",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€3.80m"
+  },
+  {
+    "name": "Esteban Andrada",
+    "position": "GK",
+    "score": 7.23,
+    "link": "https://www.sofascore.com/pt/jogador/esteban-andrada/79822",
+    "league": "México",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Marcel Ruíz",
+    "position": "CM",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/marcel-ruiz/942167",
+    "league": "México",
+    "club": "Deportivo Toluca",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€6.50m"
+  },
+  {
+    "name": "Hugo Gonzalez",
+    "position": "GK",
+    "score": 7.22,
+    "link": "https://www.sofascore.com/pt/jogador/hugo-gonzalez/127485",
+    "league": "México",
+    "club": "Mazatlán FC",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Yoel Bárcenas",
+    "position": "RW",
+    "score": 7.21,
+    "link": "https://www.sofascore.com/pt/jogador/yoel-barcenas/833352",
+    "league": "México",
+    "club": "Mazatlán FC",
+    "nationalities": [
+      "Panama"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Efrain Alvarez",
+    "position": "RW",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/efrain-alvarez/931736",
+    "league": "México",
+    "club": "Club Tijuana",
+    "nationalities": [
+      "Mexico",
+      "United States"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Juan Manuel Sanabria",
+    "position": "LB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/juan-manuel-sanabria/874568",
+    "league": "México",
+    "club": "Atlético de San Luis",
+    "nationalities": [
+      "Uruguay",
+      "Spain"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "Álvaro Fidalgo",
+    "position": "CM",
+    "score": 7.19,
+    "link": "https://www.sofascore.com/pt/jogador/alvaro-fidalgo/838629",
+    "league": "México",
+    "club": "CF América",
+    "nationalities": [
+      "Spain",
+      "Mexico"
+    ],
+    "marketValue": "€8.00m"
+  },
+  {
+    "name": "José Rivero",
+    "position": "CM",
+    "score": 7.19,
+    "link": "https://www.sofascore.com/pt/jogador/jose-rivero/789308",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Fernando Beltrán",
+    "position": "CM",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/fernando-beltran/889214",
+    "league": "México",
+    "club": "Deportivo Guadalajara",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Unai Bilbao",
+    "position": "CB",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/unai-bilbao/905194",
+    "league": "México",
+    "club": "Club Tijuana",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€2.80m"
+  },
+  {
+    "name": "Javier Aquino",
+    "position": "RB",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/javier-aquino/122092",
+    "league": "México",
+    "club": "Tigres UANL",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Rubén Duarte",
+    "position": "LB",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/ruben-duarte/253415",
+    "league": "México",
+    "club": "UNAM Pumas",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Alejandro Zendejas",
+    "position": "RW",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/alejandro-zendejas/790108",
+    "league": "México",
+    "club": "CF América",
+    "nationalities": [
+      "United States",
+      "Mexico"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Guido Pizarro",
+    "position": "CB",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/guido-pizarro/107398",
+    "league": "México",
+    "club": "Tigres UANL",
+    "nationalities": [
+      "Argentina",
+      "Mexico"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Andrés Sánchez",
+    "position": "AM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/andres-sanchez/943254",
+    "league": "México",
+    "club": "Uruguay Montevideo FC",
+    "nationalities": [
+      "Uruguay",
+      "Argentina"
+    ],
+    "marketValue": "€10k"
+  },
+  {
+    "name": "Ricardo Chávez",
+    "position": "RB",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/ricardo-chavez/817753",
+    "league": "México",
+    "club": "Atlético de San Luis",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€3.20m"
+  },
+  {
+    "name": "Alfonso Blanco",
+    "position": "CF",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/alfonso-blanco/51722",
+    "league": "México",
+    "club": "Retired",
+    "nationalities": [
+      "Argentina",
+      "Egypt"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Germán Berterame",
+    "position": "CF",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/german-berterame/822606",
+    "league": "México",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Mexico",
+      "Argentina"
+    ],
+    "marketValue": "€7.00m"
+  },
+  {
+    "name": "José Paradela",
+    "position": "AM",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/jose-paradela/944623",
+    "league": "México",
+    "club": "Club Necaxa",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Christian Rivera",
+    "position": "DM",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/christian-rivera/832662",
+    "league": "México",
+    "club": "Club Tijuana",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Willer Ditta",
+    "position": "CB",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/willer-ditta/931705",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Alexis Vega",
+    "position": "LW",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/alexis-vega/815637",
+    "league": "México",
+    "club": "Deportivo Toluca",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€5.50m"
+  },
+  {
+    "name": "Óliver Torres",
+    "position": "CM",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/oliver-torres/231776",
+    "league": "México",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Jesús Angulo",
+    "position": "LB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/jesus-angulo/869277",
+    "league": "México",
+    "club": "Tigres UANL",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€6.00m"
+  },
+  {
+    "name": "Camilo Vargas",
+    "position": "GK",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/camilo-vargas/125787",
+    "league": "México",
+    "club": "Atlas Guadalajara",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Stiven Barreiro",
+    "position": "CB",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/stiven-barreiro/286231",
+    "league": "México",
+    "club": "Club León FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Guillermo Allison",
+    "position": "GK",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/guillermo-allison/220705",
+    "league": "México",
+    "club": "Querétaro FC",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Ramón Juárez",
+    "position": "CB",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/ramon-juarez/993076",
+    "league": "México",
+    "club": "CF América",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€4.50m"
+  },
+  {
+    "name": "Joaquim",
+    "position": "AM",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/joaquim/1047740",
+    "league": "México",
+    "club": "---",
+    "nationalities": [
+      "Portugal"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Luis Reyes",
+    "position": "LB",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/luis-reyes/843154",
+    "league": "México",
+    "club": "Atlas Guadalajara",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "José Caicedo",
+    "position": "DM",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/jose-caicedo/988775",
+    "league": "México",
+    "club": "UNAM Pumas",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€4.00m"
+  },
+  {
+    "name": "Lorenzo Faravelli",
+    "position": "AM",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/lorenzo-faravelli/250009",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Argentina",
+      "Ecuador"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Carlos Acevedo",
+    "position": "GK",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-acevedo/840519",
+    "league": "México",
+    "club": "Santos Laguna",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€3.80m"
+  },
+  {
+    "name": "Stefan Medina",
+    "position": "RB",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/stefan-medina/221148",
+    "league": "México",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Alexis Gutiérrez",
+    "position": "AM",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/alexis-gutierrez/905247",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Alan Mozo",
+    "position": "RB",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/alan-mozo/809024",
+    "league": "México",
+    "club": "Deportivo Guadalajara",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€5.50m"
+  },
+  {
+    "name": "Luis Romo",
+    "position": "CM",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/romo-luis/1172773",
+    "league": "México",
+    "club": "CD Cruz Azul",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "€5.50m"
+  },
+  {
+    "name": "Leonardo Fernández",
+    "position": "AM",
+    "score": 8.27,
+    "link": "https://www.sofascore.com/pt/jogador/leonardo-fernandez/846411",
+    "league": "Uruguai",
+    "club": "CA Peñarol",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€7.50m"
+  },
+  {
+    "name": "Diego García",
+    "position": "CF",
+    "score": 7.42,
+    "link": "https://www.sofascore.com/pt/jogador/diego-garcia/989331",
+    "league": "Uruguai",
+    "club": "CD Leganés",
+    "nationalities": [
+      "Spain"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Mauro Cachi",
+    "position": "RW",
+    "score": 7.36,
+    "link": "https://www.sofascore.com/pt/jogador/mauro-cachi/1094073",
+    "league": "Uruguai",
+    "club": "CA Fénix",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€375k"
+  },
+  {
+    "name": "Leandro Lozano",
+    "position": "RB",
+    "score": 7.35,
+    "link": "https://www.sofascore.com/pt/jogador/lozano-leandro/981018",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Alexis Castro",
+    "position": "CM",
+    "score": 7.25,
+    "link": "https://www.sofascore.com/pt/jogador/alexis-castro/801037",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Rodrigo Formento",
+    "position": "GK",
+    "score": 7.24,
+    "link": "https://www.sofascore.com/pt/jogador/rodrigo-formento/931646",
+    "league": "Uruguai",
+    "club": "Cerro Largo FC",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Jhonny Da Silva",
+    "position": "Goleiro",
+    "score": 7.24,
+    "link": "https://www.sofascore.com/pt/jogador/jhonny-da-silva/339413",
+    "league": "Uruguai",
+    "club": "Unknown",
+    "nationalities": [],
+    "marketValue": "Unknown"
+  },
+  {
+    "name": "Tomas Adoryan",
+    "position": "RM",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/adoryan-tomas/1199319",
+    "league": "Uruguai",
+    "club": "Rampla Juniors FC",
+    "nationalities": [
+      "Argentina",
+      "Armenia"
+    ],
+    "marketValue": "€475k"
+  },
+  {
+    "name": "Nicolás Rodríguez",
+    "position": "RB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/nicolas-rodriguez/247195",
+    "league": "Uruguai",
+    "club": "Deportes Melipilla",
+    "nationalities": [
+      "Argentina",
+      "Chile"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Diego Polenta",
+    "position": "CB",
+    "score": 7.18,
+    "link": "https://www.sofascore.com/pt/jogador/diego-polenta/106263",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Antonio Galeano",
+    "position": "RW",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/antonio-galeano/883207",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Paraguay"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Gabriel Báez",
+    "position": "LB",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/gabriel-baez/797030",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Argentina",
+      "Paraguay"
+    ],
+    "marketValue": "€1.30m"
+  },
+  {
+    "name": "Santiago Silva",
+    "position": "CF",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/silva-santiago/1002740",
+    "league": "Uruguai",
+    "club": "Retired",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Bruno Damiani",
+    "position": "CF",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/bruno-damiani/1512461",
+    "league": "Uruguai",
+    "club": "CA Boston River",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Maximiliano Lombardi",
+    "position": "AM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/maximiliano-lombardi/46953",
+    "league": "Uruguai",
+    "club": "Miramar Misiones",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€25k"
+  },
+  {
+    "name": "Nahuel Suárez",
+    "position": "GK",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/nahuel-suarez/1015286",
+    "league": "Uruguai",
+    "club": "CA Progreso",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€400k"
+  },
+  {
+    "name": "Washington Aguerre",
+    "position": "GK",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/washington-aguerre/311402",
+    "league": "Uruguai",
+    "club": "CA Peñarol",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Matías Fracchia",
+    "position": "CB",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/matias-fracchia/889504",
+    "league": "Uruguai",
+    "club": "Danubio FC",
+    "nationalities": [
+      "Uruguay",
+      "Chile"
+    ],
+    "marketValue": "€400k"
+  },
+  {
+    "name": "Sebastián Lentinelly",
+    "position": "GK",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/sebastian-lentinelly/877395",
+    "league": "Uruguai",
+    "club": "Liverpool FC Montevideo",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Kevin Rolón",
+    "position": "LB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/kevin-rolon/1101713",
+    "league": "Uruguai",
+    "club": "Montevideo Wanderers",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Enzo Castillo",
+    "position": "RW",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/castillo-enzo/1468187",
+    "league": "Uruguai",
+    "club": "Retired",
+    "nationalities": [
+      "Peru"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Maximiliano Noble",
+    "position": "SS",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/maximiliano-noble/924761",
+    "league": "Uruguai",
+    "club": "Club Deportivo Maldonado",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Renzo Giampaoli",
+    "position": "CB",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/renzo-giampaoli/1066559",
+    "league": "Uruguai",
+    "club": "Defensor Sporting Club",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Kevin Dawson",
+    "position": "GK",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/kevin-dawson/846552",
+    "league": "Uruguai",
+    "club": "Defensor Sporting Club",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Andrés Samurio",
+    "position": "GK",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/andres-samurio/984111",
+    "league": "Uruguai",
+    "club": "Rampla Juniors FC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Sebastián Assis",
+    "position": "DM",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/sebastian-assis/976167",
+    "league": "Uruguai",
+    "club": "Cerro Largo FC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Guillermo Reyes",
+    "position": "GK",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/guillermo-reyes/588726",
+    "league": "Uruguai",
+    "club": "Club Deportivo Maldonado",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€25k"
+  },
+  {
+    "name": "Christian Oliva",
+    "position": "DM",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/christian-oliva/923803",
+    "league": "Uruguai",
+    "club": "Club Nacional",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Joaquín Lavega",
+    "position": "LW",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/joaquin-lavega/1122737",
+    "league": "Uruguai",
+    "club": "CA River Plate Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Ricardo Chopitea",
+    "position": "Defensor",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/ricardo-chopitea/1190236",
+    "league": "Uruguai",
+    "club": "Unknown",
+    "nationalities": [],
+    "marketValue": "Unknown"
+  },
+  {
+    "name": "Joaquín Valiente",
+    "position": "AM",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/joaquin-valiente/1049223",
+    "league": "Uruguai",
+    "club": "Defensor Sporting Club",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Guzmán Rodríguez",
+    "position": "CB",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/guzman-rodriguez/997239",
+    "league": "Uruguai",
+    "club": "CA Peñarol",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Hugo Magallanes",
+    "position": "CB",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/magallanes-hugo/976168",
+    "league": "Uruguai",
+    "club": "Racing Club de Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€750k"
+  },
+  {
+    "name": "Yonatan Irrazábal",
+    "position": "GK",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/yonatan-irrazabal/40767",
+    "league": "Uruguai",
+    "club": "CA River Plate Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€25k"
+  },
+  {
+    "name": "Ignacio Lemmo",
+    "position": "AM",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/ignacio-lemmo/925195",
+    "league": "Uruguai",
+    "club": "CA Progreso",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Christian Almeida",
+    "position": "CB",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/christian-almeida/877403",
+    "league": "Uruguai",
+    "club": "CA River Plate Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Agustín Alaniz",
+    "position": "RW",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/alaniz-agustin/1468045",
+    "league": "Uruguai",
+    "club": "Racing Club de Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Agustin Soria",
+    "position": "GK",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/soria-agustin/1639910",
+    "league": "Uruguai",
+    "club": "Club Social y Atlético Guillermo Brown",
+    "nationalities": [
+      "United States",
+      "Argentina"
+    ],
+    "marketValue": "€25k"
+  },
+  {
+    "name": "Mauro Goicoechea",
+    "position": "GK",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/mauro-goicoechea/33879",
+    "league": "Uruguai",
+    "club": "Danubio FC",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Matías Núñez",
+    "position": "DM",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/matias-nunez/1065968",
+    "league": "Uruguai",
+    "club": "Rampla Juniors FC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Guillermo De Los Santos",
+    "position": "CB",
+    "score": 6.98,
+    "link": "https://www.sofascore.com/pt/jogador/guillermo-de-los-santos/158611",
+    "league": "Uruguai",
+    "club": "Defensor Sporting Club",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Maximiliano Silvera",
+    "position": "CF",
+    "score": 6.98,
+    "link": "https://www.sofascore.com/pt/jogador/maximiliano-silvera/1121489",
+    "league": "Uruguai",
+    "club": "CA Peñarol",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€1.80m"
+  },
+  {
+    "name": "Leonard Costa",
+    "position": "CB",
+    "score": 6.97,
+    "link": "https://www.sofascore.com/pt/jogador/costa-leonard/1177545",
+    "league": "Uruguai",
+    "club": "CA Boston River",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Martín Ferreira",
+    "position": "CB",
+    "score": 6.97,
+    "link": "https://www.sofascore.com/pt/jogador/martin-ferreira/987703",
+    "league": "Uruguai",
+    "club": "Racing Club de Montevideo",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Nicolas Fernandez",
+    "position": "AM",
+    "score": 6.97,
+    "link": "https://www.sofascore.com/pt/jogador/fernandez-nicolas/1099489",
+    "league": "Uruguai",
+    "club": "Retired",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Maximiliano Olivera",
+    "position": "LB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/maximiliano-olivera/158621",
+    "league": "Uruguai",
+    "club": "CA Peñarol",
+    "nationalities": [
+      "Uruguay",
+      "Spain"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Santiago Ramirez",
+    "position": "AM",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-ramirez/877597",
+    "league": "Uruguai",
+    "club": "Makedonikos Neapolis",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€150k"
+  },
+  {
+    "name": "Pablo Lacoste",
+    "position": "CB",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/pablo-lacoste/924854",
+    "league": "Uruguai",
+    "club": "CA Cerro",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€50k"
+  },
+  {
+    "name": "Damián García",
+    "position": "CF",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/damian-garcia/1199476",
+    "league": "Uruguai",
+    "club": "---",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Sebastián Fernández",
+    "position": "CB",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/sebastian-fernandez/36981",
+    "league": "Uruguai",
+    "club": "Retired",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Johan Rojas",
+    "position": "AM",
+    "score": 7.52,
+    "link": "https://www.sofascore.com/pt/jogador/johan-rojas/1173373",
+    "league": "Colômbia",
+    "club": "CF Monterrey",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€3.00m"
+  },
+  {
+    "name": "Billy Arce",
+    "position": "LW",
+    "score": 7.5,
+    "link": "https://www.sofascore.com/pt/jogador/billy-arce/868746",
+    "league": "Colômbia",
+    "club": "Santos FC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Adrián Parra",
+    "position": "LW",
+    "score": 7.45,
+    "link": "https://www.sofascore.com/pt/jogador/adrian-parra/830255",
+    "league": "Colômbia",
+    "club": "Fortaleza CEIF",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Darwin Quintero",
+    "position": "AM",
+    "score": 7.4,
+    "link": "https://www.sofascore.com/pt/jogador/darwin-quintero/787564",
+    "league": "Colômbia",
+    "club": "Deportivo Pereira",
+    "nationalities": [
+      "Colombia",
+      "Mexico"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Hugo Rodallega",
+    "position": "CF",
+    "score": 7.4,
+    "link": "https://www.sofascore.com/pt/jogador/hugo-rodallega/15668",
+    "league": "Colômbia",
+    "club": "Independiente Santa Fe",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€50k"
+  },
+  {
+    "name": "James Aguirre",
+    "position": "GK",
+    "score": 7.37,
+    "link": "https://www.sofascore.com/pt/jogador/james-aguirre/829877",
+    "league": "Colômbia",
+    "club": "Once Caldas",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Francisco Chaverra",
+    "position": "LW",
+    "score": 7.21,
+    "link": "https://www.sofascore.com/pt/jogador/francisco-chaverra/977812",
+    "league": "Colômbia",
+    "club": "Independiente Medellín",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Didier Moreno",
+    "position": "DM",
+    "score": 7.21,
+    "link": "https://www.sofascore.com/pt/jogador/didier-moreno/158585",
+    "league": "Colômbia",
+    "club": "Junior FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Andrés Mosquera",
+    "position": "CB",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/andres-mosquera/829878",
+    "league": "Colômbia",
+    "club": "CD América de Cali",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Aldair Quintana",
+    "position": "GK",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/aldair-quintana/844584",
+    "league": "Colômbia",
+    "club": "Atlético Bucaramanga",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€900k"
+  },
+  {
+    "name": "Fabián Sambueza",
+    "position": "AM",
+    "score": 7.19,
+    "link": "https://www.sofascore.com/pt/jogador/fabian-sambueza/789379",
+    "league": "Colômbia",
+    "club": "Atlético Bucaramanga",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€250k"
+  },
+  {
+    "name": "Juan Pablo Vargas",
+    "position": "CB",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/juan-pablo-vargas/865783",
+    "league": "Colômbia",
+    "club": "Millonarios FC",
+    "nationalities": [
+      "Costa Rica"
+    ],
+    "marketValue": "€2.00m"
+  },
+  {
+    "name": "Sebastián Tamara",
+    "position": "CM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/sebastian-tamara/825757",
+    "league": "Colômbia",
+    "club": "Boyacá Chicó FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Gabriel Fuentes",
+    "position": "LB",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/gabriel-fuentes/927551",
+    "league": "Colômbia",
+    "club": "Fluminense Football Club",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Juan Valencia",
+    "position": "CM",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/juan-valencia/805423",
+    "league": "Colômbia",
+    "club": "Deportivo Cali",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€250k"
+  },
+  {
+    "name": "Santiago Mele",
+    "position": "GK",
+    "score": 7.13,
+    "link": "https://www.sofascore.com/pt/jogador/santiago-mele/846421",
+    "league": "Colômbia",
+    "club": "Junior FC",
+    "nationalities": [
+      "Uruguay",
+      "Italy"
+    ],
+    "marketValue": "€2.50m"
+  },
+  {
+    "name": "Robert Mejía",
+    "position": "DM",
+    "score": 7.12,
+    "link": "https://www.sofascore.com/pt/jogador/robert-mejia/1020193",
+    "league": "Colômbia",
+    "club": "FC Khimki",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Daniel Torres",
+    "position": "RW",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/daniel-torres/125813",
+    "league": "Colômbia",
+    "club": "Orlando City SC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€14.00m"
+  },
+  {
+    "name": "Daniel Ruiz",
+    "position": "LW",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/daniel-ruiz/1098305",
+    "league": "Colômbia",
+    "club": "Millonarios FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.40m"
+  },
+  {
+    "name": "Yhorman Hurtado",
+    "position": "RB",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/hurtado-yhorman/1100500",
+    "league": "Colômbia",
+    "club": "Deportes Tolima",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Enrique Serje",
+    "position": "DM",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/enrique-serje/846431",
+    "league": "Colômbia",
+    "club": "Jaguares de Córdoba",
+    "nationalities": [
+      "Colombia",
+      "Spain"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Julian Millan",
+    "position": "CB",
+    "score": 7.07,
+    "link": "https://www.sofascore.com/pt/jogador/julian-millan/839085",
+    "league": "Colômbia",
+    "club": "Independiente Santa Fe",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "José Contreras",
+    "position": "RM",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/jose-contreras/789993",
+    "league": "Colômbia",
+    "club": "Unknown",
+    "nationalities": [
+      "Venezuela"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Carlos Bacca",
+    "position": "CF",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-bacca/106572",
+    "league": "Colômbia",
+    "club": "Junior FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Carlos Henao",
+    "position": "GK",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-henao/822085",
+    "league": "Colômbia",
+    "club": "Retired",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Daniel Bocanegra",
+    "position": "CB",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/daniel-bocanegra/123272",
+    "league": "Colômbia",
+    "club": "CD América de Cali",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€50k"
+  },
+  {
+    "name": "Marcelo Ortíz",
+    "position": "RB",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/marcelo-ortiz/895340",
+    "league": "Colômbia",
+    "club": "Independiente Santa Fe",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Faber Andrés Gil",
+    "position": "RW",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/faber-andres-gil/831377",
+    "league": "Colômbia",
+    "club": "CF Pachuca",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€900k"
+  },
+  {
+    "name": "Jesús Rivas",
+    "position": "DM",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/jesus-rivas/882616",
+    "league": "Colômbia",
+    "club": "Rionegro Águilas",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Elan Ricardo",
+    "position": "CM",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/ricardo-elan/1388631",
+    "league": "Colômbia",
+    "club": "CD La Equidad Seguros SA",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.40m"
+  },
+  {
+    "name": "Juan Castillo",
+    "position": "LB",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/juan-castillo/1175004",
+    "league": "Colômbia",
+    "club": "RKC Waalwijk",
+    "nationalities": [
+      "Netherlands",
+      "Dominican Republic"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Kevin Londoño",
+    "position": "RM",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/kevin-londono/1104827",
+    "league": "Colômbia",
+    "club": "Asociación Deportivo Pasto",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€550k"
+  },
+  {
+    "name": "Dayro Moreno",
+    "position": "CF",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/dayro-moreno/31715",
+    "league": "Colômbia",
+    "club": "Once Caldas",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Mateo García",
+    "position": "RW",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/mateo-garcia/950544",
+    "league": "Colômbia",
+    "club": "Atlas Guadalajara",
+    "nationalities": [
+      "Argentina",
+      "Italy"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Leonardo Escorcia",
+    "position": "CB",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/leonardo-escorcia/819178",
+    "league": "Colômbia",
+    "club": "Cúcuta Deportivo",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Joel Graterol",
+    "position": "GK",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/joel-graterol/876415",
+    "league": "Colômbia",
+    "club": "CD América de Cali",
+    "nationalities": [
+      "Venezuela"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Henry Plazas",
+    "position": "CB",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/henry-plazas/874752",
+    "league": "Colômbia",
+    "club": "Boyacá Chicó FC",
+    "nationalities": [
+      "Venezuela",
+      "Colombia"
+    ],
+    "marketValue": "€400k"
+  },
+  {
+    "name": "Sergio Palacios",
+    "position": "CB",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/palacios-sergio/1525493",
+    "league": "Colômbia",
+    "club": "Red Bull Bragantino",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€900k"
+  },
+  {
+    "name": "Jefferson Mena",
+    "position": "CB",
+    "score": 6.98,
+    "link": "https://www.sofascore.com/pt/jogador/jefferson-mena/355850",
+    "league": "Colômbia",
+    "club": "Atlético Bucaramanga",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Aldair Gutiérrez",
+    "position": "RB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/aldair-gutierrez/857498",
+    "league": "Colômbia",
+    "club": "Atlético Bucaramanga",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Andres Correa",
+    "position": "CB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/andres-correa/329607",
+    "league": "Colômbia",
+    "club": "AD Union Magdalena",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€50k"
+  },
+  {
+    "name": "Felipe Parra",
+    "position": "CB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/felipe-parra/1017365",
+    "league": "Colômbia",
+    "club": "Retired",
+    "nationalities": [
+      "Chile",
+      "Italy"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Mateo Rodas",
+    "position": "CB",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/mateo-rodas/869998",
+    "league": "Colômbia",
+    "club": "Boyacá Patriotas FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Daniel Mosquera",
+    "position": "CF",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/daniel-mosquera/1018179",
+    "league": "Colômbia",
+    "club": "Hellas Verona",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Juan David Ríos",
+    "position": "DM",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/juan-david-rios/829864",
+    "league": "Colômbia",
+    "club": "Deportivo Pereira",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€450k"
+  },
+  {
+    "name": "Juan Pablo Nieto",
+    "position": "CM",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/juan-pablo-nieto/338861",
+    "league": "Colômbia",
+    "club": "Deportes Tolima",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Andrés Llinás",
+    "position": "CB",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/andres-llinas/982821",
+    "league": "Colômbia",
+    "club": "Millonarios FC",
+    "nationalities": [
+      "Colombia",
+      "Spain"
+    ],
+    "marketValue": "€1.40m"
+  },
+  {
+    "name": "Washington Ortega",
+    "position": "GK",
+    "score": 6.92,
+    "link": "https://www.sofascore.com/pt/jogador/washington-ortega/590018",
+    "league": "Colômbia",
+    "club": "CD La Equidad Seguros SA",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Marlon Torres",
+    "position": "CB",
+    "score": 6.91,
+    "link": "https://www.sofascore.com/pt/jogador/marlon-torres/869990",
+    "league": "Colômbia",
+    "club": "Deportes Tolima",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€650k"
+  },
+  {
+    "name": "Álvaro Montero",
+    "position": "GK",
+    "score": 6.91,
+    "link": "https://www.sofascore.com/pt/jogador/alvaro-montero/926238",
+    "league": "Colômbia",
+    "club": "Millonarios FC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Alex Arce",
+    "position": "CF",
+    "score": 7.6,
+    "link": "https://www.sofascore.com/pt/jogador/alex-arce/1167312",
+    "league": "Equador",
+    "club": "LDU Quito",
+    "nationalities": [
+      "Paraguay"
+    ],
+    "marketValue": "€5.00m"
+  },
+  {
+    "name": "Diego Armas",
+    "position": "AM",
+    "score": 7.6,
+    "link": "https://www.sofascore.com/pt/jogador/diego-armas/925605",
+    "league": "Equador",
+    "club": "Técnico Universitario",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Janner Corozo",
+    "position": "LW",
+    "score": 7.31,
+    "link": "https://www.sofascore.com/pt/jogador/janner-corozo/868275",
+    "league": "Equador",
+    "club": "Barcelona SC Guayaquil",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Jeison Medina",
+    "position": "CF",
+    "score": 7.28,
+    "link": "https://www.sofascore.com/pt/jogador/jeison-medina/925147",
+    "league": "Equador",
+    "club": "Independiente del Valle",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€1.50m"
+  },
+  {
+    "name": "Renato Ibarra",
+    "position": "RW",
+    "score": 7.28,
+    "link": "https://www.sofascore.com/pt/jogador/renato-ibarra/158395",
+    "league": "Equador",
+    "club": "Independiente del Valle",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "José Fajardo",
+    "position": "CF",
+    "score": 7.27,
+    "link": "https://www.sofascore.com/pt/jogador/jose-fajardo/936184",
+    "league": "Equador",
+    "club": "CD Universidad Católica",
+    "nationalities": [
+      "Panama"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Lucas Mancinelli",
+    "position": "RW",
+    "score": 7.2,
+    "link": "https://www.sofascore.com/pt/jogador/lucas-mancinelli/174935",
+    "league": "Equador",
+    "club": "Deportivo Cuenca",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€175k"
+  },
+  {
+    "name": "Michael Carcelén",
+    "position": "DM",
+    "score": 7.18,
+    "link": "https://www.sofascore.com/pt/jogador/michael-carcelen/1018554",
+    "league": "Equador",
+    "club": "SD Aucas",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Facundo Martinez",
+    "position": "CM",
+    "score": 7.18,
+    "link": "https://www.sofascore.com/pt/jogador/facundo-martinez/33308",
+    "league": "Equador",
+    "club": "CD Universidad Católica",
+    "nationalities": [
+      "Argentina",
+      "Ecuador"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Danny Luna",
+    "position": "LW",
+    "score": 7.17,
+    "link": "https://www.sofascore.com/pt/jogador/danny-luna/158417",
+    "league": "Equador",
+    "club": "Deportivo Cuenca",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Luis Cano",
+    "position": "LW",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/luis-cano/975548",
+    "league": "Equador",
+    "club": "SD Aucas",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Alexander Domínguez",
+    "position": "GK",
+    "score": 7.16,
+    "link": "https://www.sofascore.com/pt/jogador/alexander-dominguez/33567",
+    "league": "Equador",
+    "club": "LDU Quito",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Rolando Silva",
+    "position": "CF",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/silva-rolando-david/1020039",
+    "league": "Equador",
+    "club": "Retired",
+    "nationalities": [
+      "Portugal",
+      "Cape Verde"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Richard Schunke",
+    "position": "CB",
+    "score": 7.15,
+    "link": "https://www.sofascore.com/pt/jogador/richard-schunke/877436",
+    "league": "Equador",
+    "club": "Independiente del Valle",
+    "nationalities": [
+      "Argentina",
+      "Ecuador"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Yaimar Medina",
+    "position": "LM",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/yaimar-medina/1106546",
+    "league": "Equador",
+    "club": "Independiente del Valle",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€3.50m"
+  },
+  {
+    "name": "Cristian Zabala",
+    "position": "CF",
+    "score": 7.14,
+    "link": "https://www.sofascore.com/pt/jogador/cristian-zabala/971172",
+    "league": "Equador",
+    "club": "Without Club",
+    "nationalities": [
+      "Venezuela"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Eduardo Bores",
+    "position": "GK",
+    "score": 7.11,
+    "link": "https://www.sofascore.com/pt/jogador/bores-eduardo/1466876",
+    "league": "Equador",
+    "club": "Libertad FC",
+    "nationalities": [
+      "Ecuador",
+      "Venezuela"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Brian Heras",
+    "position": "GK",
+    "score": 7.1,
+    "link": "https://www.sofascore.com/pt/jogador/brian-heras/877442",
+    "league": "Equador",
+    "club": "Delfín SC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Nixon Molina",
+    "position": "DM",
+    "score": 7.09,
+    "link": "https://www.sofascore.com/pt/jogador/nixon-molina/1015290",
+    "league": "Equador",
+    "club": "Libertad FC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Pedro Ortiz",
+    "position": "GK",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/pedro-ortiz/905632",
+    "league": "Equador",
+    "club": "CS Emelec",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Joao Ortíz",
+    "position": "DM",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/joao-ortiz/588630",
+    "league": "Equador",
+    "club": "Independiente del Valle",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€2.20m"
+  },
+  {
+    "name": "David Cabezas",
+    "position": "DM",
+    "score": 7.08,
+    "link": "https://www.sofascore.com/pt/jogador/david-cabezas/886492",
+    "league": "Equador",
+    "club": "Without Club",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Felipe San Juan",
+    "position": "GK",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/felipe-san-juan/1186312",
+    "league": "Equador",
+    "club": "Cumbayá FC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€200k"
+  },
+  {
+    "name": "Ezequiel Piovi",
+    "position": "DM",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/ezequiel-piovi/359098",
+    "league": "Equador",
+    "club": "LDU Quito",
+    "nationalities": [
+      "Argentina",
+      "Spain"
+    ],
+    "marketValue": "€1.20m"
+  },
+  {
+    "name": "Juan Gonzalez",
+    "position": "CB",
+    "score": 7.06,
+    "link": "https://www.sofascore.com/pt/jogador/juan-gonzalez/892451",
+    "league": "Equador",
+    "club": "Retired",
+    "nationalities": [
+      "Mexico"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Ivan Zambrano",
+    "position": "Defender",
+    "score": 7.05,
+    "link": "https://www.sofascore.com/pt/jogador/ivan-zambrano/925612",
+    "league": "Equador",
+    "club": "Unknown",
+    "nationalities": [
+      "Peru"
+    ],
+    "marketValue": "-"
+  },
+  {
+    "name": "Luis Fernando León",
+    "position": "CB",
+    "score": 7.04,
+    "link": "https://www.sofascore.com/pt/jogador/luis-fernando-leon/339967",
+    "league": "Equador",
+    "club": "CS Emelec",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Ricardo Adé",
+    "position": "CB",
+    "score": 7.03,
+    "link": "https://www.sofascore.com/pt/jogador/ricardo-ade/839638",
+    "league": "Equador",
+    "club": "LDU Quito",
+    "nationalities": [
+      "Haiti"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Federico Paz",
+    "position": "CF",
+    "score": 7.02,
+    "link": "https://www.sofascore.com/pt/jogador/federico-paz/1630786",
+    "league": "Equador",
+    "club": "Imbabura SC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€350k"
+  },
+  {
+    "name": "Leonel Quiñónez",
+    "position": "LB",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/leonel-quinonez/922853",
+    "league": "Equador",
+    "club": "LDU Quito",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Pablo Daniel Magnin",
+    "position": "CF",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/pablo-daniel-magnin/249347",
+    "league": "Equador",
+    "club": "Deportivo Cuenca",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€275k"
+  },
+  {
+    "name": "Jonnathan Mina",
+    "position": "LB",
+    "score": 7.01,
+    "link": "https://www.sofascore.com/pt/jogador/mina-jonnathan/1019932",
+    "league": "Equador",
+    "club": "SD Aucas",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Jhon Ontaneda",
+    "position": "Defensor",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/ontaneda-jhon/989402",
+    "league": "Equador",
+    "club": "Unknown",
+    "nationalities": [],
+    "marketValue": "Unknown"
+  },
+  {
+    "name": "Walter Agustin Herrera",
+    "position": "CF",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/walter-agustin-herrera/1108656",
+    "league": "Equador",
+    "club": "Orense SC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Javier Burrai",
+    "position": "GK",
+    "score": 7,
+    "link": "https://www.sofascore.com/pt/jogador/javier-burrai/174421",
+    "league": "Equador",
+    "club": "Barcelona SC Guayaquil",
+    "nationalities": [
+      "Ecuador",
+      "Argentina"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Janpol Morales",
+    "position": "LW",
+    "score": 6.99,
+    "link": "https://www.sofascore.com/pt/jogador/janpol-morales/905554",
+    "league": "Equador",
+    "club": "CD Macará",
+    "nationalities": [
+      "Panama",
+      "Ecuador"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Santiago Kubiszyn",
+    "position": "AM",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/kubiszyn-santiago/1119710",
+    "league": "Equador",
+    "club": "Orense SC",
+    "nationalities": [
+      "Argentina"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Robert Burbano",
+    "position": "RW",
+    "score": 6.96,
+    "link": "https://www.sofascore.com/pt/jogador/robert-burbano/339557",
+    "league": "Equador",
+    "club": "Orense SC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€800k"
+  },
+  {
+    "name": "Gabriel Achilier",
+    "position": "CB",
+    "score": 6.95,
+    "link": "https://www.sofascore.com/pt/jogador/gabriel-achilier/37047",
+    "league": "Equador",
+    "club": "Orense SC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Steven Tapiero",
+    "position": "DM",
+    "score": 6.94,
+    "link": "https://www.sofascore.com/pt/jogador/tapiero-steven/1020186",
+    "league": "Equador",
+    "club": "Mushuc Runa SC",
+    "nationalities": [
+      "Colombia"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Pedro Velasco",
+    "position": "RB",
+    "score": 6.93,
+    "link": "https://www.sofascore.com/pt/jogador/pedro-velasco/146300",
+    "league": "Equador",
+    "club": "Orense SC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€500k"
+  },
+  {
+    "name": "Melvin Diaz",
+    "position": "LW",
+    "score": 6.93,
+    "link": "https://www.sofascore.com/pt/jogador/diaz-melvin/1069637",
+    "league": "Equador",
+    "club": "Cumbayá FC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€300k"
+  },
+  {
+    "name": "Elvis Patta",
+    "position": "RW",
+    "score": 6.93,
+    "link": "https://www.sofascore.com/pt/jogador/elvis-patta/588628",
+    "league": "Equador",
+    "club": "Técnico Universitario",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€275k"
+  },
+  {
+    "name": "Gustavo Cortez",
+    "position": "LB",
+    "score": 6.92,
+    "link": "https://www.sofascore.com/pt/jogador/gustavo-cortez/846662",
+    "league": "Equador",
+    "club": "CS Emelec",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€600k"
+  },
+  {
+    "name": "Jesús Trindade",
+    "position": "DM",
+    "score": 6.92,
+    "link": "https://www.sofascore.com/pt/jogador/jesus-trindade/924855",
+    "league": "Equador",
+    "club": "Barcelona SC Guayaquil",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€1.00m"
+  },
+  {
+    "name": "Juan Carlos Paredes",
+    "position": "DM",
+    "score": 6.91,
+    "link": "https://www.sofascore.com/pt/jogador/juan-carlos-paredes/47668",
+    "league": "Equador",
+    "club": "Cumbayá FC",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€100k"
+  },
+  {
+    "name": "Carlos Rolón",
+    "position": "CB",
+    "score": 6.9,
+    "link": "https://www.sofascore.com/pt/jogador/carlos-rolon/805203",
+    "league": "Equador",
+    "club": "SD Aucas",
+    "nationalities": [
+      "Paraguay"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Walter Chávez",
+    "position": "GK",
+    "score": 6.9,
+    "link": "https://www.sofascore.com/pt/jogador/walter-chavez/155764",
+    "league": "Equador",
+    "club": "Técnico Universitario",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€700k"
+  },
+  {
+    "name": "Hamilton Piedra",
+    "position": "GK",
+    "score": 6.9,
+    "link": "https://www.sofascore.com/pt/jogador/hamilton-piedra/794921",
+    "league": "Equador",
+    "club": "Deportivo Cuenca",
+    "nationalities": [
+      "Ecuador"
+    ],
+    "marketValue": "€400k"
+  },
+  {
+    "name": "Mauricio Alonso",
+    "position": "RW",
+    "score": 6.9,
+    "link": "https://www.sofascore.com/pt/jogador/mauricio-alonso/896840",
+    "league": "Equador",
+    "club": "Mushuc Runa SC",
+    "nationalities": [
+      "Uruguay"
+    ],
+    "marketValue": "€300k"
+  }
+]
