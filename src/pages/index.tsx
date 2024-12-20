@@ -9,7 +9,7 @@ interface Player {
   link: string;
   club: string;
   nationalities: string[];
-  marketValue: number;
+  marketValue: string;
 }
 
 const parseMarketValue = (value: string): number => {
