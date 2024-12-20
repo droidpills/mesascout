@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface Player {
   name: string;
@@ -39,7 +40,7 @@ const Home: React.FC = () => {
   const [sortField, setSortField] = useState<string>("score");
 
   useEffect(() => {
-    fetch("data/players_scores_with_transfermarkt.json")
+    fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -148,7 +149,7 @@ const Home: React.FC = () => {
             <tr>
               <th className="border border-gray-300 px-4 py-2">Name</th>
               <th className="border border-gray-300 px-4 py-2">Position</th>
-              <td 
+              <td
                 className="border border-gray-300 px-4 py-2 cursor-pointer"
                 onClick={() => handleSortToggle("score")}
               >
@@ -162,6 +163,7 @@ const Home: React.FC = () => {
                 Market Value {sortField === "marketValue" && (sortOrder === "asc" ? "🔼" : "🔽")}
               </td>
               <th className="border border-gray-300 px-4 py-2">Nationalities</th>
+              <th className="border border-gray-300 px-4 py-2">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -174,6 +176,18 @@ const Home: React.FC = () => {
                 <td className="border border-gray-300 px-4 py-2">{player.club}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.marketValue}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.nationalities.join(", ")}</td>
+                <td className="border border-gray-300 px-4 py-2">
+                  <Link
+                    href={`/player/${player.name
+                      .toLowerCase()
+                      .normalize("NFD") // Decomposição de caracteres
+                      .replace(/[\u0300-\u036f]/g, "") // Remover diacríticos
+                      .replace(/ /g, "-")}`} // Substituir espaços por hífens
+                    className="text-blue-500 underline"
+                  >
+                    View Details
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>
