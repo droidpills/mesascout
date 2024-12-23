@@ -17,7 +17,7 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json");
+  const response = await fetch("/api/players");
   const players: Player[] = await response.json();
 
   const paths = players.map((player) => ({
@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { name } = context.params!;
-  const response = await fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json");
+  const response = await fetch("/api/players");
   const players: Player[] = await response.json();
 
   const player = players.find((p) =>

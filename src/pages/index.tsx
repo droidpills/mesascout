@@ -40,7 +40,7 @@ const Home: React.FC = () => {
   const [sortField, setSortField] = useState<string>("score");
 
   useEffect(() => {
-    fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json")
+    fetch("/api/players")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
