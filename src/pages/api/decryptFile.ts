@@ -1,6 +1,6 @@
 import { decryptFile } from '../../utils/decrypt';
 
-// Definir tipos para 'req' e 'res'
+// Definir tipos para 'req' e 'res' corretamente
 export default async function handler(req: any, res: any) {
   try {
     const decryptedData = await decryptFile();
