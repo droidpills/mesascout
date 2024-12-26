@@ -17,7 +17,7 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch("/api/players");
+  const response = await fetch("/api/decryptFile");
   const players: Player[] = await response.json();
 
   const paths = players.map((player) => ({
@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { name } = context.params!;
-  const response = await fetch("/api/players");
+  const response = await fetch("/api/decryptFile");
   const players: Player[] = await response.json();
 
   const player = players.find((p) =>

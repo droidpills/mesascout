@@ -40,7 +40,7 @@ const Home: React.FC = () => {
   const [sortField, setSortField] = useState<string>("score");
 
   useEffect(() => {
-    fetch("/api/players")
+    fetch("/api/decryptFile")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
