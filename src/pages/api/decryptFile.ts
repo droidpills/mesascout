@@ -14,7 +14,6 @@ const fileUrl = 'https://gist.githubusercontent.com/naysaralodi/9b694242b3a521be
 
 // Definição do tipo para req e res usando NextApiRequest e NextApiResponse
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
     // Fazer a requisição para obter o conteúdo do arquivo remoto
     const { data: encryptedData } = await axios.get(fileUrl);
     
@@ -28,7 +27,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Parsear o JSON
     const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
     res.status(200).json(decryptedData);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to decrypt the file.' });
-  }
 }
