@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import Header from "../../components/header";
+import Header from "../components/header";
 
 interface Player {
   name: string;
@@ -17,40 +17,60 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json");
-  const players: Player[] = await response.json();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const response = await fetch(`${baseUrl}/api/decryptFile`);
+    if (!response.ok) throw new Error("Failed to fetch players");
 
-  const paths = players.map((player) => ({
-    params: { name: player.name
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/ /g, "-") },
-  }));
+    const players: Player[] = await response.json();
 
-  return { paths, fallback: false }; // fallback: false garante que 404 será retornado para rotas inexistentes
+    const paths = players.map((player) => ({
+      params: {
+        name: player.name
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/ /g, "-"),
+      },
+    }));
+
+    return { paths, fallback: "blocking" };
+  } catch (error) {
+    console.error("Error in getStaticPaths:", error);
+    return { paths: [], fallback: false }; // Retorna um fallback vazio para evitar falha
+  }
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { name } = context.params!;
-  const response = await fetch("https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/ce472c19b7f6b96ade46f92c6ecffffbcfa1f2b7/players_scores_with_transfermarkt.json");
-  const players: Player[] = await response.json();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const { name } = context.params!;
+    const response = await fetch(`${baseUrl}/api/decryptFile`);
+    if (!response.ok) throw new Error("Failed to fetch players");
 
-  const player = players.find((p) =>
-    p.name
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/ /g, "-") === name
-  );
+    const players: Player[] = await response.json();
 
-  if (!player) {
-    return { notFound: true };
+    if (!Array.isArray(players)) throw new Error("Invalid data format");
+
+    const player = players.find((p) =>
+      p.name
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/ /g, "-") === name
+    );
+
+    if (!player) {
+      return { notFound: true };
+    }
+
+    return {
+      props: { player },
+    };
+  } catch (error) {
+    console.error("Error in getStaticProps:", error);
+    return { notFound: true }; // Evita quebra no build
   }
-
-  return {
-    props: { player },
-  };
 };
 
 const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
