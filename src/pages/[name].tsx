@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import Header from "../../components/header";
+import Header from "../components/header";
 
 interface Player {
   name: string;
@@ -17,23 +17,27 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch("/api/decryptFile");
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"; // URL base
+  const response = await fetch(`${baseUrl}/api/decryptFile`); // URL absoluta
   const players: Player[] = await response.json();
 
   const paths = players.map((player) => ({
-    params: { name: player.name
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/ /g, "-") },
+    params: {
+      name: player.name
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/ /g, "-"),
+    },
   }));
 
   return { paths, fallback: false }; // fallback: false garante que 404 será retornado para rotas inexistentes
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"; // URL base
   const { name } = context.params!;
-  const response = await fetch("/api/decryptFile");
+  const response = await fetch(`${baseUrl}/api/decryptFile`); // URL absoluta
   const players: Player[] = await response.json();
 
   const player = players.find((p) =>
