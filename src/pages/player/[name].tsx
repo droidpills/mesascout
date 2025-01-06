@@ -9,6 +9,8 @@ interface Player {
   link: string;
   club: string;
   nationalities: string[];
+  jogos: number;
+  idade: number; 
   marketValue: string;
 }
 
@@ -85,6 +87,14 @@ const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Position</td>
               <td className="border border-gray-300 px-4 py-2">{player.position}</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2 font-bold">Jogos</td>
+              <td className="border border-gray-300 px-4 py-2">{player.jogos}</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2 font-bold">Age</td>
+              <td className="border border-gray-300 px-4 py-2">{player.idade}</td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Score</td>
