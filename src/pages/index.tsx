@@ -10,6 +10,8 @@ interface Player {
   link: string;
   club: string;
   nationalities: string[];
+  jogos: number;
+  idade: number; 
   marketValue: string;
 }
 
@@ -146,6 +148,8 @@ const Home: React.FC = () => {
             <tr>
               <th className="border border-gray-300 px-4 py-2">Name</th>
               <th className="border border-gray-300 px-4 py-2">Position</th>
+              <th className="border border-gray-300 px-4 py-2">Jogos</th>
+              <th className="border border-gray-300 px-4 py-2">Idade</th>
               <td
                 className="border border-gray-300 px-4 py-2 cursor-pointer"
                 onClick={() => handleSortToggle("score")}
@@ -168,6 +172,8 @@ const Home: React.FC = () => {
               <tr key={index}>
                 <td className="border border-gray-300 px-4 py-2">{player.name}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.position}</td>
+                <td className="border border-gray-300 px-4 py-2">{player.jogos}</td>
+                <td className="border border-gray-300 px-4 py-2">{player.idade}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.score}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.league}</td>
                 <td className="border border-gray-300 px-4 py-2">{player.club}</td>
