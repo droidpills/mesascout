@@ -21,9 +21,8 @@ const parseMarketValue = (value: string): number => {
     return numericValue * 1_000;
   } else if (value.includes("-")) {
     return 0;
-  }
-  else if (value.includes("Unknown")) {
-    return numericValue * 0;
+  } else if (value.includes("Unknown")) {
+    return 0; // Handle "Unknown" as 0 market value
   }
   return numericValue;
 };
@@ -40,58 +39,48 @@ const Home: React.FC = () => {
   const [sortField, setSortField] = useState<string>("score");
 
   useEffect(() => {
-    console.log("Initial data fetch:");
-    fetch("/api/decryptFile")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((jsonData: Player[]) => { // Declare aqui que jsonData é Player[]
-    const uniquePositions = Array.from(
-      new Set(jsonData.map((player) => player.position))
-    );
-    setPositions(uniquePositions);
-
-    const uniqueLeagues = Array.from(
-      new Set(jsonData.map((player) => player.league))
-    );
-    setLeagues(uniqueLeagues);
-
-    setData(jsonData);
-    setFilteredData(jsonData);
-  })
-  .catch((error) => console.error("Failed to fetch data:", error));
+    fetch("/api/players")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json() as Promise<Player[]>;
+      })
+      .then((jsonData) => {
+        setData(jsonData);
+        setFilteredData(jsonData);
+        const uniquePositions = Array.from(new Set(jsonData.map((player) => player.position)));
+        setPositions(uniquePositions);
+        const uniqueLeagues = Array.from(new Set(jsonData.map((player) => player.league)));
+        setLeagues(uniqueLeagues);
+      })
+      .catch((error) => console.error("Failed to fetch data:", error));
   }, []);
 
   useEffect(() => {
-    console.log("useEffect triggered for filtering");
-    console.log({ search, sortOrder, selectedPosition, selectedLeague, data });
-  
     let updatedData = data;
-  
-    // Filtro por busca
+
+    // Search filter
     if (search) {
       updatedData = updatedData.filter((player) =>
         player.name.toLowerCase().includes(search.toLowerCase())
       );
     }
-  
-    // Filtro por posição
+
+    // Position filter
     if (selectedPosition !== "all") {
       updatedData = updatedData.filter((player) => player.position === selectedPosition);
     }
-  
-    // Filtro por liga
+
+    // League filter
     if (selectedLeague !== "all") {
       updatedData = updatedData.filter((player) => player.league === selectedLeague);
     }
-  
-    // Ordenação
+
+    // Sort by field
     updatedData = updatedData.sort((a, b) => {
       let aValue: number, bValue: number;
-  
+
       if (sortField === "score") {
         aValue = a.score;
         bValue = b.score;
@@ -101,13 +90,12 @@ const Home: React.FC = () => {
       } else {
         return 0;
       }
-  
+
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
-  
-    console.log("Updated data:", updatedData);
+
     setFilteredData(updatedData);
-  }, [search, sortOrder, selectedPosition, selectedLeague, sortField, data]);
+  }, [search, sortOrder, selectedPosition, sortField, selectedLeague, data]);
 
   const handleSortToggle = (field: string) => {
     if (sortField === field) {
@@ -117,7 +105,6 @@ const Home: React.FC = () => {
       setSortOrder("asc");
     }
   };
-
 
   return (
     <div>
@@ -144,20 +131,14 @@ const Home: React.FC = () => {
 
           <select
             value={selectedLeague}
-            onChange={(e) => {
-              console.log("Selected league:", e.target.value);
-              setSelectedLeague(e.target.value);
-            }}
+            onChange={(e) => setSelectedLeague(e.target.value)}
             className="border border-gray-300 rounded px-2 py-1"
           >
-
             <option value="all">All Leagues</option>
             {leagues.map((league, index) => (
-              <option key={index} value={league}>{league} </option>
+              <option key={index} value={league}>{league}</option>
             ))}
-
           </select>
-
         </div>
 
         <table className="table-auto border-collapse border border-gray-300 w-full">
@@ -194,7 +175,7 @@ const Home: React.FC = () => {
                 <td className="border border-gray-300 px-4 py-2">{player.nationalities.join(", ")}</td>
                 <td className="border border-gray-300 px-4 py-2">
                   <Link
-                    href={`/${player.name
+                    href={`/player/${player.name
                       .toLowerCase()
                       .normalize("NFD") // Decomposição de caracteres
                       .replace(/[\u0300-\u036f]/g, "") // Remover diacríticos
