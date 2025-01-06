@@ -26,12 +26,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Retorna os dados como JSON
     res.status(200).json(data);
   } catch (error) {
-    if (error.name === 'AbortError') {
-      console.error("Request timed out");
-      res.status(504).json({ message: "Request timed out" }); // Timeout expirado
-    } else {
-      console.error("Error fetching players data:", error);
-      res.status(500).json({ message: "Failed to fetch players data" });
-    }
+    // if (error.name === 'AbortError') {
+      console.error(error);
+    //   res.status(504).json({ message: "Request timed out" }); // Timeout expirado
+    // } else {
+    //   console.error("Error fetching players data:", error);
+    //   res.status(500).json({ message: "Failed to fetch players data" });
+    // }
   }
 }
