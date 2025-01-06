@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import Header from "../components/header";
+import Header from "../../components/header";
 
 interface Player {
   name: string;
@@ -17,14 +17,14 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/decryptFile`);
-    if (!response.ok) throw new Error("Failed to fetch players");
+    const response = await fetch(`${baseUrl}/api/players`);
+    if (!response.ok) throw new Error("Erro na API");
+    const players = await response.json();
 
-    const players: Player[] = await response.json();
-
-    const paths = players.map((player) => ({
+    const paths = players.map((player: Player) => ({
       params: {
         name: player.name
           .toLowerCase()
@@ -36,41 +36,31 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return { paths, fallback: "blocking" };
   } catch (error) {
-    console.error("Error in getStaticPaths:", error);
-    return { paths: [], fallback: false }; // Retorna um fallback vazio para evitar falha
+    console.error("Erro ao buscar jogadores:", error);
+    return { paths: [], fallback: "blocking" }; // Evita falha no build
   }
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const { name } = context.params!;
-    const response = await fetch(`${baseUrl}/api/decryptFile`);
-    if (!response.ok) throw new Error("Failed to fetch players");
+  const { name } = context.params!;
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/players`);
+  const players: Player[] = await response.json();
 
-    const players: Player[] = await response.json();
+  const player = players.find((p) =>
+    p.name
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ /g, "-") === name
+  );
 
-    if (!Array.isArray(players)) throw new Error("Invalid data format");
-
-    const player = players.find((p) =>
-      p.name
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/ /g, "-") === name
-    );
-
-    if (!player) {
-      return { notFound: true };
-    }
-
-    return {
-      props: { player },
-    };
-  } catch (error) {
-    console.error("Error in getStaticProps:", error);
-    return { notFound: true }; // Evita quebra no build
+  if (!player) {
+    return { notFound: true };
   }
+
+  return {
+    props: { player },
+  };
 };
 
 const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
