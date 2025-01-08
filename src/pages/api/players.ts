@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout de 5 segundos
 
     const response = await fetch(
-      "https://gist.githubusercontent.com/droidpills/7a84aadccdb73e59181e7435b28357b4/raw/bba12669ddada59b410a41e285d570ccb279347a/players_scores_with_transfermarkt.json",
+      "https://storage.googleapis.com/mesascout/players_with_positions.json",
       {
         signal: controller.signal, // Passa o sinal de cancelamento
       }
