@@ -25,10 +25,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     }));
 
-    return { paths, fallback: "blocking" };
+    return { paths, fallback: "true" };
   } catch (error) {
     console.error("Erro ao buscar jogadores:", error);
-    return { paths: [], fallback: "blocking" }; // Evita falha no build
+    return { paths: [], fallback: "true" }; // Evita falha no build
   }
 };
 
