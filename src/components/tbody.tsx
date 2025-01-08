@@ -12,15 +12,22 @@ const TBody: React.FC<TBodyProps> = ({ players }) => (
       <tr key={index}>
         <td className="border border-gray-300 px-4 py-2">{player.name}</td>
         <td className="border border-gray-300 px-4 py-2">{player.position}</td>
-        <td className="border border-gray-300 px-4 py-2">{player.jogos}</td>
-        <td className="border border-gray-300 px-4 py-2">{player.idade}</td>
+        <td className="border border-gray-300 px-4 py-2">{player.games}</td>
+        <td className="border border-gray-300 px-4 py-2">{player.age}</td>
         <td className="border border-gray-300 px-4 py-2">{player.score}</td>
         <td className="border border-gray-300 px-4 py-2">{player.league}</td>
         <td className="border border-gray-300 px-4 py-2">{player.club}</td>
-        <td className="border border-gray-300 px-4 py-2">{player.marketValue}</td>
-        <td className="border border-gray-300 px-4 py-2">{player.nationalities.join(", ")}</td>
+        <td className="border border-gray-300 px-4 py-2">{player.value}</td>
+        <td className="border border-gray-300 px-4 py-2">{player.contrato}</td>
         <td className="border border-gray-300 px-4 py-2">
-          <Link href={`/player/${player.name.replace(/\s+/g, "-").toLowerCase()}`}>
+          <Link
+            href={`/player/${player.name
+              .toLowerCase()
+              .normalize("NFD") // Remove acentos
+              .replace(/[\u0300-\u036f]/g, "") // Remove diacríticos
+              .replace(/\s+/g, "-") // Substitui espaços por hifens
+              .replace(/[^a-z0-9\-]/g, "")}`} // Remove caracteres especiais
+          >
             View Details
           </Link>
         </td>
