@@ -5,8 +5,8 @@ export interface Player {
     league: string;
     link: string;
     club: string;
-    nationalities: string[];
-    jogos: number;
-    idade: number;
-    marketValue: string;
+    contrato: string;
+    games: number;
+    age: number;
+    value: string;
   }

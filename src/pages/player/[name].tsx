@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import Header from "@/components/header";
 import { Player } from "@/types/Player";
+import Footer from "@/components/footer";
 
 interface PlayerPageProps {
   player: Player;
@@ -78,11 +79,11 @@ const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Jogos</td>
-              <td className="border border-gray-300 px-4 py-2">{player.jogos}</td>
+              <td className="border border-gray-300 px-4 py-2">{player.games}</td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Age</td>
-              <td className="border border-gray-300 px-4 py-2">{player.idade}</td>
+              <td className="border border-gray-300 px-4 py-2">{player.age}</td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Score</td>
@@ -90,15 +91,15 @@ const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Market Value</td>
-              <td className="border border-gray-300 px-4 py-2">{player.marketValue}</td>
+              <td className="border border-gray-300 px-4 py-2">{player.value}</td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Club</td>
               <td className="border border-gray-300 px-4 py-2">{player.club}</td>
             </tr>
             <tr>
-              <td className="border border-gray-300 px-4 py-2 font-bold">Nationalities</td>
-              <td className="border border-gray-300 px-4 py-2">{player.nationalities.join(", ")}</td>
+              <td className="border border-gray-300 px-4 py-2 font-bold">Contrato</td>
+              <td className="border border-gray-300 px-4 py-2">{player.contrato}</td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">Profile Link</td>
@@ -111,6 +112,7 @@ const PlayerDetails: React.FC<PlayerPageProps> = ({ player }) => {
           </tbody>
         </table>
       </main>
+      <Footer />
     </div>
   );
 };

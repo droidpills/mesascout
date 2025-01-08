@@ -31,7 +31,7 @@ const Home: React.FC = () => {
 
     return result.sort((a, b) => {
       const getValue = (player: Player, field: keyof Player) => {
-        if (field === "marketValue") return parseMarketValue(player.marketValue);
+        if (field === "value") return parseMarketValue(player.value);
         const value = player[field];
         return typeof value === "number" ? value : 0;
       };
