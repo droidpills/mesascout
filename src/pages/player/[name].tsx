@@ -1,18 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import Header from "../../components/header";
-
-interface Player {
-  name: string;
-  position: string;
-  score: number;
-  league: string;
-  link: string;
-  club: string;
-  nationalities: string[];
-  jogos: number;
-  idade: number; 
-  marketValue: string;
-}
+import Header from "@/components/header";
+import { Player } from "@/types/Player";
 
 interface PlayerPageProps {
   player: Player;
