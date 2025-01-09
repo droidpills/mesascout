@@ -8,10 +8,10 @@ interface PlayerPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+  // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
 
   try {
-    const response = await fetch(`${baseUrl}/api/players`);
+    const response = await fetch('https://storage.googleapis.com/mesascout/players_with_positions.json');
     if (!response.ok) throw new Error("Erro na API");
     const players = await response.json();
 
@@ -34,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { name } = context.params!;
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/players`);
+  const response = await fetch('https://storage.googleapis.com/mesascout/players_with_positions.json');
   const players: Player[] = await response.json();
 
   const player = players.find((p) =>
