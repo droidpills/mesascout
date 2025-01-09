@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
   const [sortField, setSortField] = useState<keyof Player>("score");
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("desc");
 
   useEffect(() => {
     fetch("/api/players")
