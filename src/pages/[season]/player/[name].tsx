@@ -77,6 +77,7 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
     { label: "Score", value: player.score },
     { label: "Market Value", value: player.value },
     { label: "Club", value: player.club },
+    { label: "League", value: player.league },
     { label: "Contrato", value: player.contrato },
     { label: "Profile Link", value: <a href={player.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View Profile</a> },
   ];
