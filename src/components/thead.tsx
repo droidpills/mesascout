@@ -1,4 +1,5 @@
 import { Player } from "@/types/Player";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 interface THeadProps {
   sortField: keyof Player;
@@ -8,60 +9,19 @@ interface THeadProps {
 
 const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
   const renderSortIcon = (field: keyof Player) => {
-    const isAsc = sortField === field && sortOrder === "asc";
-    const isDesc = sortField === field && sortOrder === "desc";
+    const isActive = sortField === field;
+    const isAsc = isActive && sortOrder === "asc";
+    const isDesc = isActive && sortOrder === "desc";
 
     return (
-      <span className="inline-block ml-2">
-        {isAsc && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-4 h-4"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
-            />
-          </svg>
-        )}
-        {isDesc && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-4 h-4"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
-            />
-          </svg>
-        )}
-        {!isAsc && !isDesc && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-4 h-4 opacity-50"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 21V3m3.75 3.75L12 3m0 0L8.25 6.75"
-            />
-          </svg>
-        )}
-      </span>
+      <div className="flex flex-col items-center">
+        <ChevronUpIcon
+          className={`h-4 w-4 ${isAsc ? "opacity-100" : "opacity-50"}`}
+        />
+        <ChevronDownIcon
+          className={`h-4 w-4 ${isDesc ? "opacity-100" : "opacity-50"}`}
+        />
+      </div>
     );
   };
 
