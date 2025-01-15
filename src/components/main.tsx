@@ -16,6 +16,7 @@ interface MainProps {
   sortField: keyof Player;
   sortOrder: string;
   handleSortToggle: (field: keyof Player) => void;
+  season: string; 
 }
 
 const Main: React.FC<MainProps> = ({
@@ -29,6 +30,7 @@ const Main: React.FC<MainProps> = ({
   sortField,
   sortOrder,
   handleSortToggle,
+  season, 
 }) => (
   <main className="p-4">
     <div className="flex items-center space-x-4 mb-4">
@@ -49,6 +51,7 @@ const Main: React.FC<MainProps> = ({
       sortField={sortField}
       sortOrder={sortOrder}
       onSort={handleSortToggle}
+      season={season} // Passe a temporada para Table
     />
   </main>
 );
