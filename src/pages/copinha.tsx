@@ -10,6 +10,7 @@ const Copinha: React.FC = () => {
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
+  const [hiredFilter, setHiredFilter] = useState<"all" | "contratado" | "nao_contratado">("all"); //
   const [sortField, setSortField] = useState<keyof Player>("score");
   const [sortOrder, setSortOrder] = useState("desc");
   const season = "copinha";
@@ -26,7 +27,10 @@ const Copinha: React.FC = () => {
       return (
         (search === "" || player.name.toLowerCase().includes(search.toLowerCase())) &&
         (selectedPosition === "all" || player.position === selectedPosition) &&
-        (selectedLeague === "all" || player.league === selectedLeague)
+        (selectedLeague === "all" || player.league === selectedLeague) &&
+        (hiredFilter === "all" ||
+          (hiredFilter === "contratado" && player.hired) ||
+          (hiredFilter === "nao_contratado" && !player.hired))
       );
     });
 
@@ -42,7 +46,7 @@ const Copinha: React.FC = () => {
   
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
-  }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder]);
+  }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder, hiredFilter]);
 
   const handleSortToggle = (field: keyof Player) => {
     if (field === sortField) setSortOrder(sortOrder === "asc" ? "desc" : "asc");
@@ -63,6 +67,8 @@ const Copinha: React.FC = () => {
         setSelectedPosition={setSelectedPosition}
         selectedLeague={selectedLeague}
         setSelectedLeague={setSelectedLeague}
+        hiredFilter={hiredFilter}
+        setHiredFilter={setHiredFilter}
         filteredData={filteredData}
         sortField={sortField}
         sortOrder={sortOrder}

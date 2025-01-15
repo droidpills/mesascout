@@ -2,6 +2,7 @@ import React from "react";
 import SearchPlayers from "./searchPlayers";
 import FilterPositions from "./filterPositions";
 import FilterLeagues from "./filterLeagues";
+import FilterHired from "./filterHired";
 import Table from "./table";
 import { Player } from "../types/Player";
 
@@ -12,6 +13,8 @@ interface MainProps {
   setSelectedPosition: (value: string) => void;
   selectedLeague: string;
   setSelectedLeague: (value: string) => void;
+  hiredFilter: "all" | "contratado" | "nao_contratado";
+  setHiredFilter: (value: "all" | "contratado" | "nao_contratado") => void; 
   filteredData: Player[];
   sortField: keyof Player;
   sortOrder: string;
@@ -26,6 +29,8 @@ const Main: React.FC<MainProps> = ({
   setSelectedPosition,
   selectedLeague,
   setSelectedLeague,
+  hiredFilter, 
+  setHiredFilter, 
   filteredData,
   sortField,
   sortOrder,
@@ -44,6 +49,11 @@ const Main: React.FC<MainProps> = ({
         value={selectedLeague}
         onChange={(e) => setSelectedLeague(e.target.value)}
         options={[...new Set(filteredData.map((p) => p.league))]}
+      />
+      <FilterHired
+        value={hiredFilter}
+        onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
+        options={["all", "contratado", "nao_contratado"]}
       />
     </div>
     <Table

@@ -2,9 +2,10 @@ export interface Player {
     name: string;
     position: string;
     score: number;
-    league: string;
     link: string;
     club: string;
+    league: string;
+    hired: boolean;
     contrato: string;
     games: number;
     age: number;
