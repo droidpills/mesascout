@@ -15,7 +15,7 @@ const Copinha: React.FC = () => {
   const season = "copinha";
 
   useEffect(() => {
-    fetch("/api/playerscopinha")
+    fetch("/api/playersCopinha")
       .then((res) => res.json())
       .then(setData)
       .catch(console.error);
