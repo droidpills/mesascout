@@ -9,12 +9,13 @@ interface TableProps {
   sortField: keyof Player;
   sortOrder: string;
   onSort: (field: keyof Player) => void;
+  season: string; 
 }
 
-const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort }) => (
+const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season = "defaultSeason" }) => (
   <table className="table-auto border-collapse border border-gray-300 w-full">
     <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} />
-    <TBody players={players} />
+    <TBody players={players} season={season}  />
   </table>
 );
 

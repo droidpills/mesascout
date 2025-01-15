@@ -5,17 +5,17 @@ import { parseMarketValue } from "@/utils/parseMarketValue";
 import Footer from "@/components/footer";
 import { Player } from "../types/Player";
 
-const Home: React.FC = () => {
+const Copinha: React.FC = () => {
   const [data, setData] = useState<Player[]>([]);
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
   const [sortField, setSortField] = useState<keyof Player>("score");
   const [sortOrder, setSortOrder] = useState("desc");
-  const season = "season24";
+  const season = "copinha";
 
   useEffect(() => {
-    fetch("/api/players")
+    fetch("/api/playerscopinha")
       .then((res) => res.json())
       .then(setData)
       .catch(console.error);
@@ -74,4 +74,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Copinha;
