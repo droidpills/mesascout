@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   const season = "season24";
 
   useEffect(() => {
-    fetch("/api/players")
+    fetch("/api/playersSeason24")
       .then((res) => res.json())
       .then(setData)
       .catch(console.error);
