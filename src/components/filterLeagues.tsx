@@ -10,7 +10,7 @@ const FilterLeagues: React.FC<FilterLeaguesProps> = ({ value, onChange, options 
     onChange={onChange}
     className="border border-gray-300 rounded px-2 py-1"
   >
-    <option value="all">All Leagues</option>
+    <option value="all">Ligas</option>
     {options.map((option, index) => (
       <option key={index} value={option}>{option}</option>
     ))}
