@@ -71,15 +71,15 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
   }
 
   const playerAttributes = [
-    { label: "Position", value: player.position },
+    { label: "Posição", value: player.position },
     { label: "Jogos", value: player.games },
-    { label: "Age", value: player.age },
+    { label: "Idade", value: player.age },
     { label: "Score", value: player.score },
-    { label: "Market Value", value: player.value },
-    { label: "Club", value: player.club },
-    { label: "League", value: player.league },
+    { label: "Valor de mercado", value: player.value },
+    { label: "Clube", value: player.club },
+    { label: "Liga", value: player.league },
     { label: "Contrato", value: player.contrato },
-    { label: "Profile Link", value: <a href={player.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View Profile</a> },
+    { label: "Profile", value: <a href={player.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View Profile</a> },
   ];
 
   return (

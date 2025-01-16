@@ -6,7 +6,7 @@ interface SearchPlayersProps {
 const SearchPlayers: React.FC<SearchPlayersProps> = ({ value, onChange }) => (
   <input
     type="text"
-    placeholder="Search by name"
+    placeholder="Buscar jogadores"
     value={value}
     onChange={onChange}
     className="border border-gray-300 rounded px-2 py-1"

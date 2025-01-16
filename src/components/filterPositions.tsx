@@ -10,7 +10,7 @@ const FilterPositions: React.FC<FilterPositionsProps> = ({ value, onChange, opti
     onChange={onChange}
     className="border border-gray-300 rounded px-2 py-1"
   >
-    <option value="all">All Positions</option>
+    <option value="all">Posições</option>
     {options.map((option, index) => (
       <option key={index} value={option}>{option}</option>
     ))}
