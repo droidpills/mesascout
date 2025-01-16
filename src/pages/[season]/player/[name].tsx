@@ -4,11 +4,13 @@ import Footer from "@/components/footer";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Player } from "@/types/Player";
 import { normalizeName } from "@/utils/normalizeName";
+import { normalizeFileName } from "@/utils/normalizeFileName";
 
 const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/players_with_positions.json",
   copinha: "https://storage.googleapis.com/mesascout/players_with_positions2.json",
 };
+
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [];
@@ -70,6 +72,18 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
     );
   }
 
+  const playerImageURL = `https://storage.googleapis.com/mesascout/s24_players_images/${normalizeFileName(
+    player.name,
+    player.club,
+    "player_image"
+  )}.jpeg`;
+
+  const heatmapImageURL = `https://storage.googleapis.com/mesascout/s24_players_images/${normalizeFileName(
+    player.name,
+    player.club,
+    "heatmap"
+  )}.jpeg`;
+
   const playerAttributes = [
     { label: "Posição", value: player.position },
     { label: "Jogos", value: player.games },
@@ -86,7 +100,10 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
     <div>
       <Header />
       <main className="p-4">
-        <h2 className="text-2xl font-bold mb-4">{player.name}</h2>
+        <div className="flex items-center">
+        <img src={playerImageURL} alt={`${player.name} Foto`} className="mb-4 h-auto rounded-lg" />
+          <h2 className="text-2xl font-bold mb-4">{player.name}</h2>
+        </div>
         <table className="table-auto border-collapse border border-gray-300 w-full">
           <tbody>
             {playerAttributes.map(({ label, value }) => (
@@ -98,6 +115,10 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
           </tbody>
         </table>
       </main>
+      <div className="flex items-center justify-center p-10">
+        <h3 className="p-5"><b>Mapa de calor:</b> </h3>
+        <img src={heatmapImageURL} alt={`${player.name} Foto`} className="mb-4 h-auto" />
+        </div>
       <Footer />
     </div>
   );
