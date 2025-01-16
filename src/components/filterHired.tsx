@@ -11,7 +11,7 @@ const FilterHired: React.FC<{
   >
     {options.map((option) => (
       <option key={option} value={option}>
-        {option === "all" ? "Todos" : option === "contratado" ? "somente disponíveis" : "somente já contratados"}
+        {option === "all" ? "Todos" : option === "contratado" ? "somente já contratados" : "somente disponíveis"}
       </option>
     ))}
 
