@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Header from "../components/header";
 import Main from "../components/main";
+import Head from "next/head";
 import { parseMarketValue } from "@/utils/parseMarketValue";
 import Footer from "@/components/footer";
 import { Player } from "../types/Player";
@@ -10,7 +11,7 @@ const Home: React.FC = () => {
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
-  const [hiredFilter, setHiredFilter] = useState<"all" | "contratado" | "nao_contratado">("all"); 
+  const [hiredFilter, setHiredFilter] = useState<"all" | "contratado" | "nao_contratado">("all");
   const [sortField, setSortField] = useState<keyof Player>("score");
   const [sortOrder, setSortOrder] = useState("desc");
   const season = "season24";
@@ -40,10 +41,10 @@ const Home: React.FC = () => {
         const value = player[field];
         return typeof value === "number" ? value : 0;
       };
-  
+
       const aValue = getValue(a, sortField);
       const bValue = getValue(b, sortField);
-  
+
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
   }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder, hiredFilter]);
@@ -59,6 +60,30 @@ const Home: React.FC = () => {
 
   return (
     <div>
+      <Head>
+        <title>Campeonatos 2024 - Destaques e Análise</title>
+        <meta
+          name="description"
+          content="Descubra os jogadores em destaque no ano de 2024. Filtre por posição, liga e status de contratação."
+        />
+        <meta name="keywords" content="Liga 2024, jogadores, futebol, análise, destaques, mercado de transferências" />
+        <meta name="author" content="Mesa Scout" />
+        <meta property="og:title" content="Liga 2024 - Destaques e Análise" />
+        <meta
+          property="og:description"
+          content="Veja os principais jogadores destaque no ano de 2024 e analise suas estatísticas de desempenho."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mesascout.vercel.app/" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Liga 2024 - Destaques e Análise" />
+        <meta
+          name="twitter:description"
+          content="Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho."
+        />
+        <meta name="twitter:image" content="https://mesascout.vercel.app/" />
+      </Head>
       <Header />
       <Main
         search={search}
@@ -73,8 +98,24 @@ const Home: React.FC = () => {
         sortField={sortField}
         sortOrder={sortOrder}
         handleSortToggle={handleSortToggle}
-        season={season} 
+        season={season}
       />
+            <div className="mt-2 flex space-x-4 p-5">
+        <a
+          href={`https://twitter.com/intent/tweet?url=mesascout.vercel.app/copinha `}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
+        </a>
+        <a
+          href={`https://wa.me/?text=mesascout.vercel.app/copinha`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-green-500 text-white px-4 py-2 rounded">Compartilhar no WhatsApp</button>
+        </a>
+      </div>
       <Footer />
     </div>
   );
