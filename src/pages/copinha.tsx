@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import Head from "next/head";
 import Header from "../components/header";
 import Main from "../components/main";
 import { parseMarketValue } from "@/utils/parseMarketValue";
@@ -40,10 +41,10 @@ const Copinha: React.FC = () => {
         const value = player[field];
         return typeof value === "number" ? value : 0;
       };
-  
+
       const aValue = getValue(a, sortField);
       const bValue = getValue(b, sortField);
-  
+
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
   }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder, hiredFilter]);
@@ -56,9 +57,32 @@ const Copinha: React.FC = () => {
     }
   };
 
-
   return (
     <div>
+      <Head>
+        <title>Copinha - Destaques e Análise</title>
+        <meta
+          name="description"
+          content="Descubra os jogadores em destaque na Copinha. Filtre por posição, liga e status de contratação."
+        />
+        <meta name="keywords" content="Copinha, jogadores, futebol, análise, destaques, mercado de transferências" />
+        <meta name="author" content="Mesa Scout" />
+        <meta property="og:title" content="Copinha - Destaques e Análise" />
+        <meta
+          property="og:description"
+          content="Veja os principais jogadores da Copinha e analise suas estatísticas de desempenho."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mesascout.vercel.app/copinha" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Copinha - Destaques e Análise" />
+        <meta
+          name="twitter:description"
+          content="Veja os principais jogadores da Copinha e analise suas estatísticas de desempenho."
+        />
+        <meta name="twitter:image" content="https://mesascout.vercel.app/copinha" />
+      </Head>
       <Header />
       <Main
         search={search}
@@ -73,8 +97,24 @@ const Copinha: React.FC = () => {
         sortField={sortField}
         sortOrder={sortOrder}
         handleSortToggle={handleSortToggle}
-        season={season} 
+        season={season}
       />
+      <div className="mt-8 flex space-x-4 p-5">
+        <a
+          href={`https://twitter.com/intent/tweet?url=mesascout.vercel.app/copinha `}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
+        </a>
+        <a
+          href={`https://wa.me/?text=mesascout.vercel.app/copinha`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-green-500 text-white px-4 py-2 rounded">Compartilhar no WhatsApp</button>
+        </a>
+      </div>
       <Footer />
     </div>
   );

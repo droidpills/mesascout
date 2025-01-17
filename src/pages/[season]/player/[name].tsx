@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
+import Image from "next/image";
+import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Player } from "@/types/Player";
 import { normalizeName } from "@/utils/normalizeName";
@@ -10,7 +11,6 @@ const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/players_with_positions.json",
   copinha: "https://storage.googleapis.com/mesascout/players_with_positions2.json",
 };
-
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [];
@@ -60,18 +60,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
-  if (!player) {
-    return (
-      <div>
-        <Header />
-        <main className="p-4">
-          <p className="text-center text-red-500">Player not found.</p>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
   const playerImageURL = `https://storage.googleapis.com/mesascout/s24_players_images/${normalizeFileName(
     player.name,
     player.club,
@@ -84,6 +72,8 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
     "heatmap"
   )}.jpeg`;
 
+  const pageURL = `https://mesascout.vercel.app/copinha/player/${normalizeName(player.name)}`;
+
   const playerAttributes = [
     { label: "Posição", value: player.position },
     { label: "Jogos", value: player.games },
@@ -93,18 +83,45 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
     { label: "Clube", value: player.club },
     { label: "Liga", value: player.league },
     { label: "Contrato", value: player.contrato },
-    { label: "Profile", value: <a href={player.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View Profile</a> },
+    {
+      label: "Profile",
+      value: (
+        <a
+          href={player.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline"
+        >
+          View Profile
+        </a>
+      ),
+    },
   ];
 
   return (
     <div>
+      <Head>
+        <title>{`${player.name} - Detalhes do Jogador`}</title>
+        <meta name="description" content={`Detalhes do jogador ${player.name}, destaque da temporada ${player.league}.`} />
+        <meta property="og:title" content={`${player.name} - Detalhes do Jogador`} />
+        <meta property="og:description" content={`Confira as estatísticas de ${player.name}, incluindo posição, clube e mais.`} />
+        <meta property="og:image" content={playerImageURL} />
+        <meta property="og:url" content={pageURL} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <Header />
       <main className="p-4">
         <div className="flex items-center">
-        <img src={playerImageURL} alt={`${player.name} Foto`} className="mb-4 h-auto rounded-lg" />
-          <h2 className="text-2xl font-bold mb-4">{player.name}</h2>
+          <Image
+            src={playerImageURL}
+            alt={`${player.name} Foto`}
+            width={200}
+            height={200}
+            className="rounded-lg"
+          />
+          <h2 className="text-2xl font-bold mb-4 ml-4">{player.name}</h2>
         </div>
-        <table className="table-auto border-collapse border border-gray-300 w-full">
+        <table className="table-auto border-collapse border border-gray-300 w-full mt-4">
           <tbody>
             {playerAttributes.map(({ label, value }) => (
               <tr key={label}>
@@ -114,14 +131,43 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
             ))}
           </tbody>
         </table>
-      </main>
-      <div className="flex items-center justify-center p-10">
-        <h3 className="p-5"><b>Mapa de calor:</b> </h3>
-        <img src={heatmapImageURL} alt={`${player.name} Foto`} className="mb-4 h-auto" />
+        <div className="flex items-center justify-center p-10">
+          <h3 className="p-5">
+            <b>Mapa de calor:</b>
+          </h3>
+          <Image
+            src={heatmapImageURL}
+            alt={`${player.name} Heatmap`}
+            width={400}
+            height={200}
+            className="rounded-lg"
+          />
         </div>
+        <div className="mt-8 flex space-x-4">
+          <a
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
+              `${player.name} foi um destaque na temporada ${player.league} jogando pelo ${player.club}. O seu market value é de ${player.value}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
+          </a>
+          <a
+            href={`https://wa.me/?text=${encodeURIComponent(
+              `${player.name} foi um destaque na temporada ${player.league} jogando pelo ${player.club}. O seu market value é de ${player.value}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-green-500 text-white px-4 py-2 rounded">Compartilhar no WhatsApp</button>
+          </a>
+        </div>
+      </main>
       <Footer />
     </div>
   );
 };
 
 export default PlayerDetails;
+
