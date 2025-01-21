@@ -143,6 +143,14 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
             className="rounded-lg"
           />
         </div>
+
+        <div className="flex items-center justify-center p-10">
+          <h3 className="p-5">
+            <b>Melhores momentos:</b>
+          </h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+
         <div className="mt-8 flex space-x-4">
           <a
             href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
