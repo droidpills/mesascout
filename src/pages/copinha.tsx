@@ -57,6 +57,8 @@ const Copinha: React.FC = () => {
     }
   };
 
+  const pageURL = `https://mesascout.vercel.app/copinha`
+
   return (
     <div>
       <Head>
@@ -99,16 +101,21 @@ const Copinha: React.FC = () => {
         handleSortToggle={handleSortToggle}
         season={season}
       />
-      <div className="mt-8 flex space-x-4 p-5">
+
+      <div className="m-8 flex space-x-4">
         <a
-          href={`https://twitter.com/intent/tweet?url=mesascout.vercel.app/copinha `}
+          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
+            `Veja os principais jogadores de destaque na Copinha 2025 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
         </a>
         <a
-          href={`https://wa.me/?text=mesascout.vercel.app/copinha`}
+          href={`https://wa.me/?&text=${encodeURIComponent(
+            `Veja os principais jogadores de destaque Copinha 2025  e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -117,6 +124,7 @@ const Copinha: React.FC = () => {
       </div>
       <Footer />
     </div>
+
   );
 };
 

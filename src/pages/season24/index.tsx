@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo } from "react";
-import Header from "../components/header";
-import Main from "../components/main";
+import Header from "../../components/header";
+import Main from "../../components/main";
 import Head from "next/head";
 import { parseMarketValue } from "@/utils/parseMarketValue";
 import Footer from "@/components/footer";
-import { Player } from "../types/Player";
+import { Player } from "../../types/Player";
 
 const Home: React.FC = () => {
   const [data, setData] = useState<Player[]>([]);
@@ -57,6 +57,7 @@ const Home: React.FC = () => {
     }
   };
 
+  const pageURL = `https://mesascout.vercel.app/`
 
   return (
     <div>
@@ -100,16 +101,20 @@ const Home: React.FC = () => {
         handleSortToggle={handleSortToggle}
         season={season}
       />
-            <div className="mt-2 flex space-x-4 p-5">
+      <div className="m-8 flex space-x-4">
         <a
-          href={`https://twitter.com/intent/tweet?url=mesascout.vercel.app/copinha `}
+          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
+            `Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
         </a>
         <a
-          href={`https://wa.me/?text=mesascout.vercel.app/copinha`}
+          href={`https://wa.me/?&text=${encodeURIComponent(
+            `Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >

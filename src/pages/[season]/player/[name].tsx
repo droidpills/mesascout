@@ -154,8 +154,8 @@ const PlayerDetails: React.FC<{ player: Player }> = ({ player }) => {
             <button className="bg-blue-500 text-white px-4 py-2 rounded">Compartilhar no Twitter</button>
           </a>
           <a
-            href={`https://wa.me/?text=${encodeURIComponent(
-              `${player.name} foi um destaque na temporada ${player.league} jogando pelo ${player.club}. O seu market value é de ${player.value}`
+            href={`https://wa.me/?&text=${encodeURIComponent(
+              `${player.name} foi um destaque na temporada ${player.league} jogando pelo ${player.club}. O seu market value é de ${player.value}. Veja mais em ${pageURL}`
             )}`}
             target="_blank"
             rel="noopener noreferrer"

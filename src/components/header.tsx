@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <Link href="/" className="text-white px-4">
         <h1>Mesa Scout</h1> </Link>
       <nav>
-        <Link href="/" className="text-white px-4">Temporada 2024</Link>
+        <Link href="/season24/" className="text-white px-4">Temporada 2024</Link>
         <Link href="/about" className="text-white px-4">Sobre nós</Link>
         <Link href="/contact" className="text-white px-4">Contato</Link>
         <Link href="/copinha" className="text-white px-4">Copinha</Link>
