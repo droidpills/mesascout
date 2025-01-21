@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from "react";
-import Header from "../../components/header";
-import Main from "../../components/main";
+import Header from "../components/header";
+import Main from "../components/main";
 import Head from "next/head";
 import { parseMarketValue } from "@/utils/parseMarketValue";
 import Footer from "@/components/footer";
-import { Player } from "../../types/Player";
+import { Player } from "../types/Player";
 
-const Home: React.FC = () => {
+const Season24: React.FC = () => {
   const [data, setData] = useState<Player[]>([]);
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
@@ -126,4 +126,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Season24;
