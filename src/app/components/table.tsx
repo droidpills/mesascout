@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import THead from "./thead";
 import TBody from "./tbody";
-import { Player } from "@/types/Player";
+import { Player } from "../types/Player";
 
 interface TableProps {
   players: Player[];

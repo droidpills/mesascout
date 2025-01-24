@@ -1,13 +1,17 @@
-import React, { useState, useEffect, useMemo } from "react";
-import Header from "../components/header";
-import Main from "../components/main";
-import Head from "next/head";
-import { parseMarketValue } from "@/utils/parseMarketValue";
-import Footer from "@/components/footer";
+"use client";
+
+import React, { useState } from "react";
+import Header from "../components/layouts/header";
+import Main from "../components/layouts/main";
+import Footer from "../components/layouts/footer";
+import { parseMarketValue } from "../utils/parseMarketValue";
 import { Player } from "../types/Player";
 
-const Season24: React.FC = () => {
-  const [data, setData] = useState<Player[]>([]);
+interface Season24ClientProps {
+  players: Player[];
+}
+
+const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
@@ -16,15 +20,8 @@ const Season24: React.FC = () => {
   const [sortOrder, setSortOrder] = useState("desc");
   const season = "season24";
 
-  useEffect(() => {
-    fetch("/api/playersSeason24")
-      .then((res) => res.json())
-      .then(setData)
-      .catch(console.error);
-  }, []);
-
-  const filteredData = useMemo(() => {
-    const result = data.filter((player) => {
+  const filteredData = players
+    .filter((player) => {
       return (
         (search === "" || player.name.toLowerCase().includes(search.toLowerCase())) &&
         (selectedPosition === "all" || player.position === selectedPosition) &&
@@ -33,9 +30,8 @@ const Season24: React.FC = () => {
           (hiredFilter === "contratado" && player.hired) ||
           (hiredFilter === "nao_contratado" && !player.hired))
       );
-    });
-
-    return result.sort((a, b) => {
+    })
+    .sort((a, b) => {
       const getValue = (player: Player, field: keyof Player) => {
         if (field === "value") return parseMarketValue(player.value);
         const value = player[field];
@@ -47,44 +43,20 @@ const Season24: React.FC = () => {
 
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
-  }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder, hiredFilter]);
 
   const handleSortToggle = (field: keyof Player) => {
-    if (field === sortField) setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-    else {
+    if (field === sortField) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
       setSortField(field);
       setSortOrder("asc");
     }
   };
 
-  const pageURL = `https://mesascout.vercel.app/`
+  const pageURL = `https://mesascout.vercel.app/season24`;
 
   return (
     <div>
-      <Head>
-        <title>Campeonatos 2024 - Destaques e Análise</title>
-        <meta
-          name="description"
-          content="Descubra os jogadores em destaque no ano de 2024. Filtre por posição, liga e status de contratação."
-        />
-        <meta name="keywords" content="Liga 2024, jogadores, futebol, análise, destaques, mercado de transferências" />
-        <meta name="author" content="Mesa Scout" />
-        <meta property="og:title" content="Liga 2024 - Destaques e Análise" />
-        <meta
-          property="og:description"
-          content="Veja os principais jogadores destaque no ano de 2024 e analise suas estatísticas de desempenho."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mesascout.vercel.app/" />
-        <meta property="og:image" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Liga 2024 - Destaques e Análise" />
-        <meta
-          name="twitter:description"
-          content="Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho."
-        />
-        <meta name="twitter:image" content="https://mesascout.vercel.app/" />
-      </Head>
       <Header />
       <Main
         search={search}
@@ -104,7 +76,7 @@ const Season24: React.FC = () => {
       <div className="m-8 flex space-x-4">
         <a
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
-            `Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+            `Veja os principais jogadores de destaque na Copinha 2025 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -113,7 +85,7 @@ const Season24: React.FC = () => {
         </a>
         <a
           href={`https://wa.me/?&text=${encodeURIComponent(
-            `Veja os principais jogadores de destaque no ano de 2024 e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+            `Veja os principais jogadores de destaque Copinha 2025  e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -126,4 +98,4 @@ const Season24: React.FC = () => {
   );
 };
 
-export default Season24;
+export default Season24Client;

@@ -1,30 +1,27 @@
-import React, { useState, useEffect, useMemo } from "react";
-import Head from "next/head";
-import Header from "../components/header";
-import Main from "../components/main";
-import { parseMarketValue } from "@/utils/parseMarketValue";
-import Footer from "@/components/footer";
+"use client";
+
+import React, { useState } from "react";
+import Header from "../components/layouts/header";
+import Main from "../components/layouts/main";
+import Footer from "../components/layouts/footer";
+import { parseMarketValue } from "../utils/parseMarketValue";
 import { Player } from "../types/Player";
 
-const Copinha: React.FC = () => {
-  const [data, setData] = useState<Player[]>([]);
+interface CopinhaClientProps {
+  players: Player[];
+}
+
+const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
-  const [hiredFilter, setHiredFilter] = useState<"all" | "contratado" | "nao_contratado">("all"); //
+  const [hiredFilter, setHiredFilter] = useState<"all" | "contratado" | "nao_contratado">("all");
   const [sortField, setSortField] = useState<keyof Player>("score");
   const [sortOrder, setSortOrder] = useState("desc");
   const season = "copinha";
 
-  useEffect(() => {
-    fetch("/api/playerscopinha")
-      .then((res) => res.json())
-      .then(setData)
-      .catch(console.error);
-  }, []);
-
-  const filteredData = useMemo(() => {
-    const result = data.filter((player) => {
+  const filteredData = players
+    .filter((player) => {
       return (
         (search === "" || player.name.toLowerCase().includes(search.toLowerCase())) &&
         (selectedPosition === "all" || player.position === selectedPosition) &&
@@ -33,9 +30,8 @@ const Copinha: React.FC = () => {
           (hiredFilter === "contratado" && player.hired) ||
           (hiredFilter === "nao_contratado" && !player.hired))
       );
-    });
-
-    return result.sort((a, b) => {
+    })
+    .sort((a, b) => {
       const getValue = (player: Player, field: keyof Player) => {
         if (field === "value") return parseMarketValue(player.value);
         const value = player[field];
@@ -47,44 +43,20 @@ const Copinha: React.FC = () => {
 
       return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
     });
-  }, [data, search, selectedPosition, selectedLeague, sortField, sortOrder, hiredFilter]);
 
   const handleSortToggle = (field: keyof Player) => {
-    if (field === sortField) setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-    else {
+    if (field === sortField) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
       setSortField(field);
       setSortOrder("asc");
     }
   };
 
-  const pageURL = `https://mesascout.vercel.app/copinha`
+  const pageURL = `https://mesascout.vercel.app/copinha`;
 
   return (
     <div>
-      <Head>
-        <title>Copinha - Destaques e Análise</title>
-        <meta
-          name="description"
-          content="Descubra os jogadores em destaque na Copinha. Filtre por posição, liga e status de contratação."
-        />
-        <meta name="keywords" content="Copinha, jogadores, futebol, análise, destaques, mercado de transferências" />
-        <meta name="author" content="Mesa Scout" />
-        <meta property="og:title" content="Copinha - Destaques e Análise" />
-        <meta
-          property="og:description"
-          content="Veja os principais jogadores da Copinha e analise suas estatísticas de desempenho."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mesascout.vercel.app/copinha" />
-        <meta property="og:image" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Copinha - Destaques e Análise" />
-        <meta
-          name="twitter:description"
-          content="Veja os principais jogadores da Copinha e analise suas estatísticas de desempenho."
-        />
-        <meta name="twitter:image" content="https://mesascout.vercel.app/copinha" />
-      </Head>
       <Header />
       <Main
         search={search}
@@ -101,7 +73,6 @@ const Copinha: React.FC = () => {
         handleSortToggle={handleSortToggle}
         season={season}
       />
-
       <div className="m-8 flex space-x-4">
         <a
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageURL)}&text=${encodeURIComponent(
@@ -124,8 +95,7 @@ const Copinha: React.FC = () => {
       </div>
       <Footer />
     </div>
-
   );
 };
 
-export default Copinha;
+export default CopinhaClient;

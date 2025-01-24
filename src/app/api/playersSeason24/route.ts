@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from 'next/server';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout de 5 segundos
@@ -20,12 +20,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const data = await response.json();
 
-    // Adiciona headers CORS
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    
-    // Retorna os dados como JSON
-    res.status(200).json(data);
+    // Adiciona headers CORS e retorna os dados
+    return NextResponse.json(data, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    });
   } catch (error) {
-      console.error(error);
-     }
+    console.error(error);
+    return NextResponse.json(
+      { error: 'An error occurred while fetching data.' },
+      { status: 500 }
+    );
+  }
 }

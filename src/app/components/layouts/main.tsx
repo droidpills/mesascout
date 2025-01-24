@@ -1,10 +1,10 @@
 import React from "react";
-import SearchPlayers from "./searchPlayers";
-import FilterPositions from "./filterPositions";
-import FilterLeagues from "./filterLeagues";
-import FilterHired from "./filterHired";
-import Table from "./table";
-import { Player } from "../types/Player";
+import SearchPlayers from "../searchPlayers";
+import FilterPositions from "../filterPositions";
+import FilterLeagues from "../filterLeagues";
+import FilterHired from "../filterHired";
+import Table from "../table";
+import { Player } from "@/app/types/Player";
 
 interface MainProps {
   search: string;

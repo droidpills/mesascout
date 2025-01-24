@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Player } from "@/types/Player";
-import { normalizeName } from "@/utils/normalizeName";
-import { LinkIcon } from "@heroicons/react/24/solid";
+import { Player } from "../types/Player";
+import { normalizeName } from "../utils/normalizeName";
+import { FaLink } from "react-icons/fa6";
 
 interface TBodyProps {
   players: Player[];
@@ -51,8 +51,8 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
         </td>
         {/* <td className="border border-gray-300">{player.contrato}</td> */}
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 flex justify-center" >
-             <LinkIcon className="size-4 " />
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 flex justify-center" >
+             <FaLink  className="size-4 " />
           </Link>
         </td>
       </tr>

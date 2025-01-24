@@ -1,9 +1,9 @@
 import Link from "next/link";
-import TwitterFollowButton from "./button-follow";
+import TwitterFollowButton from "../button-follow";
 
 const Header: React.FC = () => {
   return (
-    <header className="p-4 bg-gray-800 text-white flex justify-between">
+    <header className="p-4 bg-gray-800 text-white flex justify-between w-full">
       <Link href="/" className="text-white px-4">
         <h1>Mesa Scout</h1> </Link>
       <nav>

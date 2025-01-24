@@ -1,5 +1,6 @@
-import { Player } from "@/types/Player";
-import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import { Player } from "../types/Player";
+import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+//import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 interface THeadProps {
   sortField: keyof Player;
@@ -15,10 +16,10 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
 
     return (
       <div className="inline-block  items-center m-auto align-middle">
-        <ChevronUpIcon
+        <SlArrowUp
           className={`h-3 w-3 ${isAsc ? "opacity-100" : "opacity-50"}`}
         />
-        <ChevronDownIcon
+        <SlArrowDown
           className={`h-3 w-3 ${isDesc ? "opacity-100" : "opacity-50"}`}
         />
       </div>
