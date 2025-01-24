@@ -14,38 +14,38 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
     {players.map((player, index) => (
       <tr key={index} className = {`${ player.hired ? "bg-green-100" : "" } hover:bg-slate-300 cursor-pointer`} >
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {index + 1}. {player.name}
           </Link>
         </td>
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.position}
           </Link>
         </td>
         {/* <td className="border border-gray-300">{player.games}</td> */}
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.age}
           </Link>
         </td>
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.score}
           </Link>
         </td>
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.league}
           </Link>
         </td>
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.club}
           </Link>
         </td>
         <td className="border border-gray-300">
-          <Link href={`/${season}/player/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className= "px-4 py-2 block" >
             {player.value}
           </Link>
         </td>

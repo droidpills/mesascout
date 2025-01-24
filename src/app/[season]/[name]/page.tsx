@@ -37,11 +37,9 @@ export async function generateStaticParams() {
 }
 
 interface PlayerDetailsProps {
-  params: {
-    season: string;
-    name: string;
+  params: Promise <{season: string;
+    name: string;}>
   };
-}
 
 export default async function PlayerDetails({ params }: PlayerDetailsProps) {
   const { season, name } = await params;
