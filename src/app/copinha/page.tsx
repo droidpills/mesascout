@@ -3,7 +3,7 @@ import CopinhaClient from "../components/CopinhaClient";
 import { Player } from "../types/Player";
 
 async function fetchPlayers(): Promise<Player[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/playerscopinha`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/playersCopinha`, {
     cache: "no-store", // Desabilita cache para garantir dados sempre atualizados
   });
 
