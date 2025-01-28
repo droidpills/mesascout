@@ -10,5 +10,5 @@ export interface Player {
     games: number;
     age: number;
     value: string;
-    video: string;
+    video?: string;
   }

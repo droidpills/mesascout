@@ -1,9 +1,9 @@
 import React from "react";
-import Season24 from "./season24/page";
+import Season24Server from "./season24/page";
 
 const Home: React.FC = () => {
 
-  return <Season24 />;
+  return <Season24Server />;
 };
 
 export default Home;

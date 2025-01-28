@@ -3,13 +3,20 @@
 import React from "react";
 import Main from "../components/layouts/main";
 import { Player } from "../types/Player";
-import { useFilteredPlayers } from "../hooks/useFilteredPlayers";
+import useFilteredPlayers from "../hooks/useFilteredPlayers";
 
+// Modifique a interface para garantir que a estrutura do objeto esteja correta
 interface Season24ClientProps {
-  players: Player[];
+  players: {
+    data: Player[];
+    total: number;
+    page: number;
+    pageSize: number;
+  };
 }
 
 const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
+  // Certifique-se de que 'useFilteredPlayers' seja chamado de maneira consistente
   const {
     filteredData,
     search,
@@ -23,7 +30,13 @@ const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
     sortField,
     sortOrder,
     handleSortToggle,
-  } = useFilteredPlayers(players);
+  } = useFilteredPlayers(players.data); // Não use condicional para chamar hooks!
+
+  // Coloque verificações antes de renderizar, mas fora do uso de hooks
+  if (!Array.isArray(players.data)) {
+    console.error("Players is not an array", players);
+    return <div>Erro: Dados inválidos.</div>;
+  }
 
   const season = "season24";
   const pageURL = `https://mesascout.vercel.app/season24`;

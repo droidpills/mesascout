@@ -3,13 +3,13 @@
 import React from "react";
 import Main from "../components/layouts/main";
 import { Player } from "../types/Player";
-import { useFilteredPlayers } from "../hooks/useFilteredPlayers";
+import useFilteredPlayers from "../hooks/useFilteredPlayers";
 
-interface CopinhaClientProps {
-  players: Player[];
+interface CopinhaProps {
+  players: { data: Player[]; total: number; page: number; pageSize: number };
 }
 
-const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
+const CopinhaClient: React.FC<CopinhaProps> = ({ players }) => {
   const {
     filteredData,
     search,
@@ -23,7 +23,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
     sortField,
     sortOrder,
     handleSortToggle,
-  } = useFilteredPlayers(players);
+  } = useFilteredPlayers(players.data); // Passando players.data
 
   const season = "copinha";
   const pageURL = `https://mesascout.vercel.app/copinha`;
@@ -57,7 +57,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
         </a>
         <a
           href={`https://wa.me/?&text=${encodeURIComponent(
-            `Veja os principais jogadores de destaque Copinha 2025  e analise suas estatísticas de desempenho. Veja mais em ${pageURL}`
+            `Veja os principais jogadores de destaque Copinha 2025  e analise suas estatísticas de desempenho. Veja mais em ${pageURL}` 
           )}`}
           target="_blank"
           rel="noopener noreferrer"
