@@ -53,7 +53,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
           Valor de mercado  {renderSortIcon("value")}
         </th>
         {/* <th className="border border-gray-300 px-4 py-2">Contrato</th> */}
-        <th className="border border-gray-300 px-4 py-2">Ver +</th>
+        <th className="border border-gray-300 px-4 py-2"> </th>
       </tr>
     </thead>
   );

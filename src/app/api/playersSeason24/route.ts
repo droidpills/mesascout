@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout de 5 segundos
@@ -12,24 +12,41 @@ export async function GET() {
       }
     );
 
-    clearTimeout(timeoutId); // Cancelar o timeout, se não houver erro
+    clearTimeout(timeoutId); // Cancela o timeout, se não houver erro
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data. Status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const allPlayers = await response.json();
 
-    // Adiciona headers CORS e retorna os dados
-    return NextResponse.json(data, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
+    // Obtenha os parâmetros de consulta
+    const { searchParams } = new URL(request.url);
+    const page = Number(searchParams.get("page") || 1); // Página atual
+    const pageSize = Number(searchParams.get("pageSize") || 12); // Tamanho da página
+
+    // Paginação
+    const startIndex = (page - 1) * pageSize;
+    const paginatedPlayers = allPlayers.slice(startIndex, startIndex + pageSize);
+
+    // Retorna os dados paginados e o total
+    return NextResponse.json(
+      {
+        data: paginatedPlayers,
+        total: allPlayers.length,
+        page,
+        pageSize,
       },
-    });
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        }
+      }
+    );
   } catch (error) {
     console.error(error);
     return NextResponse.json(
-      { error: 'An error occurred while fetching data.' },
+      { error: "An error occurred while fetching data." },
       { status: 500 }
     );
   }

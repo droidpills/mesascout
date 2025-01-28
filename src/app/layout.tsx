@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
+import Header from "./components/layouts/header";
+import Footer from "./components/layouts/footer";
 
 export const metadata: Metadata = {
   title: "Mesa Scout",
@@ -14,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
