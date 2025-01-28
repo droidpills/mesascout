@@ -12,9 +12,10 @@ export const useFilteredPlayers = (players: Player[]) => {
   const [filteredData, setFilteredData] = useState<Player[]>([]);
 
   useEffect(() => {
-    // Verificando se players é um array válido
+    // Ensure players is an array
     if (!Array.isArray(players)) {
-      console.error("Players não é um array:", players);
+      console.error("Players is not an array:", players);
+      setFilteredData([]); // Ensure filteredData is always an array
       return;
     }
 
