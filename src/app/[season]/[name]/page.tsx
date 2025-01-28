@@ -1,5 +1,3 @@
-import Header from "../../components/layouts/header";
-import Footer from "../../components/layouts/footer";
 import Image from "next/image";
 import Head from "next/head";
 import { notFound } from 'next/navigation';
@@ -104,7 +102,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
           <meta property="og:url" content={pageURL} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <Header />
+
         <main className="p-4">
           <div className="flex items-center">
             <Image
@@ -169,7 +167,6 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
             </a>
           </div>
         </main>
-        <Footer />
       </div>
     );
   } catch (error) {

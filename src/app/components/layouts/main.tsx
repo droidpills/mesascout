@@ -61,7 +61,7 @@ const Main: React.FC<MainProps> = ({
       sortField={sortField}
       sortOrder={sortOrder}
       onSort={handleSortToggle}
-      season={season} // Passe a temporada para Table
+      season={season} 
     />
   </main>
 );
