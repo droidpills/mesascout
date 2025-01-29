@@ -2,7 +2,6 @@ import React from "react";
 import Season24Client from "../components/Season24Client";
 import { Player } from "../types/Player";
 
-// Função para buscar jogadores paginados
 async function fetchPlayers(): Promise<{
   data: Player[];
   total: number;
@@ -10,14 +9,12 @@ async function fetchPlayers(): Promise<{
   pageSize: number;
 }> {
   const allPlayers: Player[] = [];
-  const totalPages = 29; // Total de páginas que você mencionou
+  const totalPages = 1; // Atualize conforme necessário
 
   for (let page = 1; page <= totalPages; page++) {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/playersSeason24?page=${page}`,
-      {
-        cache: "no-store",
-      }
+      { cache: "no-store" }
     );
 
     if (!res.ok) {
@@ -26,19 +23,21 @@ async function fetchPlayers(): Promise<{
 
     const data = await res.json();
 
-    // Adiciona os jogadores da página atual ao array allPlayers
-    allPlayers.push(...data.data); // Supondo que `data.data` seja um array de jogadores
+    // ✅ Se `data` já for um array, não tente acessar `data.data`
+    if (Array.isArray(data)) {
+      allPlayers.push(...data);
+    } else {
+      console.error("Formato inesperado da API:", data);
+    }
   }
 
-  // Retorna o objeto com a estrutura esperada: data, total, page, pageSize
   return {
     data: allPlayers,
     total: allPlayers.length,
-    page: 29, // Página atual pode ser ajustada conforme sua necessidade
-    pageSize: allPlayers.length, // Define o número total de jogadores (você pode ajustar isso para paginar corretamente)
+    page: 1,
+    pageSize: allPlayers.length,
   };
 }
-
 export default async function Season24Server() {
   const players = await fetchPlayers(); // Agora players terá a estrutura { data, total, page, pageSize }
 

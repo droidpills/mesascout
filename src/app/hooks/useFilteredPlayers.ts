@@ -15,8 +15,7 @@ const useFilteredPlayers = (players: Player[]) => {
   const filteredData = players
     .filter((player) => {
       const isSearchMatch =
-        search === "" ||
-        player.name.toLowerCase().includes(search.toLowerCase());
+        search === "" || player.name;
 
 
       const isPositionMatch = selectedPosition === "all" || player.position === selectedPosition;

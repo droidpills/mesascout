@@ -2,26 +2,19 @@ import React from "react";
 import CopinhaClient from "../components/CopinhaClient";
 import { Player } from "../types/Player";
 
-// Função para buscar jogadores paginados
 async function fetchPlayers(): Promise<{
   data: Player[];
   total: number;
   page: number;
   pageSize: number;
 }> {
-  // Total de páginas que você mencionou
-  const totalPages = 1;
-  
-  // Inicializa o array para armazenar os jogadores
   const allPlayers: Player[] = [];
+  const totalPages = 1; // Atualize conforme necessário
 
-  // Processa as páginas
   for (let page = 1; page <= totalPages; page++) {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/playersCopinha?page=${page}`,
-      {
-        cache: "no-store",
-      }
+      { cache: "no-store" }
     );
 
     if (!res.ok) {
@@ -30,21 +23,19 @@ async function fetchPlayers(): Promise<{
 
     const data = await res.json();
 
-    // Verifique se 'data.data' existe e é um array
-    console.log("API Response:", data);
-
-    if (data && Array.isArray(data.data)) {
-      allPlayers.push(...data.data); // Adiciona os jogadores ao array allPlayers
+    // ✅ Se `data` já for um array, não tente acessar `data.data`
+    if (Array.isArray(data)) {
+      allPlayers.push(...data);
     } else {
-      console.error("Expected 'data.data' to be an array, but got:", data);
+      console.error("Formato inesperado da API:", data);
     }
   }
 
   return {
-    data: allPlayers, // Agora 'allPlayers' contém todos os jogadores
-    total: allPlayers.length, // Usando o tamanho do array como total
-    page: 1, // Página inicial
-    pageSize: allPlayers.length, // O tamanho da página pode ser igual ao número de jogadores retornados
+    data: allPlayers,
+    total: allPlayers.length,
+    page: 1,
+    pageSize: allPlayers.length,
   };
 }
 
