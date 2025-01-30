@@ -7,8 +7,6 @@ import logo from "../../../../public/images/mesa_logo_Br01.png";
 import { usePathname } from "next/navigation";
 import { FaInstagram, FaXTwitter, FaBars } from "react-icons/fa6";
 import { FaTimes, FaYoutube, FaTiktok } from "react-icons/fa";
-import { BsYoutube, BsTiktok} from "react-icons/bs";
-
 
 const Header: React.FC = () => {
   const currentPath = usePathname();
