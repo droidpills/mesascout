@@ -29,7 +29,7 @@ const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
   const pageURL = `https://mesascout.vercel.app/season24`;
 
   return (
-    <div>
+    <div className="p-4 container mx-auto px-8">
       <Main
         search={search}
         setSearch={setSearch}

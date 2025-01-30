@@ -29,7 +29,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
   const pageURL = `https://mesascout.vercel.app/copinha`;
 
   return (
-    <div>
+    <div className="p-4 container mx-auto px-8">
       <Main
         search={search}
         setSearch={setSearch}

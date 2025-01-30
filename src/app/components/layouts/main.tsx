@@ -14,12 +14,12 @@ interface MainProps {
   selectedLeague: string;
   setSelectedLeague: (value: string) => void;
   hiredFilter: "all" | "contratado" | "nao_contratado";
-  setHiredFilter: (value: "all" | "contratado" | "nao_contratado") => void; 
+  setHiredFilter: (value: "all" | "contratado" | "nao_contratado") => void;
   filteredData: Player[];
   sortField: keyof Player;
   sortOrder: string;
   handleSortToggle: (field: keyof Player) => void;
-  season: string; 
+  season: string;
 }
 
 const Main: React.FC<MainProps> = ({
@@ -29,40 +29,52 @@ const Main: React.FC<MainProps> = ({
   setSelectedPosition,
   selectedLeague,
   setSelectedLeague,
-  hiredFilter, 
-  setHiredFilter, 
+  hiredFilter,
+  setHiredFilter,
   filteredData,
   sortField,
   sortOrder,
   handleSortToggle,
-  season, 
+  season,
 }) => (
-  <main className="p-4">
-    <div className="flex items-center space-x-4 mb-4">
-      <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
-      <FilterPositions
-        value={selectedPosition}
-        onChange={(e) => setSelectedPosition(e.target.value)}
-        options={[...new Set(filteredData.map((p) => p.position))]}
-      />
-      <FilterLeagues
-        value={selectedLeague}
-        onChange={(e) => setSelectedLeague(e.target.value)}
-        options={[...new Set(filteredData.map((p) => p.league))]}
-      />
-      <FilterHired
-        value={hiredFilter}
-        onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
-        options={["all", "contratado", "nao_contratado"]}
-      />
+  <main >
+        <div className="flex gap-x-8">
+        <div className="w-full lg:w-9/12 ">
+    <div className="flex justify-between gap-x-4 py-5 w-full">
+      <div className="flex justify-start gap-x-4">
+        <FilterPositions
+          value={selectedPosition}
+          onChange={(e) => setSelectedPosition(e.target.value)}
+          options={[...new Set(filteredData.map((p) => p.position))]}
+        />
+        <FilterLeagues
+          value={selectedLeague}
+          onChange={(e) => setSelectedLeague(e.target.value)}
+          options={[...new Set(filteredData.map((p) => p.league))]}
+        />
+        <FilterHired
+          value={hiredFilter}
+          onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
+          options={["all", "contratado", "nao_contratado"]}
+        />
+      </div>
+      <div className="justify-end max-w-2xl">
+        <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
+      </div>
     </div>
-    <Table
-      players={filteredData}
-      sortField={sortField}
-      sortOrder={sortOrder}
-      onSort={handleSortToggle}
-      season={season} 
-    />
+
+        <Table
+          players={filteredData}
+          sortField={sortField}
+          sortOrder={sortOrder}
+          onSort={handleSortToggle}
+          season={season}
+        />
+      </div>
+      <div className=" mt-4 w-3/12 bg-[#292C34] hidden lg:block">
+      </div>
+
+    </div>
   </main>
 );
 

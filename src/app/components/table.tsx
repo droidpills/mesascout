@@ -3,6 +3,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import THead from "./thead";
 import TBody from "./tbody";
 import { Player } from "../types/Player";
+import TitleTable from "./titleTable";
 
 interface TableProps {
   players: Player[];
@@ -57,8 +58,9 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
   };
 
   return (
-    <div>
-      <table className="table-auto border-collapse border border-gray-300 w-full">
+    <div >
+      <TitleTable />
+      <table className="table-fixed w-full">
         <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} />
         <TBody players={currentPlayers} season={season} />
       </table>

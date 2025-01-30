@@ -8,7 +8,7 @@ interface FilterPositionsProps {
     <select
       value={value}
       onChange={onChange}
-      className="border border-gray-300 rounded px-2 py-1"
+      className="rounded-xl text-[#6f8caa] bg-[#f0f3f6] text-sm px-2 py-1"
     >
       <option value="all">Posições</option>
       {options.map((option, index) => (
