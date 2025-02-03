@@ -5,6 +5,7 @@ import FilterLeagues from "../filterLeagues";
 import FilterHired from "../filterHired";
 import Table from "../table";
 import { Player } from "@/app/types/Player";
+import { StaticImageData } from "next/image";
 
 interface MainProps {
   search: string;
@@ -20,6 +21,9 @@ interface MainProps {
   sortOrder: string;
   handleSortToggle: (field: keyof Player) => void;
   season: string;
+  title:string;
+  flagSrc: StaticImageData[];
+  description:string;
 }
 
 const Main: React.FC<MainProps> = ({
@@ -36,6 +40,9 @@ const Main: React.FC<MainProps> = ({
   sortOrder,
   handleSortToggle,
   season,
+  title,
+  flagSrc,
+  description,
 }) => (
   <main >
         <div className="flex gap-x-8">
@@ -69,13 +76,16 @@ const Main: React.FC<MainProps> = ({
           sortOrder={sortOrder}
           onSort={handleSortToggle}
           season={season}
+          title={title}
+          flagSrc={flagSrc}
+          description={description}
         />
       </div>
       <div className=" mt-4 w-3/12 bg-[#292C34] hidden lg:block">
       </div>
-
     </div>
   </main>
+    
 );
 
 export default Main;

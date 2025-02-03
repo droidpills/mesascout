@@ -23,7 +23,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
             {player.position}
           </Link>
         </td>
-        {/* <td className=" p-2  text-left ">{player.games}</td> */}
         <td className=" p-2  text-left ">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
             {player.age}
@@ -44,12 +43,11 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
             {player.club}
           </Link>
         </td>
-        <td className=" p-2  text-left ">
+        <td className=" p-2  text-left font-bold text-[#008000] ">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
             {player.value}
           </Link>
         </td>
-        {/* <td className=" p-2  text-left ">{player.contrato}</td> */}
         <td className=" p-2  text-left ">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 flex justify-center">
             <FaLink className="size-4 " />

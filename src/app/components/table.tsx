@@ -4,6 +4,7 @@ import THead from "./thead";
 import TBody from "./tbody";
 import { Player } from "../types/Player";
 import TitleTable from "./titleTable";
+import { StaticImageData } from "next/image";
 
 interface TableProps {
   players: Player[];
@@ -11,9 +12,12 @@ interface TableProps {
   sortOrder: string;
   onSort: (field: keyof Player) => void;
   season: string;
+  title: string;
+  flagSrc: StaticImageData[];
+  description:string;
 }
 
-const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season }) => {
+const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season, title, flagSrc=[], description}) => {
   const searchParams = useSearchParams(); // Hook para acessar parâmetros de busca
   const router = useRouter(); // Para navegação programática
 
@@ -59,18 +63,18 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
 
   return (
     <div >
-      <TitleTable />
+      <TitleTable title={title} flagSrc={flagSrc} description={description}/>
       <table className="table-fixed w-full">
         <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} />
         <TBody players={currentPlayers} season={season} />
       </table>
 
       {/* Controles de paginação */}
-      <div className="mt-4 flex justify-between items-center">
+      <div className="mt-4 mb-4 flex justify-center items-center gap-x-3 text-[13px] p-2 bg-[#f0f3f6]">
         <button
           onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="px-4 py-2 bg-gray-500 text-white rounded disabled:opacity-50"
+          className="px-3 py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-60"
         >
           Anterior
         </button>
@@ -83,10 +87,10 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
               onClick={() => {
                 if (page !== "...") handlePageChange(page as number);
               }}
-              className={`px-4 py-2 rounded ${
+              className={`p-1 px-3 rounded-full ${
                 page === currentPage
-                  ? "bg-green-900 text-white"
-                  : "bg-gray-200 hover:bg-gray-300"
+                  ? "bg-[#008000] text-white"
+                  : "bg-[#e1e7ed] hover:bg-gray-300 text-[#6f8caa]"
               }`}
               disabled={page === "..."}
             >
@@ -98,11 +102,14 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
         <button
           onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-green-900 text-white rounded disabled:opacity-50"
+          className="px-3 py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-50"
         >
           Próxima
         </button>
       </div>
+        <div className="flex justify-end items-center">
+          <p className="text-sm text-[#6f8caa]">Powered by Droidpills</p>
+        </div>
     </div>
   );
 };

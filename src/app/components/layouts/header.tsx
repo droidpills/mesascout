@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../../public/images/mesa_logo_Br01.png";
+import logo from "../../../../public/images/logo/mesa_logo_Br01.png";
 import { usePathname } from "next/navigation";
 import { FaInstagram, FaXTwitter, FaBars } from "react-icons/fa6";
 import { FaTimes, FaYoutube, FaTiktok } from "react-icons/fa";
@@ -13,12 +13,12 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-5 px-6 bg-[#292C34] text-white w-full shadow-lg ">
+    <div className="py-3 px-6 bg-[#292C34] text-white w-full shadow-lg ">
       <div className="container mx-auto">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}
           <Link href="/" className="px-8" scroll={false}>
-            <Image src={logo} width={130} height={130} alt="Logo Mesa Scout" />
+            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" />
           </Link>
 
           {/* Menu para Desktop */}

@@ -13,6 +13,7 @@ const inter = Inter_Tight({
 export const metadata: Metadata = {
   title: "Mesa Scout",
   description: "Explore analises de jogadores e quais são as promessas do mercado futebolistico",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
