@@ -70,11 +70,11 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
       </table>
 
       {/* Controles de paginação */}
-      <div className="mt-4 mb-4 flex justify-center items-center gap-x-3 text-[13px] p-2 bg-[#f0f3f6]">
+      <div className="mt-4 mb-4 flex justify-center items-center gap-x-3 text-[13px] py-2 bg-[#f0f3f6]">
         <button
           onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-60"
+          className="py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-60"
         >
           Anterior
         </button>

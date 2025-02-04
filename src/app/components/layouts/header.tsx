@@ -13,12 +13,12 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-3 px-6 bg-[#292C34] text-white w-full shadow-lg ">
+    <div className="py-3 pr-6 bg-[#292C34] text-white w-full shadow-lg ">
       <div className="container mx-auto">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}
-          <Link href="/" className="px-8" scroll={false}>
-            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" />
+          <Link href="/" className=" pr-0 md:pr-8 mx-auto md:mx-0" scroll={false}>
+            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" className="w-20 h-20 md:w-[150px] md:h-auto" />
           </Link>
 
           {/* Menu para Desktop */}
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Ícones de redes sociais */}
-          <div className="hidden md:flex space-x-3 px-10">
+          <div className="hidden md:flex space-x-3">
             <div className="bg-[#171A21] rounded-full p-3 hover:shadow-lg transition-transform transform hover:scale-110">
               <Link href="https://www.instagram.com/mesascout" target="_blank">
                 <FaInstagram size={20} className="text-white hover:text-pink-500" />

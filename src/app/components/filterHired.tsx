@@ -7,7 +7,7 @@ const FilterHired: React.FC<{
     <select
       value={value}
       onChange={onChange}
-      className="rounded-xl text-[#6f8caa] bg-[#f0f3f6] text-sm px-2 py-1"
+      className="rounded-xl text-[#6f8caa] bg-[#f0f3f6] text-sm px-2 py-1 flex-1 min-w-0"
     >
       {options.map((option) => (
         <option key={option} value={option}>

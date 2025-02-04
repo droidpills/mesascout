@@ -39,7 +39,7 @@ const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
 
   return (
     <div>
-      <div className="p-4 container mx-auto px-8">
+      <div className="py-4 container mx-auto">
         <Main
           search={search}
           setSearch={setSearch}
@@ -58,8 +58,6 @@ const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
           flagSrc={[brasil, argentina, colombia, ecuador, egypt, mexico, uruguay, usa]}
           description="Top 2024: até 15M € e alto potencial de valorização."
         />
-      </div>
-      <div className="mt-16 mb-4 bg-[#292C34] h-[200px] w-full">
       </div>
     </div>
   );

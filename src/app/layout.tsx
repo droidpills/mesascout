@@ -26,7 +26,14 @@ export default function RootLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
         <Header />
-        {children}
+        <div className="flex container mx-auto gap-x-8">
+          <div className="lg:w-9/12">
+          {children}
+          </div>
+          <div className="mt-4  sticky top-0 w-3/12 h-screen bg-[#292C34] flex flex-row"></div>
+          </div>
+          <div className="mt-16 mb-4 bg-[#292C34] h-[200px] w-full">
+        </div>
         <Footer />
       </body>
     </html>

@@ -30,7 +30,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
 
   return (
     <div>
-      <div className="p-4 container mx-auto px-8">
+      <div className="py-4 container mx-auto">
         <Main
           search={search}
           setSearch={setSearch}
@@ -49,8 +49,6 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
           flagSrc={[brasil]}
           description=""
         />
-      </div>
-      <div className="mt-4 mb-6 bg-[#292C34] h-[200px] w-full">
       </div>
     </div>
 
