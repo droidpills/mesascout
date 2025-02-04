@@ -1,8 +1,8 @@
 import React from "react";
 import CopinhaClient from "../components/CopinhaClient";
-import { Player } from "../types/Player";
+import { Players } from "../types/Player";
 
-async function fetchPlayers(): Promise<Player[]> {
+async function fetchPlayers(): Promise<Players> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/playersCopinha`, {
     cache: "no-store", // Desabilita cache para garantir dados sempre atualizados
   });

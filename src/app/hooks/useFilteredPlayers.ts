@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Player } from "../types/Player";
+import { Player, Players } from "../types/Player";
 import { parseMarketValue } from "../utils/parseMarketValue";
 
-export const useFilteredPlayers = (players: Player[]) => {
+export const useFilteredPlayers = (players: Players) => {
   const [search, setSearch] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("all");
   const [selectedLeague, setSelectedLeague] = useState("all");
@@ -10,7 +10,7 @@ export const useFilteredPlayers = (players: Player[]) => {
   const [sortField, setSortField] = useState<keyof Player>("score");
   const [sortOrder, setSortOrder] = useState("desc");
 
-  const filteredData = players
+  const filteredData = players.data
     .filter((player) => {
       const isSearchMatch =
         search === "" ||

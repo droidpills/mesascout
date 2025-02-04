@@ -2,12 +2,12 @@
 
 import React from "react";
 import Main from "../components/layouts/main";
-import { Player } from "../types/Player";
+import { Players } from "../types/Player";
 import { useFilteredPlayers } from "../hooks/useFilteredPlayers";
 import brasil from "../../../public/images/brasil.png"
 
 interface CopinhaClientProps {
-  players: Player[];
+  players: Players;
 }
 
 const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {

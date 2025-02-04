@@ -2,7 +2,7 @@
 
 import React from "react";
 import Main from "../components/layouts/main";
-import { Player } from "../types/Player";
+import { Players } from "../types/Player";
 import { useFilteredPlayers } from "../hooks/useFilteredPlayers";
 import argentina from "../../../public/images/argentina.png";
 import brasil from "../../../public/images/brasil.png";
@@ -15,7 +15,7 @@ import usa from "../../../public/images/usa.png";
 
 
 interface Season24ClientProps {
-  players: Player[];
+  players: Players;
 }
 
 const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {

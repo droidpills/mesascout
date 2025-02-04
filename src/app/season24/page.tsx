@@ -1,8 +1,8 @@
 import React from "react";
 import Season24Client from "../components/Season24Client";
-import { Player } from "../types/Player";
+import { Players } from "../types/Player";
 
-async function fetchPlayers(): Promise<Player[]> {
+async function fetchPlayers(): Promise<Players> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ||'http://localhost:3000/'}/api/playersSeason24`, {
     cache: "no-store",
   });

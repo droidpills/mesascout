@@ -12,3 +12,10 @@ export interface Player {
     value: string;
     video: string;
   }
+
+  export interface Players {
+    data: Player[];
+    total: number;
+    page: number;
+    pageSize:number;
+  }

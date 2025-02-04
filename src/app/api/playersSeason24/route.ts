@@ -23,8 +23,9 @@ export async function GET(request: Request) {
     // Obtenha os parâmetros de consulta
     const { searchParams } = new URL(request.url);
     const page = Number(searchParams.get("page") || 1); // Página atual
-    const pageSize = Number(searchParams.get("pageSize") || 12); // Tamanho da página
-
+    //const pageSize = Number(searchParams.get("pageSize") || 12); // Tamanho da página
+    const pageSize = allPlayers.length
+    
     // Paginação
     const startIndex = (page - 1) * pageSize;
     const paginatedPlayers = allPlayers.slice(startIndex, startIndex + pageSize);
