@@ -25,9 +25,9 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex w-full justify-start space-x-6">
             {[
               { href: "/", label: "Temporada 2024" },
+              { href: "/copinha", label: "Copinha" },
               { href: "/about", label: "Sobre nós" },
               { href: "/contact", label: "Contato" },
-              { href: "/copinha", label: "Copinha" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
