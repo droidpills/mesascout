@@ -21,9 +21,9 @@ interface MainProps {
   sortOrder: string;
   handleSortToggle: (field: keyof Player) => void;
   season: string;
-  title:string;
+  title: string;
   flagSrc: StaticImageData[];
-  description:string;
+  description: string;
 }
 
 const Main: React.FC<MainProps> = ({
@@ -44,32 +44,32 @@ const Main: React.FC<MainProps> = ({
   flagSrc,
   description,
 }) => (
-  <main className="w-full max-w-[100vw] overflow-hidden px-4 sm:px-0">
-        <div className="flex gap-x-8">
-        <div className="w-full">
-    <div className="justify-between gap-x-4 py-5 overflow-x-hidden sm:flex">
-      <div className="flex justify-start gap-x-4 overflow-x-hidden">
-        <FilterPositions
-          value={selectedPosition}
-          onChange={(e) => setSelectedPosition(e.target.value)}
-          options={[...new Set(filteredData.map((p) => p.position))]}
-          
-        />
-        <FilterLeagues
-          value={selectedLeague}
-          onChange={(e) => setSelectedLeague(e.target.value)}
-          options={[...new Set(filteredData.map((p) => p.league))]}
-        />
-        <FilterHired
-          value={hiredFilter}
-          onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
-          options={["all", "contratado", "nao_contratado"]}
-        />
-      </div>
-      <div className="mt-3 max-w-2xl md:mt-0">
-        <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
-      </div>
-    </div>
+  <main className="w-full max-w-[100vw] overflow-hidden">
+    <div className="flex gap-x-8">
+      <div className="w-full">
+        <div className="justify-between gap-x-4 pt-2 px-4 pb-5 overflow-x-hidden sm:flex">
+          <div className="flex justify-start gap-x-5 overflow-x-hidden sm:gap-x-4">
+            <FilterPositions
+              value={selectedPosition}
+              onChange={(e) => setSelectedPosition(e.target.value)}
+              options={[...new Set(filteredData.map((p) => p.position))]}
+
+            />
+            <FilterLeagues
+              value={selectedLeague}
+              onChange={(e) => setSelectedLeague(e.target.value)}
+              options={[...new Set(filteredData.map((p) => p.league))]}
+            />
+            <FilterHired
+              value={hiredFilter}
+              onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
+              options={["all", "contratado", "nao_contratado"]}
+            />
+          </div>
+          <div className="mt-3 max-w-2xl md:mt-0">
+            <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
+          </div>
+        </div>
 
         <Table
           players={filteredData}
@@ -81,11 +81,11 @@ const Main: React.FC<MainProps> = ({
           flagSrc={flagSrc}
           description={description}
         />
-      
+
       </div>
     </div>
   </main>
-    
+
 );
 
 export default Main;

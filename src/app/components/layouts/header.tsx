@@ -13,12 +13,12 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-3 pr-6 bg-[#292C34] text-white w-full shadow-lg ">
+    <div className="py-3 bg-[#292C34] text-white w-full shadow-lg sm:pr-6 ">
       <div className="container mx-auto">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}
           <Link href="/" className=" pr-0 md:pr-8 mx-auto md:mx-0" scroll={false}>
-            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" className="w-20 h-20 md:w-[150px] md:h-auto" />
+            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" className="w-20 h-auto md:w-[150px] md:h-auto" />
           </Link>
 
           {/* Menu para Desktop */}
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
 
           {/* Botão Menu Hambúrguer para Mobile */}
           <button
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-white text-2xl absolute right-1 top-10 p-4 pt-0"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -79,12 +79,12 @@ const Header: React.FC = () => {
 
         {/* Menu Mobile */}
         {isOpen && (
-          <nav className="md:hidden flex flex-col bg-gray-800 py-4 px-6 rounded-lg mt-2 space-y-4 animate-slide-in">
+          <nav className="md:hidden flex flex-col items-center bg-[#292C34] py-3 px-6 rounded-lg mt-2 space-y-3 animate-slide-in">
             {[
               { href: "/", label: "Temporada 2024" },
+              { href: "/copinha", label: "Copinha" },
               { href: "/about", label: "Sobre nós" },
               { href: "/contact", label: "Contato" },
-              { href: "/copinha", label: "Copinha" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block text-white text-lg py-2 transition-all duration-300 ${
                   currentPath === href
-                    ? "border-b-2 border-white text-white"
+                    ? "border-b-2 border-transparent text-white"
                     : "border-b-2 border-transparent hover:border-white hover:text-gray-300"
                 }`}
               >
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
             ))}
 
             {/* Ícones de redes sociais no menu mobile */}
-            <div className="flex space-x-4 justify-center mt-4">
+            <div className="flex space-x-4 justify-center mt-5 py-2">
               <Link href="https://www.instagram.com/mesascout" target="_blank">
                 <FaInstagram size={30} className="text-gray-400 transition-transform transform hover:scale-110 hover:text-pink-500" />
               </Link>

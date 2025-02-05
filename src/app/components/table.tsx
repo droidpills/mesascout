@@ -62,13 +62,14 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
   };
 
   return (
-    <div >
+    <div className="w-full" >
       <TitleTable title={title} flagSrc={flagSrc} description={description}/>
-      <table className="table-fixed w-full">
+      <div className="w-full overflow-x-auto">
+      <table className="w-full min-w-full table-auto border-collapse overflow-x-auto">
         <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} />
         <TBody players={currentPlayers} season={season} />
       </table>
-
+      </ div>
       {/* Controles de paginação */}
       <div className="mt-4 mb-4 flex justify-center items-center gap-x-3 text-[13px] py-2 bg-[#f0f3f6]">
         <button

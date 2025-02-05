@@ -13,44 +13,40 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
   <tbody>
     {players.map((player, index) => (
       <tr key={index} className="text-[#21242b] text-sm hover:bg-slate-300" >
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.name}
+        <td className="py-4 text-left whitespace-nowrap ">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
+            <div className="inline-flex gap-x-2">
+              {player.name} <FaLink className="size-4 " /></div>
           </Link>
         </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.position}
-          </Link>
-        </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.age}
-          </Link>
-        </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.score}
-          </Link>
-        </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.league}
-          </Link>
-        </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
-            {player.club}
-          </Link>
-        </td>
-        <td className=" p-2  text-left font-bold text-[#008000] ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 block" >
+        <td className="py-4  text-center font-bold whitespace-nowrap text-[#008000] ">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
             {player.value}
           </Link>
         </td>
-        <td className=" p-2  text-left ">
-          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 flex justify-center">
-            <FaLink className="size-4 " />
+        <td className="py-4  text-center whitespace-nowrap ">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
+            {player.position}
+          </Link>
+        </td>
+        <td className="py-4  text-center whitespace-nowrap  hidden sm:block">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 " >
+            {player.age}
+          </Link>
+        </td>
+        <td className="py-4  text-center whitespace-nowrap ">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
+            {player.score}
+          </Link>
+        </td>
+        <td className="py-4  text-left whitespace-nowrap hidden sm:block">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
+            {player.league}
+          </Link>
+        </td>
+        <td className="py-4 text-left whitespace-nowrap ">
+          <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 " >
+            {player.club}
           </Link>
         </td>
       </tr>

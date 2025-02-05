@@ -27,39 +27,38 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
   };
 
   return (
-    <thead className="">
+    <thead >
       <tr className="bg-[#e1e7ed] text-[#6f8caa] text-xs uppercase tracking-tighter">
 
-        <th className="p-3 font-normal tracking-tight text-left w-[14%]"> Jogador </th>
-
-        <th className="p-3 font-normal tracking-tight text-left w-[12%]">Posição</th>
+        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap"> Jogador </th>
 
         <th
-          className="p-3 px-2 font-normal tracking-tight cursor-pointer text-left  w-[10%]"
+          className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center "
+          onClick={() => onSort("value")}
+        >
+          Valor de <br /> mercado {renderSortIcon("value")}
+        </th>
+
+        <th className="p-3 font-normal tracking-tight text-left ">Posição</th>
+
+        <th
+          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left hidden sm:block"
           onClick={() => onSort("age")}
         >
           Idade {renderSortIcon("age")}
         </th>
 
         <th
-          className="p-3 px-2 font-normal tracking-tight cursor-pointer  text-left  w-[10%]"
+          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left  "
           onClick={() => onSort("score")}
         >
           Score {renderSortIcon("score")}
         </th>
 
-        <th className="p-3 font-normal tracking-tight text-left w-[12%]">Liga</th>
+        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap  hidden sm:block">Liga</th>
 
-        <th className="p-3 font-normal tracking-tight text-left w-[20%]">Clube</th>
+        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap  ">Clube</th>
 
-        <th
-          className="p-3 font-normal tracking-tight cursor-pointer text-left flex items-center w-[14%]"
-          onClick={() => onSort("value")}
-        >
-          Valor de mercado {renderSortIcon("value")}
-        </th>
-
-        <th className="p-3 font-normal tracking-tight text-left w-[8%]"> </th>
       </tr>
     </thead>
   );
