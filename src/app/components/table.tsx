@@ -109,7 +109,7 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
         </button>
       </div>
         <div className="flex justify-end items-center">
-          <p className="text-sm text-[#6f8caa]">Powered by Droidpills</p>
+          <p className="text-sm text-[#6f8caa] pr-3">Powered by Droidpills</p>
         </div>
     </div>
   );

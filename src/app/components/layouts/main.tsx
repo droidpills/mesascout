@@ -47,13 +47,12 @@ const Main: React.FC<MainProps> = ({
   <main className="w-full max-w-[100vw] overflow-hidden">
     <div className="flex gap-x-8">
       <div className="w-full">
-        <div className="justify-between gap-x-4 pt-2 px-4 pb-5 overflow-x-hidden sm:flex">
-          <div className="flex justify-start gap-x-5 overflow-x-hidden sm:gap-x-4">
+        <div className="justify-between gap-x-4 pt-2 px-4 pb-5 overflow-x-hidden lg:flex">
+          <div className="flex justify-start gap-x-5 overflow-x-hidden lg:gap-x-4">
             <FilterPositions
               value={selectedPosition}
               onChange={(e) => setSelectedPosition(e.target.value)}
               options={[...new Set(filteredData.map((p) => p.position))]}
-
             />
             <FilterLeagues
               value={selectedLeague}
@@ -66,7 +65,7 @@ const Main: React.FC<MainProps> = ({
               options={["all", "contratado", "nao_contratado"]}
             />
           </div>
-          <div className="mt-3 max-w-2xl md:mt-0">
+          <div className="mt-3 max-w-2xl lg:mt-0">
             <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
         </div>
@@ -81,7 +80,6 @@ const Main: React.FC<MainProps> = ({
           flagSrc={flagSrc}
           description={description}
         />
-
       </div>
     </div>
   </main>

@@ -29,7 +29,7 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
             {player.position}
           </Link>
         </td>
-        <td className="py-4  text-center whitespace-nowrap  hidden sm:block">
+        <td className="py-4  text-center whitespace-nowrap  hidden md:block">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2 " >
             {player.age}
           </Link>
@@ -39,7 +39,7 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => (
             {player.score}
           </Link>
         </td>
-        <td className="py-4  text-left whitespace-nowrap hidden sm:block">
+        <td className="py-4  text-left whitespace-nowrap hidden md:block">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2" >
             {player.league}
           </Link>

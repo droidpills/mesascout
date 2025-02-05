@@ -13,16 +13,16 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-3 bg-[#292C34] text-white w-full shadow-lg sm:pr-6 ">
+    <div className="py-3 bg-[#292C34] text-white w-full shadow-lg lg:pr-6 ">
       <div className="container mx-auto">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}
-          <Link href="/" className=" pr-0 md:pr-8 mx-auto md:mx-0" scroll={false}>
-            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" className="w-20 h-auto md:w-[150px] md:h-auto" />
+          <Link href="/" className=" pr-0 mx-auto lg:pr-8 lg:mx-0" scroll={false}>
+            <Image src={logo} width={150} height={150} alt="Logo Mesa Scout" className="w-20 h-auto lg:w-[150px] lg:h-auto" />
           </Link>
 
           {/* Menu para Desktop */}
-          <nav className="hidden md:flex w-full justify-start space-x-6">
+          <nav className="hidden w-full justify-start space-x-6 lg:flex">
             {[
               { href: "/", label: "Temporada 2024" },
               { href: "/copinha", label: "Copinha" },
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Ícones de redes sociais */}
-          <div className="hidden md:flex space-x-3">
+          <div className="hidden space-x-3 lg:flex">
             <div className="bg-[#171A21] rounded-full p-3 hover:shadow-lg transition-transform transform hover:scale-110">
               <Link href="https://www.instagram.com/mesascout" target="_blank">
                 <FaInstagram size={20} className="text-white hover:text-pink-500" />
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
 
           {/* Botão Menu Hambúrguer para Mobile */}
           <button
-            className="md:hidden text-white text-2xl absolute right-1 top-10 p-4 pt-0"
+            className="text-white text-2xl absolute right-1 top-10 p-4 pt-0 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
 
         {/* Menu Mobile */}
         {isOpen && (
-          <nav className="md:hidden flex flex-col items-center bg-[#292C34] py-3 px-6 rounded-lg mt-2 space-y-3 animate-slide-in">
+          <nav className="flex flex-col items-center bg-[#292C34] py-3 px-6 rounded-lg mt-2 space-y-3 animate-slide-in lg:hidden">
             {[
               { href: "/", label: "Temporada 2024" },
               { href: "/copinha", label: "Copinha" },

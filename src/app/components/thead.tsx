@@ -33,31 +33,31 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
         <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap"> Jogador </th>
 
         <th
-          className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center "
+          className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center"
           onClick={() => onSort("value")}
         >
           Valor de <br /> mercado {renderSortIcon("value")}
         </th>
 
-        <th className="p-3 font-normal tracking-tight text-left ">Posição</th>
+        <th className="p-3 font-normal tracking-tight text-left">Posição</th>
 
         <th
-          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left hidden sm:block"
+          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left hidden md:block"
           onClick={() => onSort("age")}
         >
           Idade {renderSortIcon("age")}
         </th>
 
         <th
-          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left  "
+          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left"
           onClick={() => onSort("score")}
         >
           Score {renderSortIcon("score")}
         </th>
 
-        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap  hidden sm:block">Liga</th>
+        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap hidden md:block">Liga</th>
 
-        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap  ">Clube</th>
+        <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap ">Clube</th>
 
       </tr>
     </thead>
