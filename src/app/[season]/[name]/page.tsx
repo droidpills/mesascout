@@ -1,10 +1,9 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Head from "next/head";
 import { notFound } from 'next/navigation';
 import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
-import usa from "../../../../public/images/usa.png";
 
 const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/players_with_positions.json",
@@ -60,37 +59,8 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
       "player_image"
     )}.jpeg`;
 
-    const heatmapImageURL = `https://storage.googleapis.com/mesascout/s24_players_images/${normalizeFileName(
-      player.name,
-      player.club,
-      "heatmap"
-    )}.jpeg`;
-
     const pageURL = `https://mesascout.vercel.app/copinha/player/${normalizeName(player.name)}`;
 
-    const playerAttributes = [
-      { label: "Posição", value: player.position },
-      { label: "Jogos", value: player.games },
-      { label: "Idade", value: player.age },
-      { label: "Score", value: player.score },
-      { label: "Valor de mercado", value: player.value },
-      { label: "Clube", value: player.club },
-      { label: "Liga", value: player.league },
-      { label: "Contrato", value: player.contrato },
-      {
-        label: "Profile",
-        value: (
-          <a
-            href={player.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 underline"
-          >
-            View Profile
-          </a>
-        ),
-      },
-    ];
 
     const statistics = [
       {
