@@ -6,6 +6,7 @@ import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
 import { FaStar, FaStarHalfAlt, FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
+import { FaLink } from "react-icons/fa6";
 
 const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/players_with_positions.json",
@@ -65,6 +66,10 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
     const statistics = [
       {
+        label: 'Valor',
+        value: `${player.value}`,
+      },
+      {
         label: 'Idade',
         value: `${player.age}`,
       },
@@ -73,8 +78,16 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         value: `${player.games}`,
       },
       {
-        label: 'Valor',
-        value: `${player.value}`,
+        label: 'Position',
+        value: `${player.position}`,
+      },
+      {
+        label: 'Liga',
+        value: `${player.league}`,
+      },
+      {
+        label: 'Veja +',
+        value: <a href={player.link} target="_blank"><FaLink /></a>,
       },
     ];
 
@@ -126,20 +139,20 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
-        <div className="flex justify-start py-4">
+        <div className="flex justify-start pt-8 pl-5 lg:pl-0">
           <Link href={`/${season}`} className="bg-[#292C34] px-5 py-2 rounded-full flex items-center text-sm font-medium text-white hover:text-[#292C34] hover:bg-[#7a7c80]">
             <FaArrowLeft className="mr-2" /> Voltar
           </Link>
         </div>
 
-        <main className="flex-1 overflow-y-auto">
-          <div className="mx-auto w-[280px] flex items-center justify-center h-full p-5">
+        <main className="flex justify-center flex-wrap lg:gap-x-10">
+          <div className="w-[350px] flex items-center justify-center h-full p-5">
             <div className="rounded-3xl border border-gray-200 bg-white">
               <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                 <div className="relative overflow-hidden pb-3">
                   <div className="overflow-hidden [filter:url('#rounded')]">
                     <div className="relative h-[200px] border border-gray-200 bg-gradient-to-b from-orange-600 to-yellow-500 [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
-                      <div className="pointer-events-none absolute start-1/4 top-4 -z-10 ms-8 -translate-x-1/2 text-center text-[70px] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
+                      <div className="pointer-events-none absolute start-1/3 top-3 -z-10 ms-8 -translate-x-1/2 text-center text-[80px] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                         <div>{player.name}</div>
                         <div>{player.name}</div>
                       </div>
@@ -173,7 +186,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                 <div className="mx-auto grid w-fit grid-cols-3 divide-x divide-gray-200 pt-5 text-slate-800">
                   {habilits.map((habilit) => (
                     <div key={habilit.label} className="px-7 text-center">
-                      <div className="text-[0.6875rem]/tight uppercase pb-2">{habilit.label}</div>
+                      <div className="text-[0.6875rem]/tight text-center uppercase pb-2">{habilit.label}</div>
                       <div className="text-sm/tight font-bold flex">{habilit.value}</div>
                     </div>
                   ))}
@@ -192,7 +205,24 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
               </div>
             </div>
           </div>
+
+          <div className="py-4 flex-1">
+            <div className="flex-1 justify-start mb-8">
+              <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-900 text-center mb-6 font-extrabold leading-tight tracking-wide lg:text-2xl">
+                Veja o vídeo da liga {player.league} onde <br /> {player.name} se destacou!
+              </h2>
+              <iframe width="460" height="260" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="mx-auto max-w-fit lg:max-w-full" allowFullScreen></iframe>
+            </div>
+            <div className="flex-1 justify-start">
+              <h2 className="text-gray-800 text-center mb-4  font-bold  tracking-normal md:text-lg lg:text-xl w-fit mx-auto">
+                ⚡ Melhores lances de {player.name} ⚡ </ h2>
+              <iframe width="460" height="260" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="mx-auto max-w-fit lg:max-w-full" allowFullScreen></iframe>
+            </div>
+          </div>
+
         </main>
+
+
       </div>
     );
   } catch (error) {
