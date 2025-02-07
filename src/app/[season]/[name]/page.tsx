@@ -162,7 +162,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                         alt={`${player.name} Foto`}
                         width={150}
                         height={150}
-                        className="w-auto absolute start-1/2 bottom-0 -translate-x-1/2 z-0"
+                        className="absolute start-1/2 bottom-0 -translate-x-1/2 z-0"
                       />
                     </div>
                   </div>
