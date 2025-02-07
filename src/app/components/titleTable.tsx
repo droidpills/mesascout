@@ -11,7 +11,7 @@ const TitleTable: React.FC<TitleTableProps> = ({ title, flagSrc = [], descriptio
     return (
         <div className="flex-wrap bg-[#f0f3f6] gap-x-2 mt-2 px-0 w-full flex items-center justify-center lg:justify-start lg:px-1">
             {/* Título */}
-            <div className="h-full py-3 lg:pr-3 lg:shadow-[4px_0_0_0_currentColor] lg:text-white lg:skew-x-[-20deg]">
+            <div className="h-full py-3 lg:px-2 lg:shadow-[4px_0_0_0_currentColor] lg:text-white lg:skew-x-[-20deg]">
                 <div className="flex gap-x-2 lg:skew-x-[20deg]">
                     <FaFutbol color="green" size={20} />
                     <h2 className="text-[#708CAA] uppercase text-sm">{title}</h2>

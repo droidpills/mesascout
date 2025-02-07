@@ -133,13 +133,13 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         </div>
 
         <main className="flex-1 overflow-y-auto">
-          <div className="mx-auto w-[380px] flex items-center justify-center h-full p-5">
+          <div className="mx-auto w-[280px] flex items-center justify-center h-full p-5">
             <div className="rounded-3xl border border-gray-200 bg-white">
               <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                 <div className="relative overflow-hidden pb-3">
                   <div className="overflow-hidden [filter:url('#rounded')]">
-                    <div className="relative h-[400px] border border-gray-200 bg-gradient-to-b from-orange-600 to-yellow-500 [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
-                      <div className="pointer-events-none absolute start-1/2 top-10 -z-10 ms-8 -translate-x-1/2 text-center text-9xl/[0.8em] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
+                    <div className="relative h-[200px] border border-gray-200 bg-gradient-to-b from-orange-600 to-yellow-500 [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
+                      <div className="pointer-events-none absolute start-1/4 top-4 -z-10 ms-8 -translate-x-1/2 text-center text-[70px] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                         <div>{player.name}</div>
                         <div>{player.name}</div>
                       </div>
@@ -149,7 +149,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                         alt={`${player.name} Foto`}
                         width={500}
                         height={600}
-                        className="mix-blend-multiply absolute start-1/2 bottom-0 max-w-[calc(100%+60px)] -translate-x-1/2 z-0"
+                        className=" w-auto absolute start-1/2 bottom-0 max-w-[calc(100%+60px)] -translate-x-1/2 z-0"
                       />
                     </div>
                   </div>

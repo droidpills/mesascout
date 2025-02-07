@@ -36,7 +36,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
           className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center"
           onClick={() => onSort("value")}
         >
-          Valor de <br /> mercado {renderSortIcon("value")}
+          Valor de <br className="lg:hidden"/> mercado {renderSortIcon("value")}
         </th>
 
         <th className="p-3 font-normal tracking-tight text-left">Posição</th>

@@ -47,7 +47,7 @@ const Main: React.FC<MainProps> = ({
   <main className="w-full max-w-[100vw] overflow-hidden">
     <div className="flex gap-x-8">
       <div className="w-full">
-        <div className="justify-between gap-x-4 pt-2 px-4 pb-5 overflow-x-hidden lg:flex">
+        <div className="justify-between gap-x-4 pt-2 px-4 pb-5 overflow-x-hidden lg:flex lg:px-0">
           <div className="flex justify-start gap-x-5 overflow-x-hidden lg:gap-x-4">
             <FilterPositions
               value={selectedPosition}

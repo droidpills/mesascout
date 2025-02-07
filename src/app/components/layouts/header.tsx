@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block text-white text-lg py-2 transition-all duration-300 ${
                   currentPath === href
-                    ? "border-b-2 border-transparent text-white"
+                    ? "border-b-2 border-white text-white"
                     : "border-b-2 border-transparent hover:border-white hover:text-gray-300"
                 }`}
               >
