@@ -151,7 +151,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
               <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                 <div className="relative overflow-hidden pb-3">
                   <div className="overflow-hidden [filter:url('#rounded')]">
-                    <div className="relative h-[200px] border border-gray-200 bg-gradient-to-b from-orange-600 to-yellow-500 [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
+                    <div className="relative h-[200px] border rounded-t-3xl border-gray-200 bg-gradient-to-b from-orange-600 to-yellow-500 [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
                       <div className="pointer-events-none absolute start-1/3 top-3 -z-10 ms-8 -translate-x-1/2 text-center text-[80px] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                         <div>{player.name}</div>
                         <div>{player.name}</div>
@@ -160,21 +160,15 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                       <Image
                         src={playerImageURL}
                         alt={`${player.name} Foto`}
-                        width={500}
-                        height={600}
-                        className=" w-auto absolute start-1/2 bottom-0 max-w-[calc(100%+60px)] -translate-x-1/2 z-0"
+                        width={150}
+                        height={150}
+                        className="w-auto absolute start-1/2 bottom-0 -translate-x-1/2 z-0"
                       />
                     </div>
                   </div>
 
                   <div className="absolute bottom-0 start-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-2xl bg-gradient-to-b from-[#ff5411] to-[#fc0] text-2xl/none font-extrabold tracking-tighter text-white">
                     {player.score}
-                  </div>
-
-                  <div className="absolute start-0 top-0 aspect-square w-[76px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-200 bg-white">
-                  </div>
-
-                  <div className="absolute top-0 right-0 aspect-square w-[76px] -translate-y-1/2 translate-x-1/2 rounded-full border border-gray-200 bg-white flex items-center justify-center">
                   </div>
                 </div>
 
