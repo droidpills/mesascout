@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <Header />
         <div className="flex container mx-auto lg:gap-x-8">
-          <div className="lg:w-9/12">
+          <div className="w-full lg:w-9/12">
           {children}
           </div>
           <div className="my-7  sticky top-0  h-screen bg-[#292C34] flex flex-row lg:w-3/12"></div>
