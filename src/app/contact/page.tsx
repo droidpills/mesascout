@@ -1,6 +1,7 @@
 "use client"; // Garante que esse componente rode no lado do cliente
 
 import { useEffect } from "react";
+import FormSkeleton from "../components/CardSkeleton";
 
 const Contact = () => {
   useEffect(() => {
@@ -17,8 +18,9 @@ const Contact = () => {
   return (
     <div>
       <section className="mt-4">
+        <div className="absolute -z-10 w-full"><FormSkeleton/> </div>
         <div
-          className="hs-form-frame"
+          className="hs-form-frame bg-white"
           data-region="na1"
           data-form-id="97762e00-2291-48ae-8d64-9e9ce394f79d"
           data-portal-id="49277401"
