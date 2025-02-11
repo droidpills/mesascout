@@ -26,11 +26,8 @@ export default function RootLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
         <Header />
-        <div className="flex container mx-auto lg:gap-x-8">
-          <div className="w-full lg:w-9/12">
+        <div>
           {children}
-          </div>
-          <div className="my-7  sticky top-0  h-screen bg-[#292C34] flex flex-row lg:w-3/12"></div>
           </div>
           <div className="mt-16 mb-4 bg-[#292C34] h-[200px] w-full">
         </div>

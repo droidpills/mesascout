@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import FormSkeleton from "../components/CardSkeleton";
 
+
 const Contact = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -17,8 +18,8 @@ const Contact = () => {
 
   return (
     <div>
-      <section className="mt-4">
-        <div className="absolute -z-10 w-full"><FormSkeleton/> </div>
+      <section className="mt-4 relative">
+        <div className="absolute -z-10 ml-3 w-[90%]"><FormSkeleton/> </div>
         <div
           className="hs-form-frame bg-white"
           data-region="na1"

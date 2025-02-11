@@ -1,10 +1,9 @@
 import React from "react";
 import Season24Client from "../components/Season24Client";
 import { Players } from "../types/Player";
-import { Metadata } from "next";
 
 async function fetchPlayers(): Promise<Players> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL ||'http://localhost:3000/'}/api/playersSeason24`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/'}/api/playersSeason24`, {
     cache: "no-store",
   });
 
@@ -15,30 +14,15 @@ async function fetchPlayers(): Promise<Players> {
   return res.json();
 }
 
-export const metadata: Metadata = {
-  title: "Temporada 2024 - Analise jogadores",
-  description: "Acompanhe os jogadores mais promissores da temporada",
-  openGraph: {
-    title: "Temporada 2024 - Analise jogadores",
-    description: "Acompanhe os jogadores mais promissores da temporada",
-    url: "https://mesascout.vercel.app", 
-    siteName: "Mesa Scout",
-    images: [
-      {
-        url: "/images/logo/mesa_logo_Br01.png", 
-        width: 800,
-        height: 600,
-      },
-    ],
-  },
-};
-
 export default async function CopinhaServer() {
   const players = await fetchPlayers();
 
   return (
-    <div>
-      <Season24Client players={players} />
+    <div className="flex container mx-auto lg:gap-x-8">
+      <div className="w-full lg:w-9/12">
+        <Season24Client players={players} />
+      </div>
+      <div className="my-7  sticky top-0  h-screen bg-[#292C34] flex flex-row lg:w-3/12"></div>
     </div>
   );
 }

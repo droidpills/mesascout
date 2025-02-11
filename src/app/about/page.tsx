@@ -1,30 +1,46 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Mesa Scout - Sobre nós",
-  description: "Um site que nasceu do amor pelo futebol e a vontade de mostrar de forma prática os jogadores em ascensão",
-  openGraph: {
-    title: "Mesa Scout - Sobre nós",
-    description: "Um site que nasceu do amor pelo futebol e a vontade de mostrar de forma prática os jogadores em ascensão",
-    url: "https://mesascout.vercel.app/about", 
-    siteName: "Mesa Scout",
-    images: [
-      {
-        url: "/images/logo/mesa_logo_Br01.png", 
-        width: 800,
-        height: 600,
-      },
-    ],
-  },
-};
+import Image from "next/image";
+import mesaleft from "../../../public/images/about/mesa-left.jpg";
+import mesaright from "../../../public/images/about/mesa-right.jpg";
 
 const About = () => (
-  <div>
-    <section className="mt-4">
-      <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, perferendis magnam? Veritatis non dolorum sapiente minus dolorem totam exercitationem blanditiis eos. Nesciunt, non earum, eius dolorem nobis accusantium excepturi qui praesentium inventore dolores, eveniet ad. Quod et impedit quibusdam repellat? Beatae, odio ad debitis vero consequuntur nostrum nam iste dignissimos. Nostrum magni modi possimus facilis ea suscipit perferendis ipsum qui provident veritatis velit, facere alias. Eos, delectus sequi voluptatem ratione deleniti eum minima vero rerum nostrum nemo atque quia, nisi, doloribus veritatis enim numquam amet rem. Fugit sequi obcaecati illum quos inventore est quia. Facere sunt autem tempora consequatur! Sunt!</p>
+  <div className="container bg-white p-5 md:p-0">
+    <section className="mt-10 flex flex-wrap items-center justify-center gap-x-24 md:flex-nowrap">
+      <div className="relative mb-8 md:w-6/12 md:mb-0 ">
+        <Image
+          src={mesaleft}
+          width={800}
+          height={921}
+          alt="Jogador de futebol de costas segurando uma bola"
+          className=""
+        />
+      
+        {/* SVG no canto inferior direito da imagem */}
+        <div className="absolute -bottom-16 -right-16 p-4 hidden md:block">
+          <img
+            src="https://spin.axiomthemes.com/wp-content/uploads/2023/09/about-us-go.svg"
+            width={148}
+            height={148}
+            alt="SVG"
+            className="animate-spin-slow"
+          />
+        </div>
+      </div>
+
+      <div className="md:w-6/12">
+        <h3 className="uppercase text-xs font-semibold">Transformando dados em talentos</h3>
+        <h1 className="text-[2.5em] leading[1.13em] font-bold">Encontre o próximo craque do seu time</h1>
+        <p className="mt-3 mb-14 text-[#797C7F]">
+          O MesaScout conta com um robô que analisa sites especializados e identifica jogadores com excelente custo-benefício, cruzando dados de performance e valorização de mercado. Nossa tecnologia permite encontrar talentos promissores que podem se destacar no cenário do futebol, otimizando a busca para scouts, clubes e investidores. 🚀⚽
+        </p>
+        <Image
+          src={mesaright}
+          width={921}
+          height={800}
+          alt="Bola de futebol batendo na rede"
+        />
+      </div>
     </section>
-    </div>
-  );
-  
-  export default About;
+  </div>
+);
+
+export default About;
