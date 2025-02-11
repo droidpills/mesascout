@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from 'next/font/google';
+import GoogleAdsense from "./components/GoogleAdsense";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./styles/globals.css";
 
 import Header from "./components/layouts/header";
@@ -26,10 +28,15 @@ export default function RootLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
         <Header />
+        <div className="flex w-full bg-[#292C34] p-5">
+          <GoogleAdsense pId="3537170918649474" />
+        </div>
+        <GoogleAnalytics />
         <div>
           {children}
-          </div>
-          <div className="mt-16 mb-4 bg-[#292C34] h-[200px] w-full">
+        </div>
+        <div className="mt-16 p-5 mb-4 bg-[#292C34] w-full">
+          <GoogleAdsense pId="3537170918649474" />
         </div>
         <Footer />
       </body>
