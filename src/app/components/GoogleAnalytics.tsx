@@ -1,5 +1,6 @@
 import Script from "next/script";
 
+
 const GoogleAnalytics: React.FC = () => {
   if (process.env.NODE_ENV !== "production") {
     return null;
