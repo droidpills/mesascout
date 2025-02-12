@@ -47,19 +47,19 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body >
         <Header />
 
         {/* Banner AdSense */}
-        <div className="flex w-full bg-[#292C34] p-5">
-          <GoogleAdsense pId="3537170918649474" />
+        <div className="mt-5 flex w-full bg-[#292C34] p-5">
+          <GoogleAdsense/>
         </div>
 
         <main>{children}</main>
 
         {/* Segundo Banner AdSense */}
         <div className="mt-16 p-5 mb-4 bg-[#292C34] w-full">
-          <GoogleAdsense pId="3537170918649474" />
+          <GoogleAdsense />
         </div>
 
         <Footer />

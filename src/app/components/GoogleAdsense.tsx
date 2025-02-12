@@ -9,11 +9,8 @@ declare global {
   }
 }
 
-type Props = {
-  pId: string;
-};
 
-const GoogleAdsense: React.FC<Props> = ({ pId }) => {
+const GoogleAdsense: React.FC = () => {
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return;
 
@@ -27,14 +24,14 @@ const GoogleAdsense: React.FC<Props> = ({ pId }) => {
     }
   }, []);
 
-  if (process.env.NODE_ENV !== "production" || !pId) {
+  if (process.env.NODE_ENV !== "production") {
     return null;
   }
 
   return (
     <Script
       async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${pId}`}
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3537170918649474`}
       crossOrigin="anonymous"
       strategy="afterInteractive"
     />

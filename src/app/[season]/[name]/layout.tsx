@@ -11,7 +11,7 @@ export default function NameLayout({
   {children}
   </div>
   <div className="my-7 p-5 sticky top-0 bg-[#292C34] flex flex-row lg:w-3/12">
-    <GoogleAdsense pId="3537170918649474" />
+    <GoogleAdsense  />
   </div>
   </div>
 </>;

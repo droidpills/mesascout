@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <div>
-      <section className="mt-4 relative">
+      <section className="mt-4 h-screen relative">
         <div className="absolute -z-10 ml-3 w-[90%]"><FormSkeleton/> </div>
         <div
           className="hs-form-frame bg-white"
