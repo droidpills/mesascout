@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="py-3 bg-[#292C34] text-white w-full shadow-lg lg:pr-6 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto md:px-0 lg:px-4 2xl:px-0">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}
           <Link href="/" className=" pr-0 mx-auto lg:pr-8 lg:mx-0" scroll={false}>

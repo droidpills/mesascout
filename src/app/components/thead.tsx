@@ -1,5 +1,6 @@
 import { Player } from "../types/Player";
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 
 interface THeadProps {
   sortField: keyof Player;
@@ -36,7 +37,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
           className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center"
           onClick={() => onSort("value")}
         >
-          Valor de <br className="lg:hidden"/> mercado {renderSortIcon("value")}
+          Valor de <br className="lg:hidden" /> mercado {renderSortIcon("value")}
         </th>
 
         <th className="p-3 font-normal tracking-tight text-left">Posição</th>
@@ -49,10 +50,15 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
         </th>
 
         <th
-          className="p-3 px-2 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left"
+          className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left"
           onClick={() => onSort("score")}
         >
-          Score {renderSortIcon("score")}
+          <div className="inline-flex">
+            Score
+            <div className="px-1 relative group z-10">
+              <IoIosInformationCircleOutline size={16} /><span className="bg-gray-50 text-blue-900 invisible transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:visible absolute px-4 py-0.5 right-3 top-10 rounded-md">Lorem ipsum dolor sit.</span> </div>
+            {renderSortIcon("score")}
+          </div>
         </th>
 
         <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap hidden md:block">Liga</th>

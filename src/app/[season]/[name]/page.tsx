@@ -200,7 +200,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
             </div>
           </div>
 
-          <div className="py-4 flex-1">
+          {/* <div className="py-4 flex-1">
             <div className="flex-1 justify-start mb-8">
               <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-900 text-center mb-6 font-extrabold leading-tight tracking-wide lg:text-2xl">
                 Veja o vídeo da liga {player.league} onde <br /> {player.name} se destacou!
@@ -212,7 +212,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                 ⚡ Melhores lances de {player.name} ⚡ </ h2>
               <iframe width="460" height="260" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="mx-auto max-w-fit lg:max-w-full" allowFullScreen></iframe>
             </div>
-          </div>
+          </div> */}
 
         </main>
 
