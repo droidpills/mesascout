@@ -46,6 +46,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <meta name="google-adsense-account" content="ca-pub-3537170918649474"></meta>
       </head>
       <body >
         <Header />
