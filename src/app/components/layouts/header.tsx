@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-3 bg-[#292C34] text-white w-full shadow-lg lg:pr-6 ">
+    <div className="py-3 bg-[#292C34] text-white w-full shadow-lg">
       <div className="container mx-auto md:px-0 lg:px-4 2xl:px-0">
         <header className="flex items-center justify-between uppercase font-semibold">
           {/* Logo */}

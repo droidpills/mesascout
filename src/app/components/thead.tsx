@@ -56,7 +56,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort }) => {
           <div className="inline-flex">
             Score
             <div className="px-1 relative group z-10">
-              <IoIosInformationCircleOutline size={16} /><span className="bg-gray-50 text-blue-900 invisible transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:visible absolute px-4 py-0.5 right-3 top-10 rounded-md">Lorem ipsum dolor sit.</span> </div>
+              <IoIosInformationCircleOutline size={16} /><span className="bg-[#e1e7ed] text-[#6f8caa] text-[14px] invisible transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:visible absolute py-3 px-5 -right-6 top-7 normal-case">Performance * Idade</span> </div>
             {renderSortIcon("score")}
           </div>
         </th>

@@ -1,5 +1,5 @@
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
-import { FaYoutube, FaTiktok, FaGithub } from "react-icons/fa";
+import { FaYoutube, FaTiktok } from "react-icons/fa";
 
 
 const Footer: React.FC = () => {
@@ -21,11 +21,6 @@ const Footer: React.FC = () => {
           <a href="https://twitter.com/Mesascout" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Twitter</span>
             <FaXTwitter size={24}/>
-          </a>
-
-          <a href="https://github.com/droidpills/mesascout" className="text-gray-400 hover:text-gray-500">
-            <span className="sr-only">GitHub</span>
-            <FaGithub size={24} />
           </a>
 
           <a href="https://www.tiktok.com/@mesascout" className="text-gray-400 hover:text-gray-500">

@@ -56,7 +56,7 @@ export default function RootLayout({
           <GoogleAdsense/>
         </div>
 
-        <main className="md:px-0 lg:px-4 2xl:px-0">{children}</main>
+        <main className="h-full md:px-0 lg:px-4 2xl:px-0">{children}</main>
 
         {/* Segundo Banner AdSense */}
         <div className="mt-16 p-5 mb-4 bg-[#292C34] w-full">

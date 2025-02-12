@@ -75,7 +75,7 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
         <button
           onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-60"
+          className="px-3 py-1 bg-[#e1e7ed] text-[#6f8caa] rounded-full disabled:opacity-60"
         >
           Anterior
         </button>

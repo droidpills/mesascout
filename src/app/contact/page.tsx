@@ -17,17 +17,18 @@ const Contact = () => {
   }, []);
 
   return (
-    <div>
-      <section className="mt-4 h-screen relative">
-        <div className="absolute -z-10 ml-3 w-[90%]"><FormSkeleton/> </div>
-        <div
-          className="hs-form-frame bg-white"
-          data-region="na1"
-          data-form-id="97762e00-2291-48ae-8d64-9e9ce394f79d"
-          data-portal-id="49277401"
-        ></div>
-      </section>
-    </div>
+    <section className="h-full relative overflow-hidden w-full mx-auto">
+      <div className="absolute -z-10 w-full max-w-[90%]">
+        <FormSkeleton />
+      </div>
+      <div
+        className="hs-form-frame bg-white w-full mx-auto"
+        data-region="na1"
+        data-form-id="97762e00-2291-48ae-8d64-9e9ce394f79d"
+        data-portal-id="49277401"
+      ></div>
+    </section>
+
   );
 };
 
