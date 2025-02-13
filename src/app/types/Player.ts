@@ -4,6 +4,7 @@ export interface Player {
     score: number;
     link: string;
     club: string;
+    previous_club: string;
     league: string;
     hired: boolean;
     contrato: string;
@@ -11,6 +12,8 @@ export interface Player {
     age: number;
     value: string;
     video: string;
+    pontos_fortes: string;
+    pontos_fracos: string;
   }
 
   export interface Players {

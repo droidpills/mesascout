@@ -6,11 +6,11 @@ export default function NameLayout({
   children: React.ReactNode;
 }) {
   return <>
-  <div className="flex container mx-auto lg:gap-x-8">
-  <div className="w-full lg:w-9/12">
+  <div className="flex mx-auto lg:container lg:gap-x-8">
+  <div className="w-full mx-auto w-12/12 lg:w-9/12">
   {children}
   </div>
-  <div className="my-7 p-5 sticky top-0 bg-[#292C34] flex flex-row lg:w-3/12">
+  <div className="my-7 p-5 sticky top-0 bg-[#292C34] hidden lg:flex lg:flex-row lg:w-3/12">
     <GoogleAdsense  />
   </div>
   </div>

@@ -57,6 +57,7 @@ const Season24Client: React.FC<Season24ClientProps> = ({ players }) => {
           title="Temporada 2024"
           flagSrc={[brasil, argentina, colombia, ecuador, egypt, mexico, uruguay, usa]}
           description="Top 2024: até 15M € e alto potencial de valorização."
+          scoreText="Performance x Idade"
         />
       </div>
     </div>

@@ -29,7 +29,7 @@ export default function CopinhaLayout({
       <div className="w-full lg:w-9/12">
         {children}
       </div>
-      <div className="my-7 p-5 sticky top-0 bg-[#292C34] flex flex-row lg:w-3/12">
+      <div className="my-7 p-5 sticky top-0 bg-[#292C34] hidden lg:flex lg:flex-row lg:w-3/12">
       <GoogleAdsense />
       </div>
     </div>

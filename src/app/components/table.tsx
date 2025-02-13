@@ -15,9 +15,10 @@ interface TableProps {
   title: string;
   flagSrc: StaticImageData[];
   description:string;
+  scoreText: string;
 }
 
-const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season, title, flagSrc=[], description}) => {
+const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season, title, flagSrc=[], description, scoreText}) => {
   const searchParams = useSearchParams(); // Hook para acessar parâmetros de busca
   const router = useRouter(); // Para navegação programática
 
@@ -60,13 +61,14 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
 
     return pages;
   };
+  
 
   return (
     <div className="w-full" >
       <TitleTable title={title} flagSrc={flagSrc} description={description}/>
       <div className="w-full overflow-x-auto">
       <table className="w-full min-w-full table-auto border-collapse overflow-x-auto">
-        <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} />
+        <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} scoreText={scoreText} players={currentPlayers}/>
         <TBody players={currentPlayers} season={season} />
       </table>
       </ div>

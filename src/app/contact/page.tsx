@@ -17,7 +17,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="h-full relative overflow-hidden w-full mx-auto">
+    <section className="h-full min-h-screen relative overflow-hidden w-full mx-auto">
       <div className="absolute -z-10 w-full max-w-[90%]">
         <FormSkeleton />
       </div>

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout de 5 segundos
 
     const response = await fetch(
-      "https://storage.googleapis.com/mesascout/players_with_positions2.json",
+      "https://storage.googleapis.com/mesascout/jsons/copinha.json",
       {
         signal: controller.signal, // Passa o sinal de cancelamento
       }
