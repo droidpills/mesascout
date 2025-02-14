@@ -5,8 +5,10 @@ import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
 import { FaArrowLeft, FaUserCircle } from "react-icons/fa";
+import { FaRegStarHalfStroke, FaStar} from "react-icons/fa6";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa6";
+import React from "react";
 
 const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/jsons/season24.json",
@@ -67,9 +69,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     const player = players.find((p) => normalizeName(p.name) === name);
     if (!player) return notFound();
 
-    console.log(jsonFileUrl)
-
-   const currentSeason = jsonFileUrl.includes("season24")
+    const currentSeason = jsonFileUrl.includes("season24")
       ? "season24_images_no_bg"
       : "copinha_images_no_bg";
 
@@ -117,21 +117,26 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
     interface Habilit {
       label: string;
-      value: string;
+      value: React.ReactNode;
     }
 
     const renderStars = (count: number) => {
-      return '★'.repeat(count);
+      return Array(count).fill(<FaStar size={12}/>);
     };
-
+    
     const habilits: Habilit[] = [];
-
+    
     if (player.pontos_fortes && player.pontos_fortes !== "null") {
       const pontosFortes = player.pontos_fortes.split(",");
       pontosFortes.forEach((ponto) => {
         habilits.push({
           label: ponto.trim(),
-          value: renderStars(4),
+          value: (
+            <>
+              {renderStars(4)} {/* Renderiza 4 ícones de estrela */}
+              <FaRegStarHalfStroke size={12} />
+            </>
+         ),
         });
       });
     }
@@ -141,7 +146,14 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
       pontosFracos.forEach((ponto) => {
         habilits.push({
           label: ponto.trim(),
-          value: renderStars(2),
+          value: (
+            <>
+              {renderStars(1)} {/* Renderiza 4 ícones de estrela */}
+              <div className="bg-clip-text from-[#008000] to-[#729c72]">
+              <FaRegStarHalfStroke size={12} /> </div>
+              <div className="flex opacity-30">{renderStars(3)}</div>
+            </>
+         ),
         });
       });
     }
@@ -189,6 +201,9 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                       </div>
                     )}
                   </div>
+                  <div className="absolute bottom-0 start-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-2xl bg-gradient-to-b from-[#008000] to-[#729c72] text-2xl/none font-extrabold tracking-tighter text-white">
+                    {player.score}
+                  </div>
                 </div>
 
                 <div className="pb-1 pt-3 text-center text-slate-800 ">
@@ -196,11 +211,11 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                   <div className="text-sm">{player.club}</div>
                 </div>
 
-                <div className="mx-16 h-full pt-3 text-slate-800">
+                <div className="h-full pt-3 text-slate-800">
                   {habilits.map((habilit) => (
-                    <div key={habilit.label} className="flex justify-between items-center gap-x-2">
-                      <div className="text-[0.6875rem] uppercase h-full">{habilit.label}</div>
-                      <div>
+                    <div key={habilit.label} className="flex justify-between items-center">
+                      <div className="text-[0.6875rem] pb-2 uppercase h-full">{habilit.label}</div>
+                      <div className="flex">
                         {habilit.value}
                       </div>
                     </div>

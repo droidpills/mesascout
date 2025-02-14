@@ -3,6 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import Script from "next/script";
 import GoogleAdsense from "./components/GoogleAdsense";
 import "./styles/globals.css";
+import 'font-awesome/css/font-awesome.min.css';
 
 import Header from "./components/layouts/header";
 import Footer from "./components/layouts/footer";
