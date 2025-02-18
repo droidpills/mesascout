@@ -50,8 +50,7 @@ export default function RootLayout({
       <body >
         <Header />
         <main className="h-full md:px-0 lg:px-4 2xl:px-0">{children}</main>
-        <div className="mt-16 p-5 mb-4 bg-[#292C34] w-full">
-        </div>
+  
         <Footer />
       </body>
     </html>
