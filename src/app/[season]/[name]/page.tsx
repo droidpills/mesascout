@@ -173,7 +173,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         <main className="flex justify-center mx-auto flex-wrap lg:gap-x-10">
           <div className="relative w-[400px] flex items-center justify-center h-full p-5">
-          <div className="absolute -mt-6 -left-8 top-[50%] z-10 lg:pl-0 lg:-left-20">
+          <div className="absolute -mt-6 -left-3 top-[50%] z-10 lg:pl-0 lg:-left-20">
           <Link href={`/${season}`} className="px-5 py-2 rounded-full flex items-center text-sm font-medium text-[#48484986] hover:text-[#292C34] hover:bg-[#7a7c80]">
             <IoChevronBackCircleOutline size={50} className="mr-2" />
           </Link>
@@ -215,7 +215,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                 <div className="h-full pt-3 text-slate-800">
                   {habilits.map((habilit) => (
                     <div key={habilit.label} className="flex justify-between items-center">
-                      <div className="text-[0.8rem] text-bold pb-2 uppercase h-full">{habilit.label}</div>
+                      <div className="text-[0.8rem] font-bold pb-2 uppercase h-full">{habilit.label}</div>
                       <div className="flex">
                         {habilit.value}
                       </div>

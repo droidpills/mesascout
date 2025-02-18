@@ -53,6 +53,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
       </div>
     </div>
 
+
   );
 };
 
