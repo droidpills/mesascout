@@ -173,7 +173,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         <main className="flex justify-center mx-auto flex-wrap lg:gap-x-10">
           <div className="relative w-[400px] flex items-center justify-center h-full p-5">
-          <div className="absolute -mt-6 -left-8 top-[50%] z-10 lg:pl-0 lg:-left-20">
+          <div className="absolute -mt-6 -left-3 top-[45%] z-10 lg:pl-0 lg:-left-20">
           <Link href={`/${season}`} className="rounded-full flex items-center text-sm font-medium text-[#48484986] hover:text-[#292C34] hover:bg-[#7a7c80]">
             <BsChevronCompactLeft size={50} />
           </Link>
