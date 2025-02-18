@@ -215,7 +215,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                 <div className="h-full pt-3 text-slate-800">
                   {habilits.map((habilit) => (
                     <div key={habilit.label} className="flex justify-between items-center">
-                      <div className="text-[0.6875rem] pb-2 uppercase h-full">{habilit.label}</div>
+                      <div className="text-[0.8rem] text-bold pb-2 uppercase h-full">{habilit.label}</div>
                       <div className="flex">
                         {habilit.value}
                       </div>
