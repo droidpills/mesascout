@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import GoogleAdsense from "../components/GoogleAdsense";
 
 export const metadata: Metadata = {
   title: "Copinha - Analise jogadores",
@@ -30,7 +29,6 @@ export default function CopinhaLayout({
         {children}
       </div>
       <div className="my-7 p-5 sticky top-0 bg-[#292C34] hidden lg:flex lg:flex-row lg:w-3/12">
-      <GoogleAdsense />
       </div>
     </div>
   </>;

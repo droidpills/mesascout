@@ -111,7 +111,7 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
         </button>
       </div>
         <div className="flex justify-end items-center">
-          <p className="text-sm text-[#6f8caa] pr-3">Powered by Droidpills</p>
+          <a href="https://www.droidpills.com/" target="_blank" className="underline text-sm text-[#6f8caa] pr-3 hover:text-green-900">Powered by Droidpills</a>
         </div>
     </div>
   );

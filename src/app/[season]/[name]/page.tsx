@@ -5,7 +5,7 @@ import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
 import { FaArrowLeft, FaUserCircle } from "react-icons/fa";
-import { FaRegStarHalfStroke, FaStar} from "react-icons/fa6";
+import { FaRegStarHalfStroke, FaStar } from "react-icons/fa6";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa6";
 import React from "react";
@@ -121,11 +121,11 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     }
 
     const renderStars = (count: number) => {
-      return Array(count).fill(<FaStar size={12}/>);
+      return Array(count).fill(<FaStar size={12} />);
     };
-    
+
     const habilits: Habilit[] = [];
-    
+
     if (player.pontos_fortes && player.pontos_fortes !== "null") {
       const pontosFortes = player.pontos_fortes.split(",");
       pontosFortes.forEach((ponto) => {
@@ -136,7 +136,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
               {renderStars(4)} {/* Renderiza 4 ícones de estrela */}
               <FaRegStarHalfStroke size={12} />
             </>
-         ),
+          ),
         });
       });
     }
@@ -150,10 +150,10 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
             <>
               {renderStars(1)} {/* Renderiza 4 ícones de estrela */}
               <div className="bg-clip-text from-[#008000] to-[#729c72]">
-              <FaRegStarHalfStroke size={12} /> </div>
+                <FaRegStarHalfStroke size={12} /> </div>
               <div className="flex opacity-30">{renderStars(3)}</div>
             </>
-         ),
+          ),
         });
       });
     }
@@ -182,7 +182,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
               <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                 <div className="relative overflow-hidden pb-3">
                   <div className="relative h-[200px] border rounded-t-3xl border-gray-200 bg-gradient-to-b from-[#008000] to-[#729c72] [clip-path:polygon(0_0,_100%_0,_100%_95%,_50%_100%,_0_95%)]">
-                    <div className="pointer-events-none absolute start-1/2 top-5 -z-10 -translate-x-1/2 text-[80px] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay leading-none">
+                    <div className="pointer-events-none absolute start-1/2 top-6 -z-10 -translate-x-1/2 text-center text-9xl/[0.8em] font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                       <div>{player.name} </div>
                     </div>
 
@@ -196,8 +196,8 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
                         className="absolute start-1/2 bottom-0 -translate-x-1/2 z-0 rounded-3xl"
                       />
                     ) : (
-                      <div className="absolute start-1/2 bottom-10 -translate-x-1/2 z-0 text-6xl">
-                        <FaUserCircle className="text-gray-500" />
+                      <div className="absolute start-1/2 -bottom-2 -translate-x-1/2 z-0 text-6xl">
+                        <FaUserCircle size={120} className="text-gray-500" />
                       </div>
                     )}
                   </div>
@@ -240,6 +240,13 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
               </div>
             </div>
           </div>
+
+          {/* <div className="py-4 flex-1">
+             <div className="flex-1 justify-start">
+              <iframe width="460" height="260" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="mx-auto max-w-fit lg:max-w-full" allowFullScreen></iframe>
+            </div>
+          </div> */}
+
         </main>
       </div>
     );

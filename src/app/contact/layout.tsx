@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import GoogleAdsense from "../components/GoogleAdsense";
 
 export const metadata: Metadata = {
   title: "Mesa Scout - Contato",
@@ -30,7 +29,6 @@ export default function ContactLayout({
         {children}
       </div>
       <div className="my-7  sticky top-0 bg-[#292C34] flex flex-row lg:w-3/12">
-        <GoogleAdsense />
       </div>
     </div>
   </>;

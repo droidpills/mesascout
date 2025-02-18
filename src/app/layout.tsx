@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import Script from "next/script";
-import GoogleAdsense from "./components/GoogleAdsense";
 import "./styles/globals.css";
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -47,23 +46,12 @@ export default function RootLayout({
             `,
           }}
         />
-        <meta name="google-adsense-account" content="ca-pub-3537170918649474"></meta>
       </head>
       <body >
         <Header />
-
-        {/* Banner AdSense */}
-        <div className="mt-5 flex w-full p-5">
-          <GoogleAdsense/>
-        </div>
-
         <main className="h-full md:px-0 lg:px-4 2xl:px-0">{children}</main>
-
-        {/* Segundo Banner AdSense */}
         <div className="mt-16 p-5 mb-4 bg-[#292C34] w-full">
-          <GoogleAdsense />
         </div>
-
         <Footer />
       </body>
     </html>

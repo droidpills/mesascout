@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import FormSkeleton from "../components/CardSkeleton";
 
-
 const Contact = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -17,7 +16,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="h-full min-h-screen relative overflow-hidden w-full mx-auto">
+    <section className="h-full min-h-screen relative overflow-hidden w-full mx-auto mt-7">
+      <h1 className="text-slate-600 pl-5 text-2xl sm:text-4xl leading-snug animate-fade-in">Preencha o formulário abaixo ou entre em contato direto pelo email: <span className="font-bold">marco@droidpills.com</span> </h1>
       <div className="absolute -z-10 w-full max-w-[90%]">
         <FormSkeleton />
       </div>
