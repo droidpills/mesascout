@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import bannerleft from "../../../public/images/banners/banner-left.png"
 
 export const metadata: Metadata = {
   title: "Mesa Scout - Contato",
@@ -28,8 +30,11 @@ export default function ContactLayout({
       <div className="w-full lg:w-9/12">
         {children}
       </div>
-      <div className="my-7  sticky top-0 bg-[#292C34] flex flex-row lg:w-3/12">
-      </div>
+      <div className="my-7 sticky top-0 hidden lg:flex lg:flex-row lg:w-3/12">
+          <a href="https://x.com/mesascout" target="_blank">
+            <Image src={bannerleft} width={380} height={850} alt="Banner Youtube" />
+          </ a>
+        </div>
     </div>
   </>;
 }

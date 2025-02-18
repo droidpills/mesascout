@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation';
 import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
-import { FaArrowLeft, FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import { FaRegStarHalfStroke, FaStar } from "react-icons/fa6";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa6";
 import React from "react";
@@ -170,14 +171,14 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
-        <div className="flex justify-start pt-8 pl-5 lg:pl-0">
-          <Link href={`/${season}`} className="bg-[#292C34] px-5 py-2 rounded-full flex items-center text-sm font-medium text-white hover:text-[#292C34] hover:bg-[#7a7c80]">
-            <FaArrowLeft className="mr-2" /> Voltar
+        <main className="flex justify-center mx-auto flex-wrap lg:gap-x-10">
+          <div className="relative w-[400px] flex items-center justify-center h-full p-5">
+          <div className="absolute -mt-6 -left-8 top-[50%] z-10 lg:pl-0 lg:-left-20">
+          <Link href={`/${season}`} className="px-5 py-2 rounded-full flex items-center text-sm font-medium text-[#48484986] hover:text-[#292C34] hover:bg-[#7a7c80]">
+            <IoChevronBackCircleOutline size={50} className="mr-2" />
           </Link>
         </div>
 
-        <main className="flex justify-center mx-auto flex-wrap lg:gap-x-10">
-          <div className="w-[400px] flex items-center justify-center h-full p-5">
             <div className="w-full rounded-3xl border border-gray-200 bg-white">
               <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                 <div className="relative overflow-hidden pb-3">

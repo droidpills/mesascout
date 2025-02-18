@@ -47,7 +47,7 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
           season={season}
           title="Copinha 2025"
           flagSrc={[brasil]}
-          description=""
+          description="Destaques da Copa São Paulo de futebol junior"
           scoreText="Performance x Jogos"
         />
       </div>
