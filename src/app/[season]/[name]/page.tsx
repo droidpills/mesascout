@@ -117,13 +117,13 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         <main className="flex flex-wrap justify-center mx-auto lg:gap-x-10">
           <div className="flex flex-nowrap">
             <div className="absolute left-0 opacity-40">
-              <PlayerCard player={prevPlayer} imageExists={imageExists} playerImageURL={prevPlayerImageURL} season={season} />
+              <PlayerCard player={prevPlayer} imageExists={imageExists} playerImageURL={prevPlayerImageURL} />
             </div>
             <div className="relative z-20 flex justify-center mx-auto">
-              <PlayerCard player={player} imageExists={imageExists} playerImageURL={playerImageURL} season={season} />
+              <PlayerCard player={player} imageExists={imageExists} playerImageURL={playerImageURL} />
             </div>
             <div className="absolute left-[50%] opacity-40">
-              <PlayerCard player={nextPlayer} imageExists={imageExists} playerImageURL={nextPlayerImageURL} season={season} />
+              <PlayerCard player={nextPlayer} imageExists={imageExists} playerImageURL={nextPlayerImageURL} />
             </div>
           </div>
 
@@ -135,7 +135,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         </main>
   
-        <AsNavFor players={players} imageExists={imageExists} season={season} name={name} currentSeason={currentSeason} pageURL={pageURL}/>
+        <AsNavFor players={players} imageExists={imageExists} currentSeason={currentSeason}/>
  
       </div>
     );
