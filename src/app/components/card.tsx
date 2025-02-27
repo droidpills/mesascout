@@ -4,9 +4,9 @@ import { FaUserCircle } from "react-icons/fa";
 import { Player } from "../types/Player";
 
 interface PlayerCardProps {
-    player?: Player | null;
+    player: Player | null;
     imageExists: boolean;
-    playerImageURL: string;
+    playerImageURL: string | null;
 }
 
 export default function PlayerCard({ player, imageExists, playerImageURL }: PlayerCardProps) {
@@ -14,6 +14,8 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
         label: string;
         value: React.ReactNode;
     }
+
+//   console.log(playerImageURL)
 
     const renderStars = (count: number) => {
         return Array.from({ length: count }).map((_, index) => (
@@ -82,7 +84,7 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
                                 {player?.name ?? "Jogador"}
                             </div>
 
-                            {imageExists ? (
+                            {imageExists && playerImageURL  ? (
                                 <Image
                                     src={playerImageURL}
                                     alt={`${player?.name ?? "Jogador"} Foto`}

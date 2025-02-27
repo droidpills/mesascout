@@ -87,7 +87,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         prevPlayer.previous_club ?? player.club,
         "player_image"
       )}.png`
-      : 'notFound';
+      : '';
 
     const nextPlayerImageURL = nextPlayer
       ? `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
@@ -95,7 +95,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         nextPlayer.previous_club ?? player.club,
         "player_image"
       )}.png`
-      : 'notFound';
+      : '';
 
     const pageURL = `https://mesascout.vercel.app/${season}/${normalizeName(player.name)}`;
 
@@ -135,7 +135,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         </main>
   
-        <AsNavFor players={players} imageExists={imageExists} currentSeason={currentSeason}/>
+        <AsNavFor players={players} imageExists={imageExists} currentSeason={currentSeason} name={name}/>
  
       </div>
     );
