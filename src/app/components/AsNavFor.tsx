@@ -32,7 +32,7 @@ const AsNavFor: React.FC<AsNavForProps> = ({ players, imageExists, currentSeason
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: currentIndex,
+          initialSlide: Math.min(visiblePlayers.length - 1, 2),
         },
       },
     ],
@@ -67,7 +67,7 @@ const AsNavFor: React.FC<AsNavForProps> = ({ players, imageExists, currentSeason
     if (!initialized) {
       setInitialized(true);
     } else {
-      if (current === Math.min(visiblePlayers.length - 1, 2)) {
+      if (current >= Math.min(visiblePlayers.length - 1, 2)) {
         handleClick("next");
       } else if (current === 0) {
         handleClick("prev");

@@ -114,6 +114,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
+{/* 
         <main className="flex flex-wrap justify-center mx-auto lg:gap-x-10">
           <div className="flex flex-nowrap">
             <div className="absolute left-0 opacity-40">
@@ -127,13 +128,13 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
             </div>
           </div>
 
-          {/* <div className="py-4 flex-1">
+          <div className="py-4 flex-1">
              <div className="flex-1 justify-start">
               <iframe width="460" height="260" src="https://www.youtube.com/embed/C8HUbFKkeRc?si=wwnQstx1nxZ7ghhZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="mx-auto max-w-fit lg:max-w-full" allowFullScreen></iframe>
             </div>
-          </div> */}
+          </div> 
 
-        </main>
+        </main>*/}
   
         <AsNavFor players={players} imageExists={imageExists} currentSeason={currentSeason} name={name}/>
  
