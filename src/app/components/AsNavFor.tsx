@@ -18,7 +18,7 @@ interface AsNavForProps {
 
 const AsNavFor: React.FC<AsNavForProps> = ({ players, imageExists, currentSeason, name }) => {
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
-  const [initialized, setInitialized] = useState(true);
+  const [initialized, setInitialized] = useState(true);  
   const [visiblePlayers, setVisiblePlayers] = useState(players.slice(Math.max(currentIndex - 2, 0), Math.min(currentIndex + 3, players.length)));
 
   const settings = {
@@ -33,11 +33,14 @@ const AsNavFor: React.FC<AsNavForProps> = ({ players, imageExists, currentSeason
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: Math.min(visiblePlayers.length - 1, 2),
+          beforeChange: (current: number) => handleAfterChange(current), //mudei aqui
+          className: "",
+          centerMode: false,
         },
       },
     ],
     initialSlide: visiblePlayers.length > 2 ? 2 : Math.floor(visiblePlayers.length / 2),
-    afterChange: (current: number) => handleAfterChange(current),
+    beforeChange: (current: number) => handleAfterChange(current),  
     className: "center",
     centerMode: true,
   };
@@ -64,10 +67,14 @@ const AsNavFor: React.FC<AsNavForProps> = ({ players, imageExists, currentSeason
   };
 
   const handleAfterChange = (current: number) => {
+    const isSingleSlide = settings.slidesToShow === 1 || window.innerWidth <= 1024;
+
     if (!initialized) {
       setInitialized(true);
     } else {
-      if (current >= Math.min(visiblePlayers.length - 1, 2)) {
+      const limit = isSingleSlide ? Math.max(visiblePlayers.length - 1, 2) : Math.min(visiblePlayers.length - 1, 2);
+
+      if (current >= limit) {  
         handleClick("next");
       } else if (current === 0) {
         handleClick("prev");
