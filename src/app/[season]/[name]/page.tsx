@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
-import PlayerCard from "@/app/components/card";
 import AsNavFor from "@/app/components/AsNavFor";
 
 const SEASONS_DATA = {
@@ -66,9 +65,6 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     if (currentIndex === -1) return notFound();
 
     const player = players[currentIndex];
-    const prevPlayer = players[currentIndex - 1] || null;
-    const nextPlayer = players[currentIndex + 1] || null;
-
     if (!player) return notFound();
 
     const currentSeason = jsonFileUrl.includes("season24")
@@ -80,22 +76,6 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
       player.previous_club ?? player.club,
       "player_image"
     )}.png`;
-
-    const prevPlayerImageURL = prevPlayer
-      ? `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
-        prevPlayer.name,
-        prevPlayer.previous_club ?? player.club,
-        "player_image"
-      )}.png`
-      : '';
-
-    const nextPlayerImageURL = nextPlayer
-      ? `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
-        nextPlayer.name,
-        nextPlayer.previous_club ?? player.club,
-        "player_image"
-      )}.png`
-      : '';
 
     const pageURL = `https://mesascout.vercel.app/${season}/${normalizeName(player.name)}`;
 
