@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Player } from "../../types/Player";
 import { normalizeName } from "../../utils/normalizeName";
 import { normalizeFileName } from "../../utils/normalizeFileName";
-import AsNavFor from "@/app/components/AsNavFor";
+import SlideCarroussel from "@/app/components/slideCarroussel";
 
 const SEASONS_DATA = {
   season24: "https://storage.googleapis.com/mesascout/jsons/season24.json",
@@ -116,7 +116,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         </main>*/}
   
-        <AsNavFor players={players} imageExists={imageExists} currentSeason={currentSeason} name={name}/>
+        <SlideCarroussel players={players} imageExists={imageExists} currentSeason={currentSeason} name={name}/>
  
       </div>
     );
