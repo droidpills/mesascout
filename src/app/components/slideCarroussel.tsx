@@ -18,13 +18,25 @@ interface SlideCarrousselProps {
 
 const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists, currentSeason, name }) => {
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
-  const [initialized, setInitialized] = useState(false);
-  const [visiblePlayers, setVisiblePlayers] = useState(players.slice(Math.max(currentIndex - 2, 0), Math.min(currentIndex + 3, players.length)));
+  const [initialized, setInitialized] = useState(true);
+
+  let numberPlayersStart = -2;
+
+  if(currentIndex == players.length -1 )
+    numberPlayersStart = -4;
+
+  let numberPlayersEnd = 3;
+
+  if(currentIndex == 0 )
+    numberPlayersEnd = 5;
+
+  const [visiblePlayers, setVisiblePlayers] = useState(players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length)));
 
   const Initial = () => {
     if (visiblePlayers.length > 2) {
       if (currentIndex === 0) return 0; // Primeiro jogador no centro
       if (currentIndex === 1) return 1; // Segundo jogador no centro
+      if(currentIndex === players.length -1 ) return 5;
       return 2; // A partir do terceiro jogador, centraliza sempre o 3° (index 2)
     }
     return Math.floor(visiblePlayers.length / 2); // Quando tiver só 1 ou 2 jogadores
@@ -57,18 +69,18 @@ const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists,
 
   const handleClick = (direction: "next" | "prev") => {
     console.log('ola')
-    const middleIndex = Initial();
+    const middleIndex = Math.floor(visiblePlayers.length / 2);
     const newIndex = visiblePlayers[middleIndex]
       ? players.findIndex((p) => normalizeName(p.name) === normalizeName(visiblePlayers[middleIndex].name))
       : currentIndex;
 
 
     const offset = direction === "next" ? 1 : -1;
-    const targetIndex = newIndex + offset;
+    const targetIndex = Math.max(newIndex, 0) + offset;
     console.log(`targetIndex ${targetIndex}`)
 
     if (targetIndex >= 0 && targetIndex < players.length) {
-      let start = Math.max(targetIndex - 2, 0);
+      let start = Math.max(targetIndex + numberPlayersStart, 0);
       let end = start + 5;
       if (end > players.length) {
         end = players.length;
@@ -92,7 +104,7 @@ const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists,
       console.log(`current ${current}`)
       if (current >= limit) {
         handleClick("next");
-      } else if (current === 0) {
+      } else {
         handleClick("prev");
 
       }
