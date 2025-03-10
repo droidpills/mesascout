@@ -116,7 +116,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
         </main>*/}
   
-        <SlideCarroussel players={players} imageExists={imageExists} currentSeason={currentSeason} name={name}/>
+        <SlideCarroussel players={players} imageExists={imageExists} currentSeason={currentSeason} name={name} season={season}/>
  
       </div>
     );

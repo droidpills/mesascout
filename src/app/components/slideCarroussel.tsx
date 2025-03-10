@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,41 +13,40 @@ interface SlideCarrousselProps {
   imageExists: boolean;
   currentSeason: string;
   name: string;
+  season:string;
 }
 
-const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists, currentSeason, name }) => {
+const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists, currentSeason, name, season }) => {
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
-  const [initialized, setInitialized] = useState(true);
 
-  let numberPlayersStart = -2;
+  let numberPlayersStart = -7;
 
   if(currentIndex == players.length -1 )
-    numberPlayersStart = -4;
+    numberPlayersStart = -14;
 
-  let numberPlayersEnd = 3;
+  let numberPlayersEnd = 7;
 
   if(currentIndex == 0 )
-    numberPlayersEnd = 5;
+    numberPlayersEnd = 14;
 
-  const [visiblePlayers, setVisiblePlayers] = useState(players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length)));
+  const visiblePlayers = players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length));
 
   const Initial = () => {
-    if (visiblePlayers.length > 2) {
-      if (currentIndex === 0) return 0; // Primeiro jogador no centro
-      if (currentIndex === 1) return 1; // Segundo jogador no centro
-      if(currentIndex === players.length -1 ) return 5;
-      return 2; // A partir do terceiro jogador, centraliza sempre o 3° (index 2)
+    if (visiblePlayers.length > 6) {
+      if (currentIndex < 7) return currentIndex; // Quando o index atual for menor que 7, sempre centraliza o jogador do currentIndex no centro
+      if(currentIndex === players.length -1 ) return 14;
+      return 7; // A partir do oitavo jogador, centraliza sempre o 8° (index 7)
     }
-    return Math.floor(visiblePlayers.length / 2); // Quando tiver só 1 ou 2 jogadores
   };
 
   const settings = {
     infinite: false,
-    speed: 500,
+    speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: Initial(),
-    beforeChange: (current: number) => handleAfterChange(current),
+    onEdge: (direction:string) => handleEdge(direction),
+    afterChange: (index:number) => handleAfterChange(index),
     centerMode: true,
     centerPadding: "0px",
     className: "center",
@@ -57,59 +55,24 @@ const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists,
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          beforeChange: (current: number) => handleAfterChange(current),
         },
       },
     ],
   };
 
-  console.log(`currentIndex : ${currentIndex}`)
-  console.log(`visiblePlayers : ${visiblePlayers.length}`)
+  const handleEdge = (direction: string ) => {
+    console.log(direction)
+    if (direction == 'right') {
+        console.log(visiblePlayers[0])
 
-  const handleClick = (direction: "next" | "prev") => {
-    console.log('ola')
-    const middleIndex = Math.floor(visiblePlayers.length / 2);
-    const newIndex = visiblePlayers[middleIndex]
-      ? players.findIndex((p) => normalizeName(p.name) === normalizeName(visiblePlayers[middleIndex].name))
-      : currentIndex;
-
-
-    const offset = direction === "next" ? 1 : -1;
-    const targetIndex = Math.max(newIndex, 0) + offset;
-    console.log(`targetIndex ${targetIndex}`)
-
-    if (targetIndex >= 0 && targetIndex < players.length) {
-      let start = Math.max(targetIndex + numberPlayersStart, 0);
-      let end = start + 5;
-      if (end > players.length) {
-        end = players.length;
-        start = Math.max(end - 5, 0);
-      }
-      setVisiblePlayers(players.slice(start, end));
     }
-  };
+    window.location.reload()
+  }
 
-  const handleAfterChange = (current: number) => {
-    console.log('ola1')
-    const isSingleSlide = settings.slidesToShow === 1 || window.innerWidth <= 1024;
-
-    if (!initialized) {
-      console.log('ola2')
-      setInitialized(false);
-    } else {
-      console.log('ola3')
-      const limit = isSingleSlide ? Math.max(visiblePlayers.length - 1, 2) : Math.min(visiblePlayers.length - 1, 2);
-      console.log(`limit ${limit}`)
-      console.log(`current ${current}`)
-      if (current >= limit) {
-        handleClick("next");
-      } else {
-        handleClick("prev");
-
-      }
-    }
-  };
+  const handleAfterChange = (index: number) => {
+    console.log(visiblePlayers[index])
+    window.history.replaceState({}, '', `/${season}/${normalizeName(visiblePlayers[index].name)}`)
+  }
 
   return (
     <div className="slider-container m-5">

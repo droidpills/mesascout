@@ -80,7 +80,7 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
                 <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                     <div className="relative overflow-hidden pb-3">
                         <div className="relative h-[200px] border rounded-t-3xl border-gray-200 bg-gradient-to-b from-[#008000] to-[#729c72]">
-                            <div className="absolute start-1/2 top-6 -translate-x-1/2 text-center text-9xl font-extrabold uppercase tracking-tighter text-white opacity-40 mix-blend-overlay">
+                            <div className="absolute start-1/2 top-6 -translate-x-1/2 text-center text-9xl font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                                 {player?.name ?? "Jogador"}
                             </div>
 
