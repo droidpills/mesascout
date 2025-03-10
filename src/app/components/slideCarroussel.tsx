@@ -19,6 +19,12 @@ interface SlideCarrousselProps {
 const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists, currentSeason, name, season }) => {
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
 
+  //console.log(currentIndex);
+
+  //console.log(players[currentIndex-8])
+
+  const mostLeftPlayer = players[currentIndex-8];
+
   let numberPlayersStart = -7;
 
   if(currentIndex == players.length -1 )
@@ -63,14 +69,16 @@ const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists,
   const handleEdge = (direction: string ) => {
     console.log(direction)
     if (direction == 'right') {
-        console.log(visiblePlayers[0])
+        console.log(mostLeftPlayer)
+        window.location.assign( `/${season}/${normalizeName(mostLeftPlayer.name)}`)
+      //  window.history.replaceState({}, '', `/${season}/${normalizeName(mostLeftPlayer.name)}`)
 
     }
-    window.location.reload()
+  //  window.location.reload()
   }
 
   const handleAfterChange = (index: number) => {
-    console.log(visiblePlayers[index])
+    //console.log(visiblePlayers[index])
     window.history.replaceState({}, '', `/${season}/${normalizeName(visiblePlayers[index].name)}`)
   }
 
