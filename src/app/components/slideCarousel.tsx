@@ -42,8 +42,15 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const numberPlayersEnd = currentIndex == 0 ? 14 : 7
   const visiblePlayers = players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length));
 
+  let mostRightIndex = 7;
+
+
+  if (window.innerWidth < 1024) {
+    mostRightIndex = 6;
+  }
+
   const mostLeftPlayer = players[currentIndex - 7];
-  const mostRightPlayer = players[currentIndex + 7 ];
+  const mostRightPlayer = players[currentIndex + mostRightIndex ];
 
   const handleScroll = useCallback((emblaApi: EmblaCarouselType) => {
     console.log('handlesettle');
@@ -57,6 +64,7 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
     window.history.replaceState({}, "", `/${season}/${normalizeName(newPlayer.name)}`);
 
     if (emblaApi.canScrollNext() === false) {
+    
       window.location.assign(`/${season}/${normalizeName(mostRightPlayer.name)}`);
     } else if (emblaApi.canScrollPrev() === false) {
       window.location.assign(`/${season}/${normalizeName(mostLeftPlayer.name)}`);
