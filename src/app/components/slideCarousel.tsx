@@ -42,14 +42,14 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const numberPlayersEnd = currentIndex == 0 ? 14 : 7
   const visiblePlayers = players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length));
 
-  const mostLeftPlayer = players[currentIndex - 6];
-  const mostRightPlayer = players[currentIndex + 6 ];
+  const mostLeftPlayer = players[currentIndex - 7];
+  const mostRightPlayer = players[currentIndex + 7 ];
 
   const handleScroll = useCallback((emblaApi: EmblaCarouselType) => {
     console.log('handlesettle');
 
     const index = emblaApi.selectedScrollSnap();
-    const newPlayer = window.innerWidth >= 1024 ? visiblePlayers[index] : visiblePlayers[index+1];
+    const newPlayer = visiblePlayers[index];
 
     console.log('emblaApicanscroll');
     console.log(emblaApi);
