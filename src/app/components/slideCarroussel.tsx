@@ -1,100 +1,121 @@
 "use client";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { EmblaOptionsType} from 'embla-carousel';
+import useEmblaCarousel from 'embla-carousel-react';
+import { NextButton, PrevButton, usePrevNextButtons } from './emblaCarouselArrowButtons';
+import { DotButton, useDotButton } from './emblaCarouselDotButton';
+
 import PlayerCard from "./card";
 import { Player } from "../types/Player";
 import { normalizeFileName } from "../utils/normalizeFileName";
 import { normalizeName } from "../utils/normalizeName";
+import { useCallback, useEffect } from 'react';
 
 interface SlideCarrousselProps {
   players: Player[];
   imageExists: boolean;
   currentSeason: string;
   name: string;
-  season:string;
+  season: string;
+  slides: number[]
+  options?: EmblaOptionsType
 }
 
-const SlideCarroussel: React.FC<SlideCarrousselProps> = ({ players, imageExists, currentSeason, name, season }) => {
+const SlideCarroussel: React.FC<SlideCarrousselProps> = (props) => {
+  const { players, imageExists, currentSeason, name, season } = props
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
 
-  //console.log(currentIndex);
-
-  //console.log(players[currentIndex-8])
-
-  const mostLeftPlayer = players[currentIndex-8];
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: false, startIndex: 6, align:'center' })
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
 
   let numberPlayersStart = -7;
-
-  if(currentIndex == players.length -1 )
+  if (currentIndex == players.length - 1)
     numberPlayersStart = -14;
 
   let numberPlayersEnd = 7;
-
-  if(currentIndex == 0 )
+  if (currentIndex == 0)
     numberPlayersEnd = 14;
 
   const visiblePlayers = players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length));
 
-  const Initial = () => {
-    if (visiblePlayers.length > 6) {
-      if (currentIndex < 7) return currentIndex; // Quando o index atual for menor que 7, sempre centraliza o jogador do currentIndex no centro
-      if(currentIndex === players.length -1 ) return 14;
-      return 7; // A partir do oitavo jogador, centraliza sempre o 8° (index 7)
+  const mostLeftPlayer = players[currentIndex - 8];
+  const mostRightPlayer = players[currentIndex + 8];
+
+  const handleEdge = useCallback(() => {
+    if (!emblaApi) return;
+
+    const isAtEnd = emblaApi.canScrollNext() === false;
+    const isAtStart = emblaApi.canScrollPrev() === false;
+
+    if (isAtEnd && mostRightPlayer) {
+      window.location.assign(`/${season}/${normalizeName(mostRightPlayer.name)}`);
+    } else if (isAtStart && mostLeftPlayer) {
+      window.location.assign(`/${season}/${normalizeName(mostLeftPlayer.name)}`);
     }
-  };
+  }, [emblaApi, season, mostLeftPlayer, mostRightPlayer]);
+  
+  const handleAfterChange = useCallback(() => {
+    if (!emblaApi) return;
+    const index = emblaApi.selectedScrollSnap();
+    const newPlayer = visiblePlayers[index];
 
-  const settings = {
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: Initial(),
-    onEdge: (direction:string) => handleEdge(direction),
-    afterChange: (index:number) => handleAfterChange(index),
-    centerMode: true,
-    centerPadding: "0px",
-    className: "center",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
-  const handleEdge = (direction: string ) => {
-    console.log(direction)
-    if (direction == 'right') {
-        console.log(mostLeftPlayer)
-        window.location.assign( `/${season}/${normalizeName(mostLeftPlayer.name)}`)
-      //  window.history.replaceState({}, '', `/${season}/${normalizeName(mostLeftPlayer.name)}`)
-
+    if (newPlayer) {
+      window.history.replaceState({}, "", `/${season}/${normalizeName(newPlayer.name)}`);
     }
-  //  window.location.reload()
-  }
+  }, [emblaApi, season, visiblePlayers]);
 
-  const handleAfterChange = (index: number) => {
-    //console.log(visiblePlayers[index])
-    window.history.replaceState({}, '', `/${season}/${normalizeName(visiblePlayers[index].name)}`)
-  }
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    emblaApi.on("select", handleAfterChange);
+    emblaApi.on("scroll", handleEdge);
+
+    return () => {
+      emblaApi.off("select", handleAfterChange);
+      emblaApi.off("scroll", handleEdge);
+    };
+  }, [emblaApi, handleAfterChange, handleEdge]);
 
   return (
-    <div className="slider-container m-5">
-      <Slider {...settings}>
-        {visiblePlayers.map((player) => {
-          const playerImageURL = `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
-            player.name,
-            player.previous_club ?? player.club,
-            "player_image"
-          )}.png`;
+    <div className="embla">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {visiblePlayers.map((player) => {
+            const playerImageURL = `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
+              player.name,
+              player.previous_club ?? player.club,
+              "player_image"
+            )}.png`;
+            return <PlayerCard key={player.name} player={player} imageExists={imageExists} playerImageURL={playerImageURL} />;
+          })}
+        </div>
+      </div>
 
-          return <PlayerCard key={player.name} player={player} imageExists={imageExists} playerImageURL={playerImageURL} />;
-        })}
-      </Slider>
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
