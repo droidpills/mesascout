@@ -2,19 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
-.embla {
-  overflow: hidden;
-}
-.embla__viewport {
-  overflow: hidden;
-  width: 100%;
-}
-.embla__container {
-  display: flex;
-  gap: 1rem; /* Optional spacing */
-}
-.embla__slide {
-  flex: 0 0 33.3333%; /* 3 slides per view */
-}
