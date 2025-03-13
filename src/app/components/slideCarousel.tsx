@@ -52,12 +52,8 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const mostRightPlayer = players[currentIndex + mostRightIndex ];
 
   const handleScroll = useCallback((emblaApi: EmblaCarouselType) => {
-    console.log('handlesettle');
-
     const index = emblaApi.selectedScrollSnap();
     const newPlayer = visiblePlayers[index];
-
-    console.log('emblaApicanscroll');
     console.log(emblaApi);
 
     window.history.replaceState({}, "", `/${season}/${normalizeName(newPlayer.name)}`);
@@ -90,11 +86,11 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
               return <PlayerCard key={player.name} player={player} imageExists={imageExists} playerImageURL={playerImageURL} />;
             })}
           </div>
-      <div className="absolute left-5 top-[35%] -translate-y-1/2 lg:top-1/2">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+      <div className={`absolute left-10 top-[35%] -translate-y-1/2 lg:top-1/2`}>
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className={currentIndex == 0 && emblaApi?.canScrollPrev() === false ? 'hidden' : ''} />
         </div>
-        <div className="absolute right-5 top-[35%] -translate-y-1/2 lg:top-1/2">
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="absolute right-10 top-[35%] -translate-y-1/2 lg:top-1/2">
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled}  className={currentIndex == (players.length - 1) && emblaApi?.canScrollNext() === false ? 'hidden' : ''} />
       </div>
         </div>
       </section>

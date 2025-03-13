@@ -37,13 +37,13 @@
     border-right: 5px solid rgb(105, 100, 100);
     transform: rotate(45deg);
     margin: -10px;
-    animation: animate 2s infinite;
+    animation: animate 3s infinite;
 }
 .arrow span:nth-child(2) {
-    animation-delay: -0.2s;
+    animation-delay: -0.3s;
 }
 .arrow span:nth-child(3) {
-    animation-delay: -0.4s;
+    animation-delay: -0.6s;
 }
 @keyframes animate {
     0% {
