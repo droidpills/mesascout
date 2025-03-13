@@ -9,6 +9,7 @@ import { Player } from "../types/Player";
 import { normalizeFileName } from "../utils/normalizeFileName";
 import { normalizeName } from "../utils/normalizeName";
 import { useCallback, useEffect } from 'react';
+import ClassNames from 'embla-carousel-class-names';
 
 interface SlideCarrousselProps {
   players: Player[];
@@ -24,13 +25,13 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
 
   const Initial = () => {
-    if (currentIndex < 7) return currentIndex; // Quando o index atual for menor que 7, sempre centraliza o jogador do currentIndex no centro
+    if (currentIndex < 7) return currentIndex; 
     if (currentIndex === players.length - 1) return 14;
-    return 7; // A partir do oitavo jogador, centraliza sempre o 8° (index 7)
+    return 7; 
   };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: false, startIndex: Initial(), align: 'center' })
+    { loop: false, startIndex: Initial(), align: 'center', containScroll:false }, [ClassNames()])
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -43,9 +44,7 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const visiblePlayers = players.slice(Math.max(currentIndex + numberPlayersStart, 0), Math.min(currentIndex + numberPlayersEnd, players.length));
 
   let mostRightIndex = 7;
-
-
-  if (window.innerWidth < 1024) {
+  if (typeof window !== "undefined" && window.innerWidth < 1024) {
     mostRightIndex = 6;
   }
 
@@ -79,7 +78,7 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
 
   return (
     <div>
-      <section className="overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex gap-4">
             {visiblePlayers.map((player) => {
@@ -91,15 +90,15 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
               return <PlayerCard key={player.name} player={player} imageExists={imageExists} playerImageURL={playerImageURL} />;
             })}
           </div>
+      <div className="absolute left-5 top-[35%] -translate-y-1/2 lg:top-1/2">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        </div>
+        <div className="absolute right-5 top-[35%] -translate-y-1/2 lg:top-1/2">
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
         </div>
       </section>
 
-      <div className="grid grid-cols-[auto_1fr] justify-between gap-3 mt-7">
-        <div className="grid grid-cols-2 gap-3 items-center">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-      </div>
     </div>
   );
 };

@@ -75,7 +75,7 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
     ];
 
     return (
-        <div className="lg:flex-none lg:min-w-[30%] flex min-w-full relative w-[400px] items-center justify-center h-full p-5 ">
+        <div className="lg:flex-none lg:min-w-[30%] flex min-w-full relative w-[400px] items-center justify-center h-full py-5 ">
             <div className="w-full rounded-3xl border border-gray-200 bg-white">
                 <div className="rounded-3xl p-4 ring-1 ring-gray-200">
                     <div className="relative overflow-hidden pb-3">
