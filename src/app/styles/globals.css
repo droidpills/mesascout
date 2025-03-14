@@ -2,5 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
+
+/* viseble slide */
+
+.is-in-view {
+    opacity: .5;
+}
+
+.is-snapped {
+    opacity: 1;
+}
+
+/* arrow */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    cursor: pointer;
+}
+.arrow.right {
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+.arrow.left {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.arrow span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-bottom: 5px solid rgb(105, 100, 100);
+    border-right: 5px solid rgb(105, 100, 100);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 3s infinite;
+}
+.arrow span:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.arrow span:nth-child(3) {
+    animation-delay: -0.6s;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}

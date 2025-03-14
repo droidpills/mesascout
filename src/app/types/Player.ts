@@ -12,8 +12,8 @@ export interface Player {
     age: number;
     value: string;
     video: string;
-    pontos_fortes: string;
-    pontos_fracos: string;
+    pontos_fortes?: string;
+    pontos_fracos?: string;
   }
 
   export interface Players {
