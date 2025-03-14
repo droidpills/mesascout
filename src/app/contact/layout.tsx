@@ -31,7 +31,7 @@ export default function ContactLayout({
         {children}
       </div>
       <div className="my-7 sticky top-0 hidden lg:flex lg:flex-row lg:w-3/12">
-          <a href="https://x.com/mesascout" target="_blank">
+          <a href="https://www.instagram.com/mesascout/#" target="_blank">
             <Image src={bannerleft} width={380} height={850} alt="Banner Youtube" />
           </ a>
         </div>
