@@ -14,6 +14,8 @@
     "country-flag-icons": "^1.5.14",
     "embla-carousel-class-names": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
+    "firebase": "^11.5.0",
+    "firebase-admin": "^13.2.0",
     "font-awesome": "^4.7.0",
     "heroicons": "^2.2.0",
     "next": "15.1.6",

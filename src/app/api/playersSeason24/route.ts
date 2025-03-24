@@ -3,16 +3,16 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request) {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000); // Timeout de 5 segundos
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
 
     const response = await fetch(
       "https://storage.googleapis.com/mesascout/jsons/season24.json",
       {
-        signal: controller.signal, // Passa o sinal de cancelamento
+        signal: controller.signal,
       }
     );
 
-    clearTimeout(timeoutId); // Cancela o timeout, se não houver erro
+    clearTimeout(timeoutId); 
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data. Status: ${response.status}`);
@@ -20,17 +20,13 @@ export async function GET(request: Request) {
 
     const allPlayers = await response.json();
 
-    // Obtenha os parâmetros de consulta
     const { searchParams } = new URL(request.url);
-    const page = Number(searchParams.get("page") || 1); // Página atual
-    //const pageSize = Number(searchParams.get("pageSize") || 12); // Tamanho da página
+    const page = Number(searchParams.get("page") || 1); 
     const pageSize = allPlayers.length
     
-    // Paginação
     const startIndex = (page - 1) * pageSize;
     const paginatedPlayers = allPlayers.slice(startIndex, startIndex + pageSize);
 
-    // Retorna os dados paginados e o total
     return NextResponse.json(
       {
         data: paginatedPlayers,

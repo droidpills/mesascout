@@ -14,7 +14,6 @@ const About = () => (
           className=""
         />
       
-        {/* SVG no canto inferior direito da imagem */}
         <div className="absolute -bottom-16 -right-16 p-4 hidden md:block">
           <Image
             src="https://spin.axiomthemes.com/wp-content/uploads/2023/09/about-us-go.svg"

@@ -22,7 +22,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
     <tbody>
     {players.map((player, index) => (
       <tr key={index} className="text-[#21242b] text-sm hover:bg-slate-300">
-        {/* Nome */}
         <td className="py-4 text-left whitespace-nowrap">
           <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
             <div className="inline-flex gap-x-2">
@@ -31,7 +30,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </Link>
         </td>
   
-        {/* Valor de Mercado */}
         {shouldShowColumn("value") && (
           <td className="py-4 text-center font-bold whitespace-nowrap text-[#008000]">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
@@ -40,7 +38,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </td>
         )}
   
-        {/* Posição */}
         {shouldShowColumn("position") && (
           <td className="py-4 text-center whitespace-nowrap">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
@@ -49,7 +46,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </td>
         )}
   
-        {/* Idade */}
         {shouldShowColumn("age") && (
           <td className="py-4 text-center whitespace-nowrap hidden md:block">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
@@ -58,7 +54,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </td>
         )}
   
-        {/* Score */}
         {shouldShowColumn("score") && (
           <td className="py-4 text-center whitespace-nowrap">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
@@ -67,7 +62,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </td>
         )}
   
-        {/* Liga */}
         {shouldShowColumn("league") && (
           <td className="py-4 text-left whitespace-nowrap hidden md:block">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
@@ -76,7 +70,6 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           </td>
         )}
   
-        {/* Clube */}
         {shouldShowColumn("club") && (
           <td className="py-4 text-left whitespace-nowrap">
             <Link href={`../../${season}/${normalizeName(player.name)}`} className="px-2 py-2">
