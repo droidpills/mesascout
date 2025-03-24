@@ -15,8 +15,6 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
         value: React.ReactNode;
     }
 
-//   console.log(playerImageURL)
-
     const renderStars = (count: number) => {
         return Array.from({ length: count }).map((_, index) => (
             <FaStar key={index} size={12} />

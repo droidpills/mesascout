@@ -10,14 +10,13 @@ const SEASONS_DATA = {
   copinha: "https://storage.googleapis.com/mesascout/jsons/copinha.json",
 };
 
-// Função assíncrona para verificar se a imagem existe
 async function checkImageExists(url: string): Promise<boolean> {
   try {
-    const res = await fetch(url, { method: "HEAD" }); // Fazemos uma requisição HEAD para verificar a existência
-    return res.ok; // Retorna true se o status for 200, false se for erro (404)
+    const res = await fetch(url, { method: "HEAD" });
+    return res.ok;
   } catch (error) {
     console.error("Erro ao buscar jogador:", error);
-    return false; // Se houver erro ao fazer a requisição, consideramos que a imagem não existe
+    return false;
   }
 }
 
@@ -78,8 +77,6 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     )}.png`;
 
     const pageURL = `https://mesascout.vercel.app/${season}/${normalizeName(player.name)}`;
-
-    // Verificando se a imagem existe
     const imageExists = await checkImageExists(playerImageURL); 
 
     return (
