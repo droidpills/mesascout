@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, orderBy} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -30,7 +30,8 @@ export interface Season {
 export async function getSeasons(): Promise<Season[]> {
     const db = getFirestore(); 
     const seasonsCollection = collection(db, "seasons"); 
-    const snapshot = await getDocs(seasonsCollection);  
+    const q = query(seasonsCollection, orderBy("name", "desc"));
+    const snapshot = await getDocs(q);  
 
     const seasons: Season[] = snapshot.docs.map((doc) => ({
         id: doc.id,

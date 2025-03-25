@@ -1,10 +1,10 @@
-import React from "react";
-import Season24 from "./season24/page";
+import { redirect } from 'next/navigation';
 
-
-const Home: React.FC = () => {
-
-  return <Season24 />;
-};
-
-export default Home;
+export default function HomePage() {
+  redirect( '/seasons/season24' ); 
+  return (
+    <div>
+      {}
+    </div>
+  );
+}

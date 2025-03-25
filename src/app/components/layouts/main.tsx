@@ -25,6 +25,7 @@ interface MainProps {
   flagSrc: StaticImageData[];
   description: string;
   scoreText:string;
+  seasonColumns: string[];
 }
 
 const Main: React.FC<MainProps> = ({
@@ -45,6 +46,7 @@ const Main: React.FC<MainProps> = ({
   flagSrc,
   description,
   scoreText,
+  seasonColumns
 }) => (
   <main className="w-full max-w-[100vw] overflow-hidden">
     <div className="flex gap-x-8">
@@ -82,6 +84,7 @@ const Main: React.FC<MainProps> = ({
           flagSrc={flagSrc}
           description={description}
           scoreText={scoreText}
+          seasonColumns={seasonColumns}
         />
       </div>
     </div>

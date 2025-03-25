@@ -3,22 +3,21 @@ import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 
 interface THeadProps {
-  players: Player[]; 
+  players: Player[];
   sortField: keyof Player;
   sortOrder: string;
   onSort: (field: keyof Player) => void;
   scoreText: string;
-  
+  seasonColumns: string[]; 
 }
 
-const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, players }) => {
+const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, players, seasonColumns }) => {
   const renderSortIcon = (field: keyof Player) => {
     const isActive = sortField === field;
     const isAsc = isActive && sortOrder === "asc";
     const isDesc = isActive && sortOrder === "desc";
 
     return (
-
       <div className="inline-block  items-center m-auto align-middle ml-2">
         <SlArrowUp
           className={`h-2 w-2 ${isAsc ? "opacity-100" : "opacity-50"}`}
@@ -30,32 +29,42 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, 
     );
   };
 
-  const shouldShowColumn = (field: keyof Player) => {
-        return Array.isArray(players) && players.some(
-          player => player?.[field] !== null && player?.[field] !== undefined
-        );
-      }; 
+  const columnMapping: { [key: string]: keyof Player } = {
+    "Jogador": "name",
+    "Valor de mercado": "value",
+    "Posição": "position",
+    "Idade": "age",
+    "Score": "score",
+    "Liga": "league",
+    "Clube": "club",
+  };
   
+  const shouldShowColumn = (field: keyof Player) => {
+    return seasonColumns.some((col: string) => columnMapping[col] === field) && players.some(
+      (player) => player[field] !== null && player[field] !== undefined
+    );
+  };
+
   return (
     <thead>
       <tr className="bg-[#e1e7ed] text-[#6f8caa] text-xs uppercase tracking-tighter">
         <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap">Jogador</th>
-  
+
         {/* Valor de Mercado */}
         {shouldShowColumn("value") && (
           <th
             className="p-3 font-normal tracking-tight whitespace-nowrap cursor-pointer text-left flex items-center"
             onClick={() => onSort("value")}
           >
-            Valor de <br className="lg:hidden"/> mercado {renderSortIcon("value")}
+            Valor de <br className="lg:hidden" /> mercado {renderSortIcon("value")}
           </th>
         )}
-  
+
         {/* Posição */}
         {shouldShowColumn("position") && (
           <th className="p-3 font-normal tracking-tight text-left">Posição</th>
         )}
-  
+
         {/* Idade */}
         {shouldShowColumn("age") && (
           <th
@@ -65,7 +74,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, 
             Idade {renderSortIcon("age")}
           </th>
         )}
-  
+
         {/* Score */}
         {shouldShowColumn("score") && (
           <th
@@ -84,19 +93,19 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, 
             </div>
           </th>
         )}
-  
+
         {/* Liga */}
         {shouldShowColumn("league") && (
           <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap hidden md:block">Liga</th>
         )}
-  
+
         {/* Clube */}
         {shouldShowColumn("club") && (
           <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap">Clube</th>
         )}
       </tr>
     </thead>
-  ); 
+  );
 };
 
 export default THead;
