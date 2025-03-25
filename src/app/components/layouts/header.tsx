@@ -26,7 +26,6 @@ const Header: React.FC = () => {
     };
     fetchSeasons();
   }, []);
-//console.log(seasons)
   
   return (
     <div className="py-3 bg-[#292C34] text-white w-full shadow-lg">
@@ -41,7 +40,7 @@ const Header: React.FC = () => {
           <nav className="hidden w-full justify-start space-x-6 lg:flex">
             {[
               ...seasons.map(({ urlName, name }: { urlName: string; name: string }) => ({
-                href: `/${urlName}`,
+                href: `/seasons/${urlName}`,
                 label: name,
               })),
               { href: "/about", label: "Sobre nós" },

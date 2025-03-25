@@ -1,16 +1,24 @@
 "use client";
 
 import React from "react";
-import Main from "../components/layouts/main";
-import { Players } from "../types/Player";
-import { useFilteredPlayers } from "../hooks/useFilteredPlayers";
-import brasil from "../../../public/images/brasil.png"
+import Main from "./layouts/main"; 
+import { Players } from "../types/Player"; 
+import { useFilteredPlayers } from "../hooks/useFilteredPlayers"; 
 
-interface CopinhaClientProps {
+interface SeasonsClientProps {
   players: Players;
+  seasonMeta: {
+    urlName?: string;
+    description?: string;
+    flags?: string[];
+    scoreDescription?: string;
+    columns?: string[];
+    name?:string;
+    jsonUrl?:string;
+  };
 }
 
-const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
+const SeasonsClient: React.FC<SeasonsClientProps> = ({ players, seasonMeta }) => {
   const {
     filteredData,
     search,
@@ -25,8 +33,6 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
     sortOrder,
     handleSortToggle,
   } = useFilteredPlayers(players);
-
-  const season = "copinha";
 
   return (
     <div>
@@ -44,17 +50,17 @@ const CopinhaClient: React.FC<CopinhaClientProps> = ({ players }) => {
           sortField={sortField}
           sortOrder={sortOrder}
           handleSortToggle={handleSortToggle}
-          season={season}
-          title="Copinha 2025"
-          flagSrc={[brasil]}
-          description="Destaques da Copa São Paulo de futebol junior"
-          scoreText="Performance x Jogos"
+          season={seasonMeta.urlName || "Temporada Desconhecida"} 
+          title={seasonMeta.name || "Sem Nome"} 
+          flagSrc={seasonMeta.flags?.map(flag => ({ src: flag, height: 20, width: 32 })) || [] }
+          description={seasonMeta.description || "Descrição indisponível"} 
+          scoreText={seasonMeta.scoreDescription || "Sem descrição de pontuação"} 
+          seasonColumns={seasonMeta.columns || []}
         />
+
       </div>
     </div>
-
-
   );
 };
 
-export default CopinhaClient;
+export default SeasonsClient;
