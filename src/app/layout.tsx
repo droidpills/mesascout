@@ -12,6 +12,7 @@ const inter = Inter_Tight({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mesascout.com.br/"),
   title: "Mesa Scout",
   description:
     "Explore análises de jogadores e quais são as promessas do mercado futebolístico",

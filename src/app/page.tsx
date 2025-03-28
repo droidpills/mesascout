@@ -1,10 +1,20 @@
 import { redirect } from 'next/navigation';
 
-export default function HomePage() {
-  redirect( '/seasons/season24' ); 
-  return (
-    <div>
-      {}
-    </div>
-  );
+export default async function HomePage() {
+  const response = await fetch("http://localhost:3000/api/getSeasons");
+  
+  if (!response.ok) {
+    throw new Error(`Failed to fetch seasons data: ${response.statusText}`);
+  }
+
+  const seasons = await response.json();
+
+  type Season = { sortOrder: number; urlName: string };
+  const lowestOrderSeason = seasons.sort((a: Season, b: Season) => a.sortOrder - b.sortOrder)[0];
+
+  if (lowestOrderSeason) {
+    redirect(`/seasons/${lowestOrderSeason.urlName}`);
+  }
+
+  return <div/>;
 }

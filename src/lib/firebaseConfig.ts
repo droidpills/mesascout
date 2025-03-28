@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, query, orderBy} from "firebase/firestore";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,6 +15,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export interface Season {
+    sortOrder: number;
     id: string;
     name: string;
     jsonUrl: string;
@@ -30,11 +31,11 @@ export interface Season {
 export async function getSeasons(): Promise<Season[]> {
     const db = getFirestore(); 
     const seasonsCollection = collection(db, "seasons"); 
-    const q = query(seasonsCollection, orderBy("name", "desc"));
-    const snapshot = await getDocs(q);  
+    const snapshot = await getDocs(seasonsCollection);  
 
     const seasons: Season[] = snapshot.docs.map((doc) => ({
         id: doc.id,
+        sortOrder: doc.data().sortOrder,
         name: doc.data().name,
         jsonUrl: doc.data().jsonUrl,
         urlName: doc.data().urlName,
