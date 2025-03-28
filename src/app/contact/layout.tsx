@@ -3,6 +3,7 @@ import Image from "next/image";
 import bannerleft from "../../../public/images/banners/banner-left.png"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mesascout.com.br/"),
   title: "Mesa Scout - Contato",
   description: "Entre em contato com Mesa Scout",
   openGraph: {

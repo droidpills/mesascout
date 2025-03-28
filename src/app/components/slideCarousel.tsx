@@ -54,7 +54,6 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   const handleScroll = useCallback((emblaApi: EmblaCarouselType) => {
     const index = emblaApi.selectedScrollSnap();
     const newPlayer = visiblePlayers[index];
-    console.log(emblaApi);
 
     window.history.replaceState({}, "", `/${season}/${normalizeName(newPlayer.name)}`);
 
@@ -65,7 +64,7 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
       window.location.assign(`/${season}/${normalizeName(mostLeftPlayer.name)}`);
     }
 
-  }, [emblaApi, season, mostLeftPlayer, mostRightPlayer]);
+  }, [season, mostLeftPlayer, mostRightPlayer, visiblePlayers]);
 
   useEffect(() => {
     if (!emblaApi) return;

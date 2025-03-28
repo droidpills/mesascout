@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mesascout.com.br/"),
   title: "Mesa Scout - Sobre nós",
   description: "Um site que nasceu do amor pelo futebol e a vontade de mostrar de forma prática os jogadores em ascensão",
   openGraph: {
