@@ -11,7 +11,7 @@ type Season = {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const  {slug}  = await params;
-  const response = await fetch("http://localhost:3000/api/getSeasons");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
   const seasons: Season[] = await response.json();
   const season = seasons.find((s) => s.urlName === slug);
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${season.name} - Análise de Jogadores`,
       description: season.metaDescription,
-      url: `https://mesascout.vercel.app/seasons/${season.urlName}`,
+      url: `https://mesascout.com.br/seasons/${season.urlName}`,
       siteName: "Mesa Scout",
       images: [
         {

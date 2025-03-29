@@ -15,7 +15,7 @@ async function checkImageExists(url: string): Promise<boolean> {
   return res.ok;
 }
 async function fetchSeasonsData() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const response = await fetch(`${apiUrl}/api/getSeasons`)
   const seasons: Season[] = await response.json();
   return seasons;
@@ -60,9 +60,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
 
   const player = players[currentIndex];
 
-  const currentSeason = jsonFileUrl.includes("season24")
-    ? "season24_images_no_bg"
-    : "copinha_images_no_bg";
+  const currentSeason = season+'_images_no_bg';
 
   const playerImageURL = `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
     player.name,
@@ -80,7 +78,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         <meta name="description" content={`Detalhes do jogador ${player.name}, destaque da temporada ${player.league}.`} />
         <meta property="og:title" content={`${player.name} - Detalhes do Jogador`} />
         <meta property="og:description" content={`Confira as estatísticas de ${player.name}, incluindo posição, clube e mais.`} />
-        <meta property="og:image" content={imageExists ? playerImageURL : ""} />
+        <meta property="og:image" content={imageExists ? playerImageURL : "https://storage.googleapis.com/mesascout/images/no-player-image.svg"} />
         <meta property="og:url" content={pageURL} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
