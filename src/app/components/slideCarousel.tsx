@@ -13,7 +13,7 @@ import ClassNames from 'embla-carousel-class-names';
 
 interface SlideCarrousselProps {
   players: Player[];
-  imageExists: boolean;
+  imageExistenceMap: Record<string, boolean>;
   currentSeason: string;
   name: string;
   season: string;
@@ -21,17 +21,17 @@ interface SlideCarrousselProps {
 }
 
 const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
-  const { players, imageExists, currentSeason, name, season } = props
+  const { players, imageExistenceMap, currentSeason, name, season } = props
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
 
   const Initial = () => {
-    if (currentIndex < 7) return currentIndex; 
+    if (currentIndex < 7) return currentIndex;
     if (currentIndex === players.length - 1) return 14;
-    return 7; 
+    return 7;
   };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: false, startIndex: Initial(), align: 'center', containScroll:false }, [ClassNames()])
+    { loop: false, startIndex: Initial(), align: 'center', containScroll: false }, [ClassNames()])
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -49,19 +49,19 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
   }
 
   const mostLeftPlayer = players[currentIndex - 7];
-  const mostRightPlayer = players[currentIndex + mostRightIndex ];
+  const mostRightPlayer = players[currentIndex + mostRightIndex];
 
   const handleScroll = useCallback((emblaApi: EmblaCarouselType) => {
     const index = emblaApi.selectedScrollSnap();
     const newPlayer = visiblePlayers[index];
 
-    window.history.replaceState({}, "", `/${season}/${normalizeName(newPlayer.name)}`);
+    window.history.replaceState({}, "", `/season/${season}/${normalizeName(newPlayer.name)}`);
 
     if (emblaApi.canScrollNext() === false) {
-    
-      window.location.assign(`/${season}/${normalizeName(mostRightPlayer.name)}`);
+
+      window.location.assign(`/season/${season}/${normalizeName(mostRightPlayer.name)}`);
     } else if (emblaApi.canScrollPrev() === false) {
-      window.location.assign(`/${season}/${normalizeName(mostLeftPlayer.name)}`);
+      window.location.assign(`/season/${season}/${normalizeName(mostLeftPlayer.name)}`);
     }
 
   }, [season, mostLeftPlayer, mostRightPlayer, visiblePlayers]);
@@ -82,15 +82,23 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
                 player.previous_club ?? player.club,
                 "player_image"
               )}.png`;
-              return <PlayerCard key={player.name} player={player} imageExists={imageExists} playerImageURL={playerImageURL} />;
+
+              return (
+                <PlayerCard
+                  key={player.name}
+                  player={player}
+                  playerImageURL={playerImageURL}
+                  imageExists={imageExistenceMap[player.name]}
+                />
+              );
             })}
           </div>
-      <div className={`absolute left-10 top-[35%] -translate-y-1/2 lg:top-1/2`}>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className={currentIndex == 0 && emblaApi?.canScrollPrev() === false ? 'hidden' : ''} />
-        </div>
-        <div className="absolute right-10 top-[35%] -translate-y-1/2 lg:top-1/2">
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled}  className={currentIndex == (players.length - 1) && emblaApi?.canScrollNext() === false ? 'hidden' : ''} />
-      </div>
+          <div className={`absolute left-10 top-[35%] -translate-y-1/2 lg:top-1/2`}>
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className={currentIndex == 0 && emblaApi?.canScrollPrev() === false ? 'hidden' : ''} />
+          </div>
+          <div className="absolute right-10 top-[35%] -translate-y-1/2 lg:top-1/2">
+            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} className={currentIndex == (players.length - 1) && emblaApi?.canScrollNext() === false ? 'hidden' : ''} />
+          </div>
         </div>
       </section>
 

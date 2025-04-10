@@ -14,6 +14,7 @@ export interface Player {
     video?: string;
     pontos_fortes?: string;
     pontos_fracos?: string;
+    prox_adversario?: string;
   }
 
   export interface Players {

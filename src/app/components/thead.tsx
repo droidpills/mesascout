@@ -37,6 +37,7 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, 
     "Score": "score",
     "Liga": "league",
     "Clube": "club",
+    "Próximo Adversário": "prox_adversario", 
   };
   
   const shouldShowColumn = (field: keyof Player) => {
@@ -102,6 +103,11 @@ const THead: React.FC<THeadProps> = ({ sortField, sortOrder, onSort, scoreText, 
         {/* Clube */}
         {shouldShowColumn("club") && (
           <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap">Clube</th>
+        )}
+
+        {/* Proximo Adversário */}
+        {shouldShowColumn("prox_adversario") && (
+          <th className="p-3 font-normal tracking-tight text-left whitespace-nowrap">Próximo Adversário</th>
         )}
       </tr>
     </thead>
