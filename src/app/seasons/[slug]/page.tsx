@@ -3,14 +3,14 @@ import SeasonsClient from "@/app/components/SeasonsClient";
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
-    const seasons = await fetch('http://localhost:3000/api/getSeasons').then((res) => res.json())
+    const seasons = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`).then((res) => res.json())
     return seasons.map(({ urlName }: { urlName: string }) => ({
         slug: urlName,
     }))
 }
 
 async function fetchPlayers(season: string): Promise<Players> {
-    const res = await fetch(`http://localhost:3000/api/getSeasons?season=${season}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons?season=${season}`);
 
     if (!res.ok) {
         notFound();
@@ -19,7 +19,7 @@ async function fetchPlayers(season: string): Promise<Players> {
 }
 
 async function fetchSeasonData(slug: string) {
-    const response = await fetch("http://localhost:3000/api/getSeasons");
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch seasons data: ${response.statusText}`);

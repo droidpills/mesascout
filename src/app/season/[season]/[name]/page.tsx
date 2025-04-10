@@ -21,8 +21,7 @@ async function checkImageExists(url: string): Promise<boolean> {
 }
 
 async function fetchSeasonsData() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-  const response = await fetch(`${apiUrl}/api/getSeasons`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
   const seasons: Season[] = await response.json();
   return seasons;
 }
@@ -88,7 +87,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     "player_image"
   )}.png`;
 
-  const pageURL = `https://mesascout.vercel.app/${season}/${normalizeName(player.name)}`;
+  const pageURL = `${process.env.NEXT_PUBLIC_API_URL}/${season}/${normalizeName(player.name)}`;
 
   return (
     <div>

@@ -6,6 +6,7 @@ interface Season {
   urlName: string;
   name: string;
   sortOrder: number;
+  status: boolean;
 }
 import Link from "next/link";
 import Image from "next/image";
@@ -41,6 +42,7 @@ const Header: React.FC = () => {
           <nav className="hidden w-full justify-start space-x-6 lg:flex">
             {[
               ...seasons
+                .filter(season => season.status === true)
                 .sort((a, b) => a.sortOrder - b.sortOrder)
                 .map(({ urlName, name }) => ({
                   href: `/seasons/${urlName}`,
@@ -98,6 +100,7 @@ const Header: React.FC = () => {
           <nav className="flex flex-col items-center bg-[#292C34] py-3 px-6 rounded-lg mt-2 space-y-3 animate-slide-in lg:hidden">
             {[
               ...seasons
+                .filter(season => season.status === true) 
                 .sort((a, b) => a.sortOrder - b.sortOrder)
                 .map(({ urlName, name }) => ({
                   href: `/seasons/${urlName}`,
@@ -111,8 +114,8 @@ const Header: React.FC = () => {
                 href={href}
                 scroll={false}
                 className={`relative inline-block py-2 leading-none transition-all duration-300 tracking-wide text-sm ${currentPath === href
-                  ? "border-b-2 border-white text-white"
-                  : "border-b-2 border-transparent text-white hover:border-gray-400 hover:text-white"
+                    ? "border-b-2 border-white text-white"
+                    : "border-b-2 border-transparent text-white hover:border-gray-400 hover:text-white"
                   }`}
               >
                 {label}
