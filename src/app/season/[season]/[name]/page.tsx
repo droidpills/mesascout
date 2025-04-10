@@ -91,7 +91,7 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
     "player_image"
   )}.png`;
 
-  const pageURL = `https://mesascout.vercel.app/${season}/${normalizeName(player.name)}`;
+  const pageURL = `https://mesascout.com.br/season/${season}/${normalizeName(player.name)}`;
 
   return (
     <div>
