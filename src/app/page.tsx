@@ -1,8 +1,9 @@
+export const dynamic = 'force-dynamic'; // ✅ add this line
 import { redirect } from 'next/navigation';
 
 export default async function HomePage() {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
-  
+
   if (!response.ok) {
     throw new Error(`Failed to fetch seasons data: ${response.statusText}`);
   }
@@ -16,5 +17,5 @@ export default async function HomePage() {
     redirect(`/seasons/${lowestOrderSeason.urlName}`);
   }
 
-  return <div/>;
+  return <div />;
 }
