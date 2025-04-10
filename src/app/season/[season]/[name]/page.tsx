@@ -20,9 +20,27 @@ async function checkImageExists(url: string): Promise<boolean> {
   }
 }
 
-async function fetchSeasonsData() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
-  const seasons: Season[] = await response.json();
+async function fetchSeasonsData(): Promise<Season[]> {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  if (!apiUrl) {
+    throw new Error("Missing NEXT_PUBLIC_API_URL");
+  }
+
+  const res = await fetch(`${apiUrl}/api/getSeasons`);
+
+  if (!res.ok) {
+    console.error(`Failed to fetch seasons: ${res.status}`);
+    return [];
+  }
+
+  const contentType = res.headers.get("content-type");
+  if (!contentType?.includes("application/json")) {
+    console.error("Invalid response type for getSeasons");
+    return [];
+  }
+
+  const seasons: Season[] = await res.json();
   return seasons;
 }
 
@@ -31,19 +49,37 @@ export async function generateStaticParams() {
   const paths: { season: string; name: string }[] = [];
 
   for (const season of SEASONS_DATA) {
-    const response = await fetch(season.jsonUrl);
-    const players: Player[] = await response.json();
+    try {
+      const res = await fetch(season.jsonUrl);
 
-    paths.push(
-      ...players.map((player) => ({
-        season: season.urlName,
-        name: normalizeName(player.name),
-      }))
-    );
+      if (!res.ok) {
+        console.error(`Failed to fetch season data for ${season.urlName}`);
+        continue;
+      }
+
+      const contentType = res.headers.get("content-type");
+      if (!contentType?.includes("application/json")) {
+        console.error(`Invalid JSON for ${season.jsonUrl}`);
+        continue;
+      }
+
+      const players: Player[] = await res.json();
+
+      paths.push(
+        ...players.map((player) => ({
+          season: season.urlName,
+          name: normalizeName(player.name),
+        }))
+      );
+    } catch (err) {
+      console.error(`Error fetching ${season.jsonUrl}:`, err);
+      continue;
+    }
   }
 
   return paths;
 }
+
 
 interface PlayerDetailsProps {
   params: Promise<{ season: string; name: string }>;

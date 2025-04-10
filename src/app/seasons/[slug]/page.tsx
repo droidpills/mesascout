@@ -2,53 +2,104 @@ import { Players } from "@/app/types/Player";
 import SeasonsClient from "@/app/components/SeasonsClient";
 import { notFound } from 'next/navigation';
 
+interface Season {
+  urlName: string;
+  jsonUrl?: string;
+}
+
 export async function generateStaticParams() {
-    const seasons = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`).then((res) => res.json())
-    return seasons.map(({ urlName }: { urlName: string }) => ({
-        slug: urlName,
-    }))
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) throw new Error("Missing NEXT_PUBLIC_API_URL");
+
+    const res = await fetch(`${apiUrl}/api/getSeasons`);
+    if (!res.ok) {
+      console.error(`Failed to fetch seasons: ${res.status}`);
+      return [];
+    }
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) {
+      console.error("Invalid response type for getSeasons");
+      return [];
+    }
+
+    const seasons: Season[] = await res.json();
+    return seasons.map(({ urlName }) => ({ slug: urlName }));
+  } catch (err) {
+    console.error("Error in generateStaticParams:", err);
+    return [];
+  }
 }
 
 async function fetchPlayers(season: string): Promise<Players> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons?season=${season}`);
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) throw new Error("Missing NEXT_PUBLIC_API_URL");
+
+    const res = await fetch(`${apiUrl}/api/getSeasons?season=${season}`);
 
     if (!res.ok) {
-        notFound();
+      console.error(`Failed to fetch players for season ${season}: ${res.status}`);
+      notFound();
     }
-    return res.json();
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) {
+      console.error(`Invalid JSON for players of season ${season}`);
+      notFound();
+    }
+
+    return await res.json();
+  } catch (err) {
+    console.error(`Error fetching players for season ${season}:`, err);
+    notFound();
+  }
 }
 
 async function fetchSeasonData(slug: string) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) throw new Error("Missing NEXT_PUBLIC_API_URL");
 
-    if (!response.ok) {
-        throw new Error(`Failed to fetch seasons data: ${response.statusText}`);
+    const res = await fetch(`${apiUrl}/api/getSeasons`);
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch seasons data: ${res.statusText}`);
     }
 
-    interface Season {
-        urlName: string;
-      }
-    const seasons = await response.json();
-    const seasonData = seasons.find((season: Season) => season.urlName === slug);
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) {
+      throw new Error("Invalid response format for getSeasons");
+    }
+
+    const seasons: Season[] = await res.json();
+    const seasonData = seasons.find((season) => season.urlName === slug);
 
     if (!seasonData) {
-        throw new Error(`Season "${slug}" not found in API.`);
+      throw new Error(`Season "${slug}" not found in API.`);
     }
 
     if (!seasonData.jsonUrl) {
-        throw new Error(`Missing jsonUrl for season "${slug}".`);
+      throw new Error(`Missing jsonUrl for season "${slug}".`);
     }
+
     return seasonData;
+  } catch (err) {
+    console.error("Error fetching season data:", err);
+    throw err;
+  }
 }
 
-export default async function SeasonsServer({ params }: { params: Promise<{ slug: string }> })  {
-    const  {slug}  = await params;
-    const players = await fetchPlayers(slug);
-    const seasonMeta = await fetchSeasonData(slug);
+export default async function SeasonsServer({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
-    return (
-        <div>
-            <SeasonsClient players={players} seasonMeta={seasonMeta} />
-        </div>
-    );
+  const players = await fetchPlayers(slug);
+  const seasonMeta = await fetchSeasonData(slug);
+
+  return (
+    <div>
+      <SeasonsClient players={players} seasonMeta={seasonMeta} />
+    </div>
+  );
 }
