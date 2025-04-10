@@ -1,54 +1,77 @@
 import { Players } from "@/app/types/Player";
 import SeasonsClient from "@/app/components/SeasonsClient";
-import { notFound } from 'next/navigation';
+
+interface Season {
+  urlName: string;
+  jsonUrl?: string;
+}
 
 export async function generateStaticParams() {
-    const seasons = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`).then((res) => res.json())
-    return seasons.map(({ urlName }: { urlName: string }) => ({
-        slug: urlName,
-    }))
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const res = await fetch(`${apiUrl}/api/getSeasons`);
+    if (!res.ok) return [];
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) return [];
+
+    const seasons: Season[] = await res.json();
+    return seasons.map(({ urlName }) => ({ slug: urlName }));
+  } catch (err) {
+    console.error("Failed to generate static params:", err);
+    return [];
+  }
 }
 
-async function fetchPlayers(season: string): Promise<Players> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons?season=${season}`);
+async function fetchPlayers(season: string): Promise<Players | null> {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const res = await fetch(`${apiUrl}/api/getSeasons?season=${season}`);
 
-    if (!res.ok) {
-        notFound();
-    }
-    return res.json();
+    if (!res.ok) return null;
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) return null;
+
+    return await res.json();
+  } catch (err) {
+    console.error("Error fetching players:", err);
+    return null;
+  }
 }
 
-async function fetchSeasonData(slug: string) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
+async function fetchSeasonData(slug: string): Promise<Season | null> {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const res = await fetch(`${apiUrl}/api/getSeasons`);
+    if (!res.ok) return null;
 
-    if (!response.ok) {
-        throw new Error(`Failed to fetch seasons data: ${response.statusText}`);
-    }
+    const contentType = res.headers.get("content-type");
+    if (!contentType?.includes("application/json")) return null;
 
-    interface Season {
-        urlName: string;
-      }
-    const seasons = await response.json();
-    const seasonData = seasons.find((season: Season) => season.urlName === slug);
+    const seasons: Season[] = await res.json();
+    const seasonData = seasons.find((season) => season.urlName === slug);
 
-    if (!seasonData) {
-        throw new Error(`Season "${slug}" not found in API.`);
-    }
-
-    if (!seasonData.jsonUrl) {
-        throw new Error(`Missing jsonUrl for season "${slug}".`);
-    }
+    if (!seasonData || !seasonData.jsonUrl) return null;
     return seasonData;
+  } catch (err) {
+    console.error("Error fetching season data:", err);
+    return null;
+  }
 }
 
-export default async function SeasonsServer({ params }: { params: Promise<{ slug: string }> })  {
-    const  {slug}  = await params;
-    const players = await fetchPlayers(slug);
-    const seasonMeta = await fetchSeasonData(slug);
+export default async function SeasonsServer({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
-    return (
-        <div>
-            <SeasonsClient players={players} seasonMeta={seasonMeta} />
-        </div>
-    );
+  const players = await fetchPlayers(slug);
+  const seasonMeta = await fetchSeasonData(slug);
+
+  if (!players || !seasonMeta) {
+    return <div>Dados da temporada não encontrados.</div>;
+  }
+
+  return (
+    <div>
+      <SeasonsClient players={players} seasonMeta={seasonMeta} />
+    </div>
+  );
 }
