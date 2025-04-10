@@ -1,7 +1,7 @@
 import Image from "next/image";
-import bannertop from "../../../../public/images/banners/banner-top.png";
-import bannerleft from "../../../../public/images/banners/banner-left.png";
-import bannermobile from "../../../../public/images/banners/banner-mobile.gif";
+import bannertop from "../../../../../public/images/banners/banner-top.png";
+import bannerleft from "../../../../../public/images/banners/banner-left.png";
+import bannermobile from "../../../../../public/images/banners/banner-mobile.gif";
 
 export default function NameLayout({
   children,

@@ -1,11 +1,15 @@
-import React from "react";
+'use client';
+
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import SearchPlayers from "../searchPlayers";
 import FilterPositions from "../filterPositions";
 import FilterLeagues from "../filterLeagues";
 import FilterHired from "../filterHired";
-import Table from "../table";
 import { Player } from "@/app/types/Player";
 import { StaticImageData } from "next/image";
+
+const Table = dynamic(() => import("../table"), { ssr: false });
 
 interface MainProps {
   search: string;
@@ -24,7 +28,8 @@ interface MainProps {
   title: string;
   flagSrc: StaticImageData[];
   description: string;
-  scoreText:string;
+  scoreText: string;
+  seasonColumns: string[];
 }
 
 const Main: React.FC<MainProps> = ({
@@ -45,6 +50,7 @@ const Main: React.FC<MainProps> = ({
   flagSrc,
   description,
   scoreText,
+  seasonColumns,
 }) => (
   <main className="w-full max-w-[100vw] overflow-hidden">
     <div className="flex gap-x-8">
@@ -63,7 +69,9 @@ const Main: React.FC<MainProps> = ({
             />
             <FilterHired
               value={hiredFilter}
-              onChange={(e) => setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")}
+              onChange={(e) =>
+                setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")
+              }
               options={["all", "contratado", "nao_contratado"]}
             />
           </div>
@@ -72,21 +80,23 @@ const Main: React.FC<MainProps> = ({
           </div>
         </div>
 
-        <Table
-          players={filteredData}
-          sortField={sortField}
-          sortOrder={sortOrder}
-          onSort={handleSortToggle}
-          season={season}
-          title={title}
-          flagSrc={flagSrc}
-          description={description}
-          scoreText={scoreText}
-        />
+        <Suspense fallback={<div>Carregando tabela...</div>}>
+          <Table
+            players={filteredData}
+            sortField={sortField}
+            sortOrder={sortOrder}
+            onSort={handleSortToggle}
+            season={season}
+            title={title}
+            flagSrc={flagSrc}
+            description={description}
+            scoreText={scoreText}
+            seasonColumns={seasonColumns}
+          />
+        </Suspense>
       </div>
     </div>
   </main>
-
 );
 
 export default Main;

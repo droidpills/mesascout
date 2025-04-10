@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { FaRegStarHalfStroke, FaStar, FaLink } from "react-icons/fa6";
-import { FaUserCircle } from "react-icons/fa";
 import { Player } from "../types/Player";
 
 interface PlayerCardProps {
     player: Player | null;
     imageExists: boolean;
-    playerImageURL: string | null;
+    playerImageURL: string | 'https://storage.googleapis.com/mesascout/images/no-player-image.svg';
 }
 
 export default function PlayerCard({ player, imageExists, playerImageURL }: PlayerCardProps) {
@@ -14,8 +13,6 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
         label: string;
         value: React.ReactNode;
     }
-
-//   console.log(playerImageURL)
 
     const renderStars = (count: number) => {
         return Array.from({ length: count }).map((_, index) => (
@@ -84,18 +81,22 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
                                 {player?.name ?? "Jogador"}
                             </div>
 
-                            {imageExists && playerImageURL  ? (
+                            {imageExists ? (
                                 <Image
-                                    src={playerImageURL}
+                                    src={playerImageURL ?? ''}
                                     alt={`${player?.name ?? "Jogador"} Foto`}
                                     width={150}
                                     height={150}
                                     className="absolute start-1/2 bottom-0 -translate-x-1/2 rounded-3xl"
                                 />
                             ) : (
-                                <div className="absolute start-1/2 -bottom-2 -translate-x-1/2 text-6xl">
-                                    <FaUserCircle size={120} className="text-gray-500" />
-                                </div>
+                                <Image
+                                    src='https://storage.googleapis.com/mesascout/images/no-player-image.svg'
+                                    alt={`${player?.name ?? "Jogador"} Foto`}
+                                    width={150}
+                                    height={150}
+                                    className="absolute start-1/2 bottom-0 -translate-x-1/2 rounded-3xl"
+                                />
                             )}
                         </div>
                         <div className="absolute bottom-0 start-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-2xl bg-gradient-to-b from-[#008000] to-[#729c72] text-2xl font-extrabold tracking-tighter text-white">
