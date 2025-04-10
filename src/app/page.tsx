@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
 export default async function HomePage() {
-  const response = await fetch("http://localhost:3000/api/getSeasons");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/getSeasons`);
   
   if (!response.ok) {
     throw new Error(`Failed to fetch seasons data: ${response.statusText}`);

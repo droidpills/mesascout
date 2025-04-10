@@ -5,7 +5,7 @@ import { Player } from "../types/Player";
 interface PlayerCardProps {
     player: Player | null;
     imageExists: boolean;
-    playerImageURL: string | null;
+    playerImageURL: string | 'https://storage.googleapis.com/mesascout/images/no-player-image.svg';
 }
 
 export default function PlayerCard({ player, imageExists, playerImageURL }: PlayerCardProps) {
