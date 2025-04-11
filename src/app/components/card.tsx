@@ -4,11 +4,10 @@ import { Player } from "../types/Player";
 
 interface PlayerCardProps {
     player: Player | null;
-    imageExists: boolean;
     playerImageURL: string | 'https://storage.googleapis.com/mesascout/images/no-player-image.svg';
 }
 
-export default function PlayerCard({ player, imageExists, playerImageURL }: PlayerCardProps) {
+export default function PlayerCard({ player, playerImageURL }: PlayerCardProps) {
     interface Habilit {
         label: string;
         value: React.ReactNode;
@@ -61,6 +60,7 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
         { label: "Posição", value: player?.position ?? "-" },
         { label: "Liga", value: player?.league ?? "-" },
         { label: "Contrato", value: player?.contrato ?? "-" },
+        { label: "Próximo Adversário", value: player?.prox_adversario ?? "-" },
         {
             label: "Veja +",
             value: player?.link ? (
@@ -80,8 +80,6 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
                             <div className="absolute start-1/2 top-6 -translate-x-1/2 text-center text-9xl font-extrabold uppercase italic tracking-tighter text-white opacity-40 mix-blend-overlay">
                                 {player?.name ?? "Jogador"}
                             </div>
-
-                            {imageExists ? (
                                 <Image
                                     src={playerImageURL ?? ''}
                                     alt={`${player?.name ?? "Jogador"} Foto`}
@@ -89,15 +87,6 @@ export default function PlayerCard({ player, imageExists, playerImageURL }: Play
                                     height={150}
                                     className="absolute start-1/2 bottom-0 -translate-x-1/2 rounded-3xl"
                                 />
-                            ) : (
-                                <Image
-                                    src='https://storage.googleapis.com/mesascout/images/no-player-image.svg'
-                                    alt={`${player?.name ?? "Jogador"} Foto`}
-                                    width={150}
-                                    height={150}
-                                    className="absolute start-1/2 bottom-0 -translate-x-1/2 rounded-3xl"
-                                />
-                            )}
                         </div>
                         <div className="absolute bottom-0 start-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-2xl bg-gradient-to-b from-[#008000] to-[#729c72] text-2xl font-extrabold tracking-tighter text-white">
                             {player?.score ?? "-"}

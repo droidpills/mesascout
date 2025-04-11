@@ -13,7 +13,6 @@ import ClassNames from 'embla-carousel-class-names';
 
 interface SlideCarrousselProps {
   players: Player[];
-  imageExistenceMap: Record<string, boolean>;
   currentSeason: string;
   name: string;
   season: string;
@@ -21,7 +20,7 @@ interface SlideCarrousselProps {
 }
 
 const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
-  const { players, imageExistenceMap, currentSeason, name, season } = props
+  const { players, currentSeason, name, season } = props
   const currentIndex = players.findIndex((p) => normalizeName(p.name) === name);
 
   const Initial = () => {
@@ -88,7 +87,6 @@ const SlideCarousel: React.FC<SlideCarrousselProps> = (props) => {
                   key={player.name}
                   player={player}
                   playerImageURL={playerImageURL}
-                  imageExists={imageExistenceMap[player.name]}
                 />
               );
             })}

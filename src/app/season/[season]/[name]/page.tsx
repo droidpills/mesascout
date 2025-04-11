@@ -9,16 +9,6 @@ interface Season {
   jsonUrl: string;
 }
 
-async function checkImageExists(url: string): Promise<boolean> {
-  try {
-    const res = await fetch(url, { method: "HEAD" });
-    return res.ok;
-  } catch (error) {
-    console.error("Erro ao buscar jogador:", error);
-    return false;
-  }
-}
-
 async function fetchSeasonsData(): Promise<Season[]> {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   if (!apiUrl) throw new Error("Missing NEXT_PUBLIC_API_URL");
@@ -75,16 +65,6 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
   const player = players[currentIndex];
   const currentSeason = season+'_images_no_bg';
 
-  const imageExistenceMap: Record<string, boolean> = {};
-  for (const p of players) {
-    const imgUrl = `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
-      p.name,
-      p.previous_club ?? p.club,
-      "player_image"
-    )}.png`;
-    imageExistenceMap[p.name] = await checkImageExists(imgUrl);
-  }
-
   const playerImageURL = `https://storage.googleapis.com/mesascout/images/${currentSeason}/${normalizeFileName(
     player.name,
     player.previous_club ?? player.club,
@@ -100,14 +80,13 @@ export default async function PlayerDetails({ params }: PlayerDetailsProps) {
         <meta name="description" content={`Detalhes do jogador ${player.name}, destaque da temporada ${player.league}.`} />
         <meta property="og:title" content={`${player.name} - Detalhes do Jogador`} />
         <meta property="og:description" content={`Confira as estatísticas de ${player.name}, incluindo posição, clube e mais.`} />
-        <meta property="og:image" content={imageExistenceMap[player.name] ? playerImageURL : ""} />
+        <meta property="og:image" content={ playerImageURL ?? ""} />
         <meta property="og:url" content={pageURL} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <SlideCarousel
         players={players}
-        imageExistenceMap={imageExistenceMap}
         currentSeason={currentSeason}
         name={name}
         season={season}
