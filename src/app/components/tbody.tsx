@@ -9,9 +9,7 @@ interface TBodyProps {
   season: string;
 }
 
-
 const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
-
   const shouldShowColumn = (field: keyof Player) => {
     return Array.isArray(players) && players.some(
       player => player?.[field] !== null && player?.[field] !== undefined
