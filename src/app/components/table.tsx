@@ -58,7 +58,6 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
     return pages;
   };
   
-
   return (
     <div className="w-full" >
       <TitleTable title={title} flagSrc={flagSrc} description={description}/>

@@ -9,7 +9,7 @@ import FilterHired from "../filterHired";
 import { Player } from "@/app/types/Player";
 import { StaticImageData } from "next/image";
 
-const Table = dynamic(() => import("../table"), { ssr: false });
+const Table = dynamic(() => import("../table"));
 
 interface MainProps {
   search: string;
