@@ -15,6 +15,9 @@ export interface Player {
     pontos_fortes?: string;
     pontos_fracos?: string;
     prox_adversario?: string;
+    totalminutos?: number;
+    minute?: number;
+    injured?: boolean;
   }
 
   export interface Players {

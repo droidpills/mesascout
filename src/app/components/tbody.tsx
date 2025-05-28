@@ -7,15 +7,25 @@ import { FaLink } from "react-icons/fa6";
 interface TBodyProps {
   players: Player[];
   season: string;
+  seasonColumns: string[];
 }
 
-const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
-  const shouldShowColumn = (field: keyof Player) => {
-    return Array.isArray(players) && players.some(
-      player => player?.[field] !== null && player?.[field] !== undefined
-    );
-  };
+const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason", seasonColumns }) => {
+const columnMapping: { [key: string]: keyof Player } = {
+  "Jogador": "name",
+  "Valor de mercado": "value",
+  "Posição": "position",
+  "Idade": "age",
+  "Score": "score",
+  "Liga": "league",
+  "Clube": "club",
+  "Próximo Adversário": "prox_adversario", 
+};
 
+const shouldShowColumn = (field: keyof Player) => {
+  return seasonColumns.some(col => columnMapping[col] === field) && 
+    players.some(player => player?.[field] !== null && player?.[field] !== undefined);
+};
   return (
     <tbody>
       {players.map((player, index) => (
@@ -77,7 +87,7 @@ const TBody: React.FC<TBodyProps> = ({ players, season = "defaultSeason" }) => {
           )}
 
           {shouldShowColumn("prox_adversario") && (
-            <td className="py-4 text-left whitespace-nowrap">
+            <td className="py-4 text-left whitespace-nowrap text-red-900 font-semibold">
               <Link href={`/season/${season}/${normalizeName(player.name)}`} className="px-2 py-2">
                 {player.prox_adversario ?? "-"}
               </Link>
