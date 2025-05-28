@@ -34,7 +34,7 @@ interface MainProps {
   scoreText: string;
   seasonColumns: string[];
   seasonMeta: {
-  urlName?: string;
+    urlName?: string;
   }
 }
 
@@ -84,13 +84,16 @@ const Main: React.FC<MainProps> = ({
                 options={[...new Set(filteredData.map((p) => p.club))]}
               />
             )}
-            <FilterHired
-              value={hiredFilter}
-              onChange={(e) =>
-                setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")
-              }
-              options={["all", "contratado", "nao_contratado"]}
-            />
+
+            {seasonMeta.urlName === "season24" && (
+              <FilterHired
+                value={hiredFilter}
+                onChange={(e) =>
+                  setHiredFilter(e.target.value as "all" | "contratado" | "nao_contratado")
+                }
+                options={["all", "contratado", "nao_contratado"]}
+              />
+            )}
           </div>
           <div className="mt-3 max-w-2xl lg:mt-0">
             <SearchPlayers value={search} onChange={(e) => setSearch(e.target.value)} />
