@@ -14,10 +14,7 @@ export const useFilteredPlayers = (players: Players) => {
     .filter((player) => {
       const isSearchMatch =
         search === "" ||
-        player.name.toLowerCase().includes(search.toLowerCase()) ||
-        player.position.toLowerCase().includes(search.toLowerCase()) ||
-        player.league.toLowerCase().includes(search.toLowerCase()) ||
-        player.club.toLowerCase().includes(search.toLowerCase());
+        player.name.toLowerCase().includes(search.toLowerCase());
 
       const isPositionMatch = selectedPosition === "all" || player.position === selectedPosition;
       const isLeagueMatch = selectedLeague === "all" || player.league === selectedLeague;

@@ -32,23 +32,22 @@ export async function getSeasons(): Promise<Season[]> {
     const db = getFirestore(); 
     const seasonsCollection = collection(db, "seasons"); 
     const snapshot = await getDocs(seasonsCollection);  
-
     const seasons: Season[] = snapshot.docs
-        .filter((doc) => doc.data().status === true) // filtra aqui
-        .map((doc) => ({
-            id: doc.id,
-            sortOrder: doc.data().sortOrder,
-            name: doc.data().name,
-            jsonUrl: doc.data().jsonUrl,
-            urlName: doc.data().urlName,
-            status: doc.data().status,
-            metaDescription: doc.data().metaDescription,
-            description: doc.data().description,
-            columns: doc.data().columns,
-            flags: doc.data().flags,
-            scoreDescription: doc.data().scoreDescription,
-        }));
-
+    .filter((doc) => doc.data().status === true) // filtra aqui
+    .map((doc) => ({
+        id: doc.id,
+        sortOrder: doc.data().sortOrder,
+        name: doc.data().name,
+        jsonUrl: doc.data().jsonUrl,
+        urlName: doc.data().urlName,
+        status: doc.data().status,
+        metaDescription: doc.data().metaDescription,
+        description: doc.data().description,
+        columns: doc.data().columns,
+        flags: doc.data().flags,
+        scoreDescription: doc.data().scoreDescription,
+    }));
+    
     return seasons;
 }
 
