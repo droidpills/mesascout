@@ -69,9 +69,14 @@ export default async function SeasonsServer({ params }: { params: Promise<{ slug
     return <div>Dados da temporada não encontrados.</div>;
   }
 
+  const filteredPlayers = {
+    ...players,
+    data: players.data.filter(player => !player.injured),
+  };
+
   return (
     <div>
-      <SeasonsClient players={players} seasonMeta={seasonMeta} />
+      <SeasonsClient players={filteredPlayers} seasonMeta={seasonMeta} />
     </div>
   );
 }

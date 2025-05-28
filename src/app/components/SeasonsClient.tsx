@@ -27,6 +27,8 @@ const SeasonsClient: React.FC<SeasonsClientProps> = ({ players, seasonMeta }) =>
     setSelectedPosition,
     selectedLeague,
     setSelectedLeague,
+    selectedClub,
+    setSelectedClub,
     hiredFilter,
     setHiredFilter,
     sortField,
@@ -44,6 +46,8 @@ const SeasonsClient: React.FC<SeasonsClientProps> = ({ players, seasonMeta }) =>
           setSelectedPosition={setSelectedPosition}
           selectedLeague={selectedLeague}
           setSelectedLeague={setSelectedLeague}
+          selectedClub={selectedClub}
+          setSelectedClub={setSelectedClub}
           hiredFilter={hiredFilter}
           setHiredFilter={setHiredFilter}
           filteredData={filteredData}
@@ -56,6 +60,7 @@ const SeasonsClient: React.FC<SeasonsClientProps> = ({ players, seasonMeta }) =>
           description={seasonMeta.description || "Descrição indisponível"} 
           scoreText={seasonMeta.scoreDescription || "Sem descrição de pontuação"} 
           seasonColumns={seasonMeta.columns || []}
+          seasonMeta={seasonMeta}
         />
 
       </div>

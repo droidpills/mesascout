@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import THead from "./thead";
 import TBody from "./tbody";
@@ -16,20 +16,39 @@ interface TableProps {
   season: string;
   title: string;
   flagSrc: StaticImageData[];
-  description:string;
+  description: string;
   scoreText: string;
   seasonColumns: string[];
 }
 
-const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, season, title, flagSrc=[], description, scoreText, seasonColumns=[]}) => {
-  const searchParams = useSearchParams(); 
-  const router = useRouter(); 
+const Table: React.FC<TableProps> = ({
+  players,
+  sortField,
+  sortOrder,
+  onSort,
+  season,
+  title,
+  flagSrc = [],
+  description,
+  scoreText,
+  seasonColumns = [],
+}) => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
-  const playersPerPage = 12; 
-  const currentPage = parseInt(searchParams.get("page") || "1", 10); 
-  const totalPages = Math.ceil(players.length / playersPerPage); 
+  const playersPerPage = 12;
+  const currentPage = parseInt(searchParams.get("page") || "1", 10);
+  const totalPages = Math.ceil(players.length / playersPerPage);
   const startIndex = (currentPage - 1) * playersPerPage;
   const currentPlayers = players.slice(startIndex, startIndex + playersPerPage);
+
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("page", "1");
+      router.replace(`?${params.toString()}`);
+    }
+  }, [currentPage, totalPages, searchParams, router]);
 
   const handlePageChange = (newPage: number) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -38,35 +57,51 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
   };
 
   const getPageNumbers = () => {
-    const pages = [];
-    const maxPagesToShow = 5; 
+    const pages: (number | "...")[] = [];
+    const maxPagesToShow = 5;
 
-    for (let i = Math.max(1, currentPage - 2); i <= Math.min(currentPage + 2, totalPages); i++) {
+    for (
+      let i = Math.max(1, currentPage - 2);
+      i <= Math.min(currentPage + 2, totalPages);
+      i++
+    ) {
       pages.push(i);
     }
 
     if (currentPage > 3 && totalPages > maxPagesToShow) {
-      pages.unshift("..."); 
+      pages.unshift("...");
       if (pages[0] !== 1) pages.unshift(1);
     }
 
     if (currentPage < totalPages - 2 && totalPages > maxPagesToShow) {
-      pages.push("..."); 
+      pages.push("...");
       if (pages[pages.length - 1] !== totalPages) pages.push(totalPages);
     }
 
     return pages;
   };
-  
+
   return (
-    <div className="w-full" >
-      <TitleTable title={title} flagSrc={flagSrc} description={description}/>
+    <div className="w-full">
+      <TitleTable title={title} flagSrc={flagSrc} description={description} />
       <div className="w-full overflow-x-auto">
-      <table className="w-full min-w-full table-auto border-collapse overflow-x-auto">
-        <THead sortField={sortField} sortOrder={sortOrder} onSort={onSort} scoreText={scoreText} players={currentPlayers} seasonColumns={seasonColumns}/>
-        <TBody players={currentPlayers} season={season} />
-      </table>
-      </ div>
+        <table className="w-full min-w-full table-auto border-collapse overflow-x-auto">
+          <THead
+            sortField={sortField}
+            sortOrder={sortOrder}
+            onSort={onSort}
+            scoreText={scoreText}
+            players={currentPlayers}
+            seasonColumns={seasonColumns}
+          />
+          <TBody
+            players={currentPlayers}
+            season={season}
+            seasonColumns={seasonColumns}
+          />
+        </table>
+      </div>
+
       <div className="mt-4 mb-4 flex justify-center items-center gap-x-3 text-[13px] py-2 bg-[#f0f3f6]">
         <button
           onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
@@ -103,9 +138,16 @@ const Table: React.FC<TableProps> = ({ players, sortField, sortOrder, onSort, se
           Próxima
         </button>
       </div>
-        <div className="flex justify-end items-center">
-          <a href="https://www.droidpills.com/" target="_blank" className="underline text-sm text-[#6f8caa] pr-3 hover:text-green-900">Powered by Droidpills</a>
-        </div>
+
+      <div className="flex justify-end items-center">
+        <a
+          href="https://www.droidpills.com/"
+          target="_blank"
+          className="underline text-sm text-[#6f8caa] pr-3 hover:text-green-900"
+        >
+          Powered by Droidpills
+        </a>
+      </div>
     </div>
   );
 };

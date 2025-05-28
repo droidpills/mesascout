@@ -56,10 +56,12 @@ export default function PlayerCard({ player, playerImageURL }: PlayerCardProps) 
     const statistics = [
         { label: "Valor", value: player?.value ?? "-" },
         { label: "Idade", value: player?.age ? `${player.age} anos` : "-" },
-        { label: "Jogos", value: player?.games && player?.league ? `${player.games} jogos em ${player.league}` : "-" },
+        { label: "Jogos", value: player?.games ? `${player.games} jogos` : "-" },
         { label: "Posição", value: player?.position ?? "-" },
         { label: "Liga", value: player?.league ?? "-" },
         { label: "Contrato", value: player?.contrato ?? "-" },
+        { label: "Minutos por jogo", value: player?.minute ?? "-" },
+        { label: "Minutos jogados total", value: player?.totalminutos ?? "-" },
         { label: "Próximo Adversário", value: player?.prox_adversario ?? "-" },
         {
             label: "Veja +",

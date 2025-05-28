@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import SearchPlayers from "../searchPlayers";
 import FilterPositions from "../filterPositions";
 import FilterLeagues from "../filterLeagues";
+import FilterClub from "../filterClub";
 import FilterHired from "../filterHired";
 import { Player } from "@/app/types/Player";
 import { StaticImageData } from "next/image";
@@ -18,6 +19,8 @@ interface MainProps {
   setSelectedPosition: (value: string) => void;
   selectedLeague: string;
   setSelectedLeague: (value: string) => void;
+  selectedClub: string;
+  setSelectedClub: (value: string) => void;
   hiredFilter: "all" | "contratado" | "nao_contratado";
   setHiredFilter: (value: "all" | "contratado" | "nao_contratado") => void;
   filteredData: Player[];
@@ -30,6 +33,9 @@ interface MainProps {
   description: string;
   scoreText: string;
   seasonColumns: string[];
+  seasonMeta: {
+  urlName?: string;
+  }
 }
 
 const Main: React.FC<MainProps> = ({
@@ -39,6 +45,8 @@ const Main: React.FC<MainProps> = ({
   setSelectedPosition,
   selectedLeague,
   setSelectedLeague,
+  selectedClub,
+  setSelectedClub,
   hiredFilter,
   setHiredFilter,
   filteredData,
@@ -51,6 +59,7 @@ const Main: React.FC<MainProps> = ({
   description,
   scoreText,
   seasonColumns,
+  seasonMeta
 }) => (
   <main className="w-full max-w-[100vw] overflow-hidden">
     <div className="flex gap-x-8">
@@ -62,11 +71,19 @@ const Main: React.FC<MainProps> = ({
               onChange={(e) => setSelectedPosition(e.target.value)}
               options={[...new Set(filteredData.map((p) => p.position))]}
             />
-            <FilterLeagues
-              value={selectedLeague}
-              onChange={(e) => setSelectedLeague(e.target.value)}
-              options={[...new Set(filteredData.map((p) => p.league))]}
-            />
+            {seasonMeta.urlName === "season24" ? (
+              <FilterLeagues
+                value={selectedLeague}
+                onChange={(e) => setSelectedLeague(e.target.value)}
+                options={[...new Set(filteredData.map((p) => p.league))]}
+              />
+            ) : (
+              <FilterClub
+                value={selectedClub}
+                onChange={(e) => setSelectedClub(e.target.value)}
+                options={[...new Set(filteredData.map((p) => p.club))]}
+              />
+            )}
             <FilterHired
               value={hiredFilter}
               onChange={(e) =>
